@@ -7,7 +7,7 @@ export const SearchBar = () => {
     }
 
     return (
-        <div className="search-bar">
+        <div className="search-bar u-margin-bottom-medium">
             <div className="search-bar__selector-group">
                 {/* <!-- SELECT SPORT --> */}
                 <div className="form-group">

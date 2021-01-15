@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Output = () => {
     return (
-        <div className="output">
+        <div className="output u-margin-bottom-medium">
             <table className="output__table">
                 <thead>
                     <tr>
