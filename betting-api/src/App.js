@@ -31,7 +31,9 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>$$$ Odds Checker</h1>
+        <div className="u-margin-bottom-medium">
+          <h1>$$$ Odds Checker</h1>
+        </div>
         <SearchBar />
         <Output />
       </header>
