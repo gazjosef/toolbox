@@ -15,14 +15,91 @@ export const Output = () => {
                 <tbody>
                     <tr>
                     <td rowSpan="2">12:30 PM</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
                     </tr>
                     <tr>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
+                    </tr>
+                    <tr>
+                    <td rowSpan="2">12:30 PM</td>
+                    <td>Roosters</td>
+                    <td>SportsBet</td>
+                    <td>$1.95</td>
+                    </tr>
+                    <tr>
+                    <td>Storm</td>
+                    <td>BetFair</td>
+                    <td>$2.05</td>
                     </tr>
                 </tbody>
             </table>
