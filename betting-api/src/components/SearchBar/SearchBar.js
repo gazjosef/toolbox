@@ -1,9 +1,13 @@
 import React from 'react';
 
 export const SearchBar = () => {
+
+    const getOdds = () => {
+        console.log("test");
+    }
+
     return (
         <div className="search-bar">
-            <h1>Search Bar</h1>
             <div className="search-bar__selector-group">
                 {/* <!-- SELECT SPORT --> */}
                 <div className="form-group">
@@ -46,7 +50,7 @@ export const SearchBar = () => {
                 {/* <button id="sportsBtn" onClick="getSports()" className="btn">
                 Sports
                 </button> */}
-                <button id="oddsBtn" onClick="getOdds()" className="btn">
+                <button id="oddsBtn" onClick={getOdds()} className="btn">
                 Odds
                 </button>
             </div>

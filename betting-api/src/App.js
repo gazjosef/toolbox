@@ -5,21 +5,21 @@ import { SearchBar } from './components/SearchBar/SearchBar'
 import { Output } from './components/Output/Output'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [dataObject, setDataObject] = useState([])
+  // const [count, setCount] = useState(0);
+  // const [dataObject, setDataObject] = useState([])
 
   const APIkey = '0964ad4e3be969508766aef582e92012';
 
   useEffect(() => {
     console.log("call");
-    // fetch(`https://api.the-odds-api.com/v3/sports?apiKey=${APIkey}`)
-    // .then((res) => res.json())
-    // .then((data) => {  
-    //   // dataObject = data.data;
-    //   // setDataObject(data.data)
-    //   console.log(dataObject);
-    // });
-  });
+    fetch(`https://api.the-odds-api.com/v3/sports?apiKey=${APIkey}`)
+    .then((res) => res.json())
+    .then((data) => {  
+        console.log(data.data);
+      // setDataObject([data.data])
+      // console.log(dataObject);
+    });
+  }, []);
 
   // Output
   // let outputEl = document.getElementById('output');
@@ -29,8 +29,8 @@ function App() {
   // let marketEl = document.getElementById('selectMarket');
 // let regionEl = document.getElementById('selectRegion');
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <header className="app__header">
         <h1>$$$ Odds Checker</h1>
         <SearchBar />
         <Output />
