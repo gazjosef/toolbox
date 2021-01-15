@@ -1,0 +1,17 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #008ed6 4px solid;
+  opacity: 0.8;
+}
+
+#main-header .container {
+  color: #000;
+}
+
+.card {
+  color: #000;
+}
