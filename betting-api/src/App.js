@@ -5,8 +5,7 @@ import { SearchBar } from './components/SearchBar/SearchBar'
 import { Output } from './components/Output/Output'
 
 function App() {
-  // const [count, setCount] = useState(0);
-  // const [dataObject, setDataObject] = useState([])
+  const [dataObject, setDataObject] = useState([])
 
   const APIkey = '0964ad4e3be969508766aef582e92012';
 
@@ -15,9 +14,9 @@ function App() {
     fetch(`https://api.the-odds-api.com/v3/sports?apiKey=${APIkey}`)
     .then((res) => res.json())
     .then((data) => {  
-        console.log(data.data);
-      // setDataObject([data.data])
-      // console.log(dataObject);
+      console.log(data.data);
+      setDataObject(data.data);
+      console.log(dataObject);
     });
   }, []);
 
