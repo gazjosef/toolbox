@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { CityDate } from "../layout/cityDate/CityDate";
 import { MainInfo } from "../layout/mainInfo/MainInfo";
@@ -27,6 +27,60 @@ export const WeatherApp = () => {
     const [time, setTime] = useState()
     const [wind, setWind] = useState()
     const [windDegrees, setWindDegrees] = useState()
+
+    useEffect(() => {
+        const getWeather = async (e) => {
+    
+
+            
+            const api_call = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?q=sydney,au&appid=${API_KEY}&units=metric`
+            );
+                
+            const data = await api_call.json();
+                
+            console.log(data);
+            
+            setBackground(backgroundConverter(data.weather[0].icon))
+            setCity(data.name)
+            setCountry(data.sys.country)
+            // setDate(data.dt)
+            setDescription(data.weather[0].description)
+            setFeelslike(data.main.feels_like)
+            setHumidity(data.main.humidity)
+            setIcon(iconConverter(data.weather[0].icon))
+            setLatitude(data.coord.lat)
+            setLongitude(data.coord.lon)
+            setSunrise(timeConverter(data.sys.sunrise))
+            setSunset(timeConverter(data.sys.sunset))
+            setTemp_min(data.main.temp_min)
+            setTemp_max(data.main.temp_max)
+            setTemperature(data.main.temp)
+            setTime(timeConverter(data.dt))
+            setWind(data.wind.speed)
+            setWindDegrees(data.wind.deg)
+
+    
+            // console.log("Background is: ", background);
+            // console.log("City is: ", city);
+            // console.log("Country is: ", country);
+            // console.log("Description is: ", description);
+            // console.log("Feelslike is: ", feelslike);
+            // console.log("Humidity is: ", humidity);
+            // console.log("Icon is: ", icon);
+            // console.log("Latitude is: ", latitude);
+            // console.log("Longitude is: ", longitude);
+            // console.log("Sunrise is: ", sunrise);
+            // console.log("Sunset is: ", sunset);
+            // console.log("Temp_min is: ", temp_min);
+            // console.log("Temp_max is: ", temp_max);
+            // console.log("Temperature is: ", temperature);
+            // console.log("Time is: ", time);
+            // console.log("Wind is: ", wind);
+            // console.log("Wind Degrees is: ", windDegrees);
+        }
+        getWeather()    
+    }, [])
 
     const backgroundConverter = (icon) => {
         const weatherBackground = {
