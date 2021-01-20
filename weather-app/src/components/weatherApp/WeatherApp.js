@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 
-import { SearchField } from "../layout/searchField/SearchField"
+import { CityDate } from "../layout/cityDate/CityDate";
+import { MainInfo } from "../layout/mainInfo/MainInfo";
+import { SearchField } from "../layout/searchField/SearchField";
+import { WeatherIcon } from "../layout/weatherIcon/WeatherIcon";
 
 const API_KEY = "4a64ed09d073cdac231c53e1a3b62181";
 
@@ -174,6 +177,16 @@ export const WeatherApp = () => {
     return (
         <div className={`screen ${background}`}>
             <SearchField getWeather={getWeather} />
+            <div className="weather-display">
+                <CityDate 
+                    city={city}
+                    country={country}
+                    // date={date}
+                    time={time}
+                />
+                <WeatherIcon icon={icon} description={description} />
+                <MainInfo temperature={temperature} description={description} />
+            </div>
         </div>
     )
 }

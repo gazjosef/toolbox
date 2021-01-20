@@ -1,0 +1,18 @@
+#weather-icon {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    fill: #fff;
+  }
+  
+  .filter-white {
+    filter: brightness(0) invert(1);
+    /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+      brightness(118%) contrast(119%); */
+  }
