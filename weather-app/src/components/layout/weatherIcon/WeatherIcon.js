@@ -5,7 +5,9 @@ export const WeatherIcon = (props) => {
     return (
       <div id="weather-icon">
         <img
-          src={require(`../../../assets/icons/${props.icon}.svg`)}
+          src={require(
+            `../../../assets/icons/${props.icon}.svg`
+          ).default}
           alt={props.description}
           className="filter-white"
         />
