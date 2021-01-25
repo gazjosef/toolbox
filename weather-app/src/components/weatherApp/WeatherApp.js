@@ -151,7 +151,7 @@ export const WeatherApp = () => {
         let month = months[a.getMonth()];
         let day = a.getDate();
         let hour = a.getHours();
-        let min = a.getMinutes();
+        let min = ("0" + a.getMinutes()).slice(-2);
         // let sec = a.getSeconds();
         let time = day + ' ' + month + ' ' + year + ' ' + hour + ':' + min;
         return time;
