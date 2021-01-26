@@ -30,8 +30,6 @@ export const WeatherApp = () => {
 
     useEffect(() => {
         const getWeather = async (e) => {
-    
-
             
             const api_call = await fetch(
                 `https://api.openweathermap.org/data/2.5/weather?q=sydney,au&appid=${API_KEY}&units=metric`
@@ -55,7 +53,7 @@ export const WeatherApp = () => {
             setSunset(timeConverter(data.sys.sunset))
             setTemp_min(data.main.temp_min)
             setTemp_max(data.main.temp_max)
-            setTemperature(data.main.temp)
+            setTemperature(Math.floor(data.main.temp))
             setTime(timeConverter(data.dt))
             setWind(data.wind.speed)
             setWindDegrees(data.wind.deg)
@@ -186,7 +184,7 @@ export const WeatherApp = () => {
             setSunset(timeConverter(data.sys.sunset))
             setTemp_min(data.main.temp_min)
             setTemp_max(data.main.temp_max)
-            setTemperature(data.main.temp)
+            setTemperature(Math.floor(data.main.temp))
             setTime(timeConverter(data.dt))
             setWind(data.wind.speed)
             setWindDegrees(data.wind.deg)
