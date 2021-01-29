@@ -12,6 +12,12 @@
     min-height: 100vh;
     margin: 0;
   }
+
+  div {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+  }
   
   h1 {
     font-size: 45px;
@@ -68,3 +74,7 @@
     transform: translateX(0);
   }
   
+
+  #score {
+    display: inline-block;
+  }

@@ -1,5 +1,9 @@
+const rulesBtn = document.getElementById('rules-btn');
+const closeBtn = document.getElementById('close-btn');
+
 const cvs = document.getElementById('tetris');
 const ctx = cvs.getContext('2d');
+const scoreElement = document.getElementById('score')
 
 const ROW = 20;
 const COL = (COLUMN = 10);
@@ -147,6 +151,8 @@ Piece.prototype.rotate = function () {
   }
 };
 
+let score = 0
+
 Piece.prototype.lock = function() {
   for (r = 0; r < this.activeTetromino.length; r++) {
     for (c = 0; c < this.activeTetromino.length; c++) {
@@ -165,6 +171,34 @@ Piece.prototype.lock = function() {
       board[this.y + r][this.x + c] = this.color
     } 
   }
+  // remove full rows
+  for(r = 0; r < ROW; r++) {
+    let isRowFull = true
+    for(c = 0; c < COL; c++) {
+      isRowFull = isRowFull && (board[r][c] != VACANT)
+    }
+    if(isRowFull) {
+      // If the row is full
+      // We have to move all the rows above it
+      for(y = r; y > 1; y--) {
+        for(c = 0; c < COL; c++) {
+          board[y][c] = board[y - 1][c]
+        }
+      }
+      // The top row board[][] has no row above it
+      for(c = 0; c < COL; c++) {
+        board[0][c] = VACANT
+      }
+      // Increment the score
+      score += 10
+    }
+  }
+  // Update the board
+  drawBoard()
+
+  // Update the score
+  scoreElement.innerHTML = score
+
 } 
 
 // Collision Function
@@ -230,3 +264,7 @@ function drop() {
 }
 
 drop();
+
+// Rules and close event handlers
+rulesBtn.addEventListener('click', () => rules.classList.add('show'));
+closeBtn.addEventListener('click', () => rules.classList.remove('show'));
