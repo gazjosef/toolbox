@@ -99,6 +99,8 @@ Piece.prototype.moveDown = function () {
     this.y++;
     this.draw();
   } else {
+    // We lock the piece and generate a new one
+    this.lock()
     p = randomPiece()
   }
 };
