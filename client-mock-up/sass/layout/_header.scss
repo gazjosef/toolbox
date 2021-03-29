@@ -1,13 +1,13 @@
 .header {
-    position: relative;
+    // position: relative;
 
     &__logo-box {
-        position: absolute;
+        // position: absolute;
         top: 4rem;
-        left: 4rem;
+        left: 25rem;
       }
     
-      &__logo {
+    &__logo {
         height: 3.5rem;
-      }
+    }
 }
