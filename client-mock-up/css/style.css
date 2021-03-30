@@ -75,11 +75,7 @@ body {
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 6rem * 3) / 4) + (2 * 6rem)); }
 
-.navbar__logo-box {
-  padding-left: 5rem; }
-
 .navbar__logo {
-  padding-left: 5rem;
   height: 5rem;
   transform: scale(2); }
 
@@ -95,6 +91,8 @@ body {
   /* Style inputs with type="text", select elements and textareas */
   /* Style the submit button with a specific background color etc */
   /* When moving the mouse over the submit button, add a darker green color */ }
+  .section-form .form {
+    width: 50%; }
   .section-form input[type=text], .section-form select, .section-form textarea {
     width: 100%;
     /* Full width */

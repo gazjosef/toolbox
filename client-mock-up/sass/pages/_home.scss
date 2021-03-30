@@ -1,7 +1,5 @@
 .section-about {
-    // background-color: $color-grey-light-1;
     padding: 15rem 0;
-    // margin-top: -20vh;
 
     #hot-sauce {
         height: auto; 
@@ -12,6 +10,10 @@
 }
 
 .section-form {
+    .form {
+        width: 50%;
+    }
+
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
         width: 100%; /* Full width */
