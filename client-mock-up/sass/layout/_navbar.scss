@@ -1,0 +1,11 @@
+.navbar {
+    
+    &__logo-box {
+        padding-left: 5rem;
+    }
+    
+    &__logo {
+        height: 5rem;
+        transform: scale(2);
+    }
+}
