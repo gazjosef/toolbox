@@ -10,7 +10,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #40a040; }
+  background-color: #05773c; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -18,74 +18,6 @@ body {
   line-height: 1.7;
   color: #000;
   padding: 3rem; }
-
-.playing-field {
-  border-color: #208020 #60c060 #60c060 #208020;
-  border-style: solid;
-  border-width: 1px;
-  color: #000;
-  margin-bottom: 0.8rem;
-  padding: 4px;
-  text-align: left;
-  height: 5rem; }
-  .playing-field::after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.cardArea {
-  font-size: 20pt;
-  height: 8rem;
-  position: relative;
-  padding: 2rem; }
-
-.poker-container {
-  display: grid;
-  width: 100vw;
-  height: 100vh; }
-  .poker-container .poker-table {
-    justify-self: center;
-    align-self: center;
-    max-width: 1200px;
-    width: 100%;
-    max-height: 540px;
-    height: 100%;
-    background-color: #4d2712;
-    border-radius: 270px;
-    position: relative;
-    display: grid; }
-    .poker-container .poker-table .outside-ring {
-      max-width: 1110px;
-      max-height: 450px;
-      width: 100%;
-      height: 100%;
-      background: #36aa25;
-      background: radial-gradient(circle, #36aa25 -30%, #073602 90%);
-      position: absolute;
-      border-radius: 270px;
-      justify-self: center;
-      align-self: center;
-      border: 8px #c29f41 solid; }
-
-.text-box {
-  background-color: #ffffc0;
-  border-color: #006000 #90f090 #90f090 #006000;
-  border-style: solid;
-  border-width: 1px;
-  clear: right;
-  color: #000;
-  float: right;
-  font-size: 10pt;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  padding: 0.1rem;
-  text-align: center;
-  width: 12rem; }
-
-.name {
-  background-color: #208020;
-  border-color: #60c060 #006000 #006000 #60c060;
-  color: #ffffc0; }
 
 .row {
   max-width: 114rem;
@@ -112,3 +44,6 @@ body {
     width: calc(2 * ((100% - 6rem * 3) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 6rem * 3) / 4) + (2 * 6rem)); }
+
+.section-home {
+  display: flex; }

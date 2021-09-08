@@ -4,9 +4,6 @@
 @import "base/base";
 @import "base/typography";
 
-@import "components/playing-field";
-@import "components/card-area";
-@import "components/poker";
-@import "components/text-box";
+@import "layout/grid";
 
-@import "layout/grid";  
+@import "pages/home";
