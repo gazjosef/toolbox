@@ -3,6 +3,7 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
 
   &__image {
@@ -13,7 +14,11 @@
   }
 
   &__score {
+    width: 40rem;
+
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 
     .box-score {
       height: 13rem;
@@ -26,6 +31,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
+
+      color: $color-white;
     }
   }
 }

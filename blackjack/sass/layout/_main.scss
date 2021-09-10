@@ -2,7 +2,9 @@
   height: 70rem;
   width: 70rem;
   padding: 2rem;
+
   border: 1px solid $color-black;
+  border-radius: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -13,6 +15,8 @@
   &__player {
     width: 15rem;
     height: 22.5rem;
+
     border: 1px solid $color-gold;
+    border-radius: 1rem;
   }
 }
