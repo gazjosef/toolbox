@@ -15,11 +15,17 @@
   &__score {
     display: flex;
 
-    .box {
+    .box-score {
       height: 13rem;
       width: 15rem;
+      padding: 2rem;
 
       border: 1px solid #000;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
     }
   }
 }
