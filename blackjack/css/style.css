@@ -19,6 +19,15 @@ body {
   color: #000;
   padding: 3rem; }
 
+.button {
+  width: 10rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .button--double, .button--split {
+    display: none; }
+
 .sidebar {
   height: 70rem;
   display: flex;
@@ -26,8 +35,8 @@ body {
   align-items: center;
   justify-content: space-around; }
   .sidebar__image img {
-    height: 30rem;
-    width: 30rem; }
+    height: 40rem;
+    width: 40rem; }
   .sidebar__score {
     width: 40rem;
     display: flex;
@@ -38,11 +47,16 @@ body {
       width: 15rem;
       padding: 2rem;
       border: 1px solid #000;
+      border-radius: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       color: #fff; }
+      .sidebar__score .box-score h1 {
+        text-transform: uppercase; }
+        .sidebar__score .box-score h1 .value {
+          font-size: 3rem; }
 
 .row {
   max-width: 114rem;
@@ -80,11 +94,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between; }
-  .playing-area__dealer, .playing-area__player {
+  .playing-area .card-box {
     width: 15rem;
     height: 22.5rem;
     border: 1px solid #fdc269;
     border-radius: 1rem; }
+  .playing-area__dealer, .playing-area__player {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+  .playing-area__player {
+    height: 30rem; }
 
 .section-home {
   display: flex;

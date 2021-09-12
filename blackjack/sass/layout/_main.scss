@@ -11,12 +11,25 @@
   align-items: center;
   justify-content: space-between;
 
-  &__dealer,
-  &__player {
+  .card-box {
     width: 15rem;
     height: 22.5rem;
 
     border: 1px solid $color-gold;
     border-radius: 1rem;
+  }
+
+  &__dealer,
+  &__player {
+    width: 35rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__player {
+    height: 30rem;
   }
 }
