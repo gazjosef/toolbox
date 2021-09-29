@@ -1,4 +1,25 @@
-// ARRAYS
+
+
+// 1. Variables
+// 2. Build Deck of Cards
+// 3. Start
+// 4. Shuffle Deck
+// 5. New Deal
+// 6. Clear Table
+// 1. Variables
+// 1. Variables
+
+
+
+////////////////////////////////////////
+// 1. VARIABLES
+
+// -- GAME STATUS
+
+let cardCount = 0;
+let mydollars = 1000;
+
+// -- ARRAYS
 
 let DEALERS_HAND = [];
 let PLAYERS_HAND = [];
@@ -7,12 +28,7 @@ const DECK = [];
 const SUITS = ['spades', 'hearts', 'clubs', 'diams'];
 const NUMB = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 
-// GAME STATUS
-
-let cardCount = 0;
-let mydollars = 1000;
-
-// DOM ELEMENTS
+// -- DOM ELEMENTS
 
 const $message = document.getElementById('message');
 const $dealerHolder = document.getElementById('dealerHolder');
@@ -26,7 +42,7 @@ const playerBoxes = document.getElementById('playerBoxes');
 const playingField = document.getElementById('playingField');
 const myActions = document.getElementById('myactions');
 
-// --- Buttons
+// -- Buttons
 const start = document.getElementById('start');
 const selectBoxesBtn = document.getElementById('selectBoxes');
 const decreaseBtn = document.getElementById('decrease');
@@ -34,7 +50,9 @@ const increaseBtn = document.getElementById('increase');
 const doubleBtn = document.getElementById('btndouble');
 // const splitBtn = document.getElementById('increase');
 
-// BUILD DECK OF CARDS
+
+////////////////////////////////////////
+// 2. BUILD DECK OF CARDS
 
 for (let s in SUITS) {
   let suit = SUITS[s][0].toUpperCase();
@@ -52,14 +70,16 @@ for (let s in SUITS) {
   }
 }
 
-// START GAME
+////////////////////////////////////////
+// 3. START GAME
 
 function Start() {
   shuffleDeck(DECK);
   newDeal();
 }
 
-// SHUFFLE DECK
+////////////////////////////////////////
+// 4. SHUFFLE DECK
 
 function shuffleDeck(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
@@ -71,7 +91,8 @@ function shuffleDeck(deck) {
   return deck;
 }
 
-// NEW DEAL
+////////////////////////////////////////
+// 5. NEW DEAL
 
 function newDeal() {
   clearTable();
@@ -92,7 +113,8 @@ function newDeal() {
   deal();
 }
 
-// CLEAR TABLE
+////////////////////////////////////////
+// 6. CLEAR TABLE
 
 function clearTable() {
   $dealerValue.innerHTML = '?';
@@ -104,7 +126,8 @@ function clearTable() {
   $chipStack.innerHTML = mydollars;
 }
 
-// DEAL
+////////////////////////////////////////
+// 7. DEAL
 
 function deal() {
   // Card count reshuffle
@@ -148,7 +171,8 @@ function deal() {
   // }
 }
 
-// RE-DEAL
+////////////////////////////////////////
+// 8. RE-DEAL
 
 function reDeal() {
   cardCount++;
@@ -160,7 +184,8 @@ function reDeal() {
   }
 }
 
-// CARD OUTPUT
+////////////////////////////////////////
+// 9. CARD OUTPUT
 
 function cardOutput(n, x) {
   let hpos = x > 0 ? x * 60 + 100 : 100;
@@ -177,7 +202,8 @@ function cardOutput(n, x) {
   );
 }
 
-// CARD ACTION
+////////////////////////////////////////
+// 10. CARD ACTION
 
 function cardAction(a) {
   console.log(a);
@@ -213,7 +239,8 @@ function cardAction(a) {
   }
 }
 
-// TAKE CARD
+////////////////////////////////////////
+// 11. TAKE CARD
 
 function takeCard() {
   PLAYERS_HAND.push(DECK[cardCount]);
@@ -227,6 +254,7 @@ function takeCard() {
   }
 }
 
+////////////////////////////////////////
 // // SPLIT CARD
 
 // function splitCard() {
@@ -234,7 +262,8 @@ function takeCard() {
 //   document.getElementById('player1').style.display = 'block';
 // }
 
-// END PLAY
+////////////////////////////////////////
+// 12. END PLAY
 
 function endPlay() {
   endplay = true;
@@ -287,7 +316,7 @@ function endPlay() {
   $chipStack.innerHTML = mydollars;
 }
 
-// CHECK TOTAL
+// 13. CHECK TOTAL
 
 function checkTotal(arr) {
   let rValue = 0;
