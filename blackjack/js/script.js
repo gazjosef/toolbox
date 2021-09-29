@@ -1,9 +1,9 @@
 // ARRAYS
 
-const DECK = [];
 let DEALERS_HAND = [];
 let PLAYERS_HAND = [];
 
+const DECK = [];
 const SUITS = ['spades', 'hearts', 'clubs', 'diams'];
 const NUMB = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 
@@ -25,6 +25,7 @@ const myBet = document.getElementById('mybet');
 const playerBoxes = document.getElementById('playerBoxes');
 const playingField = document.getElementById('playingField');
 const myActions = document.getElementById('myactions');
+
 // --- Buttons
 const start = document.getElementById('start');
 const selectBoxesBtn = document.getElementById('selectBoxes');
