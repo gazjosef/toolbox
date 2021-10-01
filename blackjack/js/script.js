@@ -2,14 +2,16 @@
 
 // 1. Variables
 // 2. Build Deck of Cards
-// 3. Start
-// 4. Shuffle Deck
-// 5. New Deal
-// 6. Clear Table
-// 1. Variables
-// 1. Variables
-
-
+// 3. Shuffle Deck
+// 4. Clear Table
+// 5. Deal
+// 6. New Deal
+// 7. Start Game
+// 8. ReDeal
+// 9. Card Output
+// 10. Card Action
+// 11. Take Card
+// 12. End Pplay
 
 ////////////////////////////////////////
 // 1. VARIABLES
@@ -50,7 +52,6 @@ const increaseBtn = document.getElementById('increase');
 const doubleBtn = document.getElementById('btndouble');
 // const splitBtn = document.getElementById('increase');
 
-
 ////////////////////////////////////////
 // 2. BUILD DECK OF CARDS
 
@@ -70,7 +71,6 @@ for (let s in SUITS) {
   }
 }
 
-
 ////////////////////////////////////////
 // 3. SHUFFLE DECK
 
@@ -84,39 +84,9 @@ function shuffleDeck(deck) {
   return deck;
 }
 
-////////////////////////////////////////
-// 4. NEW DEAL
-
-function newDeal() {
-  clearTable();
-
-  // Display Bet Value
-  let betvalue = myBet.value;
-  mydollars = mydollars - betvalue;
-  $chipStack.innerHTML = mydollars;
-  $message.innerHTML = `Current bet is $${betvalue}`;
-
-  // Hide myBet, startBtn, increaseBtn, & decreaseBtn
-  myBet.disabled = true;
-  start.style.display = 'none';
-  decreaseBtn.style.display = 'none';
-  increaseBtn.style.display = 'none';
-
-  myActions.style.display = 'block';
-  deal();
-}
 
 ////////////////////////////////////////
-// 5. START GAME
-
-function Start() {
-  shuffleDeck(DECK);
-  newDeal();
-}
-
-
-////////////////////////////////////////
-// 6. CLEAR TABLE
+// 4. CLEAR TABLE
 
 function clearTable() {
   $dealerValue.innerHTML = '?';
@@ -128,8 +98,9 @@ function clearTable() {
   $chipStack.innerHTML = mydollars;
 }
 
+
 ////////////////////////////////////////
-// 7. DEAL
+// 5. DEAL
 
 function deal() {
   // Card count reshuffle
@@ -171,6 +142,36 @@ function deal() {
   //   document.getElementById('btnsplit').style.display = 'inline';
   //   console.log('Split cards?');
   // }
+}
+
+////////////////////////////////////////
+// 6. NEW DEAL
+
+function newDeal() {
+  clearTable();
+
+  // Display Bet Value
+  let betvalue = myBet.value;
+  mydollars = mydollars - betvalue;
+  $chipStack.innerHTML = mydollars;
+  $message.innerHTML = `Current bet is $${betvalue}`;
+
+  // Hide myBet, startBtn, increaseBtn, & decreaseBtn
+  myBet.disabled = true;
+  start.style.display = 'none';
+  decreaseBtn.style.display = 'none';
+  increaseBtn.style.display = 'none';
+
+  myActions.style.display = 'block';
+  deal();
+}
+
+////////////////////////////////////////
+// 7. START GAME
+
+function Start() {
+  shuffleDeck(DECK);
+  newDeal();
 }
 
 ////////////////////////////////////////
