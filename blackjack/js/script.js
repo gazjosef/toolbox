@@ -70,16 +70,9 @@ for (let s in SUITS) {
   }
 }
 
-////////////////////////////////////////
-// 3. START GAME
-
-function Start() {
-  shuffleDeck(DECK);
-  newDeal();
-}
 
 ////////////////////////////////////////
-// 4. SHUFFLE DECK
+// 3. SHUFFLE DECK
 
 function shuffleDeck(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
@@ -92,7 +85,7 @@ function shuffleDeck(deck) {
 }
 
 ////////////////////////////////////////
-// 5. NEW DEAL
+// 4. NEW DEAL
 
 function newDeal() {
   clearTable();
@@ -112,6 +105,15 @@ function newDeal() {
   myActions.style.display = 'block';
   deal();
 }
+
+////////////////////////////////////////
+// 5. START GAME
+
+function Start() {
+  shuffleDeck(DECK);
+  newDeal();
+}
+
 
 ////////////////////////////////////////
 // 6. CLEAR TABLE
