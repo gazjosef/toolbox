@@ -20,13 +20,16 @@ body {
   padding: 3rem; }
 
 .button {
-  width: 10rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
   font-weight: bold;
   text-transform: uppercase; }
-  .button--double, .button--split {
+  .button--hit, .button--stand, .button--double, .button--split {
     display: none; }
+  .button--deal {
+    margin-left: 2.5rem;
+    padding: 1rem 3rem;
+    font-size: 3rem; }
 
 .sidebar {
   height: 70rem;

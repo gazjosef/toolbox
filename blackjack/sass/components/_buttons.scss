@@ -1,5 +1,5 @@
 .button {
-  width: 10rem;
+  // width: 10rem;
   padding: 1rem 2rem;
 
   border-radius: 1rem;
@@ -7,7 +7,14 @@
   font-weight: bold;
   text-transform: uppercase;
 
-  &--double, &--split {
-    display:none
+  &--hit, &--stand, &--double, &--split {
+    display:none;
+  }
+
+  &--deal {
+    margin-left: 2.5rem;
+    padding: 1rem 3rem;
+
+    font-size: 3rem;
   }
 }

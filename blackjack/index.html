@@ -21,8 +21,12 @@
           <div class="card-box">Player</div>
 
           <div class="button-menu">
-            <button class="button">Hit</button>
-            <button id="button-stand" class="button">Stand</button>
+            <button id="button-hit" class="button button--hit">
+              Hit
+            </button>
+            <button id="button-stand" class="button button--stand">
+              Stand
+            </button>
             <button id="button-double" class="button button--double">
               Double
             </button>
@@ -35,9 +39,11 @@
 
       <!-- Sidebar -->
       <aside class="sidebar">
+        <!-- Image -->
         <div class="sidebar__image">
           <img src="img/pngegg.png" alt="blackjack-logo" />
         </div>
+        <!-- Score -->
         <div class="sidebar__score">
           <div class="box-score">
             <h1>
@@ -51,6 +57,18 @@
             </h1>
             <h1>Balance</h1>
           </div>
+        </div>
+
+        <div class="sidebar__deal">
+          <button id="button-increase" class="button button--increase">
+            Increase
+          </button>
+          <button id="button-decrease" class="button button--decrease">
+            Decrease
+          </button>
+          <button id="button-deal" class="button button--deal">
+            Deal
+          </button>
         </div>
       </aside>
     </section>
