@@ -52,10 +52,11 @@ const increaseBtn = document.getElementById('increase');
 const doubleBtn = document.getElementById('btndouble');
 // const splitBtn = document.getElementById('increase');
 
-start.addEventListener("click", function(e) {
-  e.preventDefault()
-  console.log("click")
-})
+// start.addEventListener("click", function(e) {
+//   e.preventDefault()
+//   console.log("click")
+// })
+start.addEventListener("click", Start())
 
 ////////////////////////////////////////
 // 2. BUILD DECK OF CARDS
@@ -175,7 +176,7 @@ function newDeal() {
 
 function Start() {
   shuffleDeck(DECK);
-  newDeal();
+  // newDeal();
   console.log('click')
 }
 
