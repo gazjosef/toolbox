@@ -15,7 +15,7 @@
     width: 15rem;
     height: 22.5rem;
 
-    border: 1px solid $color-gold;
+    border: 1.5px solid $color-gold;
     border-radius: 1rem;
   }
 
@@ -41,5 +41,11 @@
 
   &__player {
     height: 30rem;
+
+    .button-menu {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+    }
   }
 }

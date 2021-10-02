@@ -21,7 +21,11 @@ body {
 
 .button {
   padding: 1rem 2rem;
+  min-width: 10rem;
   border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   text-transform: uppercase; }
   .button--hit, .button--stand, .button--double, .button--split {
@@ -37,17 +41,20 @@ body {
   align-items: center;
   justify-content: space-around; }
   .sidebar__image img {
-    height: 40rem;
-    width: 40rem; }
+    height: 35rem;
+    width: 35rem; }
+  .sidebar__message {
+    color: #fff;
+    font-size: 2rem; }
   .sidebar__score {
-    width: 40rem;
+    width: 35rem;
     display: flex;
     align-items: center;
     justify-content: space-around; }
     .sidebar__score .box-score {
-      height: 13rem;
-      width: 15rem;
-      padding: 2rem;
+      height: 10rem;
+      width: 12rem;
+      padding: 1rem;
       border: 1px solid #000;
       border-radius: 1rem;
       display: flex;
@@ -58,7 +65,12 @@ body {
       .sidebar__score .box-score h1 {
         text-transform: uppercase; }
         .sidebar__score .box-score h1 .value {
-          font-size: 3rem; }
+          font-size: 2.75rem; }
+  .sidebar__change-stake {
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
 
 .row {
   max-width: 114rem;
@@ -99,7 +111,7 @@ body {
   .playing-area .card-box {
     width: 15rem;
     height: 22.5rem;
-    border: 1px solid #fdc269;
+    border: 1.5px solid #fdc269;
     border-radius: 1rem; }
   .playing-area__dealer, .playing-area__player {
     width: 35rem;
@@ -115,6 +127,10 @@ body {
       font-size: 1.75rem; }
   .playing-area__player {
     height: 30rem; }
+    .playing-area__player .button-menu {
+      display: flex;
+      align-self: center;
+      justify-content: center; }
 
 .section-home {
   display: flex;
