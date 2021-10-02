@@ -1,5 +1,3 @@
-
-
 // 1. Variables
 // 2. Build Deck of Cards
 // 3. Shuffle Deck
@@ -27,43 +25,42 @@ let DEALERS_HAND = [];
 let PLAYERS_HAND = [];
 
 const DECK = [];
-const SUITS = ['spades', 'hearts', 'clubs', 'diams'];
-const NUMB = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+const SUITS = ["spades", "hearts", "clubs", "diams"];
+const NUMB = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 // -- DOM ELEMENTS
 
-const $message = document.getElementById('message');
-const $dealerHolder = document.getElementById('dealer-hand');
-const $playerHolder = document.getElementById('player-hand');
-const $dealerValue = document.getElementById('dealer-value');
-const $playerValue = document.getElementById('player-value');
-const $chipStack = document.getElementById('dollars');
+const $message = document.getElementById("message");
+const $dealerHolder = document.getElementById("dealer-hand");
+const $playerHolder = document.getElementById("player-hand");
+const $dealerValue = document.getElementById("dealer-value");
+const $playerValue = document.getElementById("player-value");
+const $chipStack = document.getElementById("dollars");
 
-const myBet = document.getElementById('my-bet');
-const playerBoxes = document.getElementById('playerBoxes');
-const playingField = document.getElementById('playingField');
-const myActions = document.getElementById('myactions');
+const myBet = document.getElementById("my-bet");
+const playerBoxes = document.getElementById("playerBoxes");
+const playingField = document.getElementById("playingField");
+const myActions = document.getElementById("myactions");
 
 // -- Buttons
-const start = document.getElementById('button-deal');
-const selectBoxesBtn = document.getElementById('selectBoxes');
-const decreaseBtn = document.getElementById('decrease');
-const increaseBtn = document.getElementById('increase');
-const doubleBtn = document.getElementById('btndouble');
+const $start = document.getElementById("button-deal");
+const $increaseBtn = document.getElementById("button-increase");
+const $decreaseBtn = document.getElementById("button-decrease");
+const selectBoxesBtn = document.getElementById("selectBoxes");
+const doubleBtn = document.getElementById("btndouble");
 // const splitBtn = document.getElementById('increase');
 
-// start.addEventListener("click", function(e) {
-//   e.preventDefault()
-//   console.log("click")
-// })
-start.addEventListener("click", Start())
+$start.addEventListener("click", function (e) {
+  e.preventDefault();
+  Start();
+});
 
 ////////////////////////////////////////
 // 2. BUILD DECK OF CARDS
 
 for (let s in SUITS) {
   let suit = SUITS[s][0].toUpperCase();
-  const bgcolor = suit === 'S' || suit === 'C' ? 'black' : 'red';
+  const bgcolor = suit === "S" || suit === "C" ? "black" : "red";
   for (let n in NUMB) {
     const cardValue = n > 9 ? 10 : parseInt(n) + 1;
     let card = {
@@ -96,13 +93,16 @@ function shuffleDeck(deck) {
 function clearTable() {
   PLAYERS_HAND = [];
   DEALERS_HAND = [];
-  // $dealerValue.innerHTML = '?';
-  // $dealerHolder.innerHTML = '';
-  // $playerHolder.innerHTML = '';
-  start.style.display = 'none';
-  // $chipStack.innerHTML = mydollars;
-}
 
+  $dealerValue.innerHTML = "?";
+  $dealerHolder.innerHTML = "";
+  $playerHolder.innerHTML = "";
+
+  $start.style.display = "none";
+  $decreaseBtn.style.display = "none";
+  $increaseBtn.style.display = "none";
+  $chipStack.innerHTML = mydollars;
+}
 
 ////////////////////////////////////////
 // 5. DEAL
@@ -136,8 +136,8 @@ function deal() {
       checkTotal(PLAYERS_HAND) === 11) &&
     PLAYERS_HAND.length === 2
   ) {
-    doubleBtn.style.display = 'inline';
-    console.log('Double-down?');
+    doubleBtn.style.display = "inline";
+    console.log("Double-down?");
   }
 
   // // Split: Check for Pairs
@@ -155,20 +155,19 @@ function deal() {
 function newDeal() {
   clearTable();
 
-  // Display Bet Value
-  let betvalue = myBet.value;
-  mydollars = mydollars - betvalue;
-  $chipStack.innerHTML = mydollars;
-  $message.innerHTML = `Current bet is $${betvalue}`;
+  //? Display Bet Value
 
-  // Hide myBet, startBtn, increaseBtn, & decreaseBtn
-  myBet.disabled = true;
-  start.style.display = 'none';
-  decreaseBtn.style.display = 'none';
-  increaseBtn.style.display = 'none';
+  // let betvalue = myBet.value;
+  // mydollars = mydollars - betvalue;
+  // $chipStack.innerHTML = mydollars;
+  // $message.innerHTML = `Current bet is $${betvalue}`;
 
-  myActions.style.display = 'block';
-  deal();
+  //? Hide myBet
+
+  // myBet.disabled = true;
+
+  // myActions.style.display = "block";
+  // deal();
 }
 
 ////////////////////////////////////////
@@ -176,8 +175,8 @@ function newDeal() {
 
 function Start() {
   shuffleDeck(DECK);
-  // newDeal();
-  console.log('click')
+  newDeal();
+  console.log("click");
 }
 
 ////////////////////////////////////////
@@ -186,10 +185,10 @@ function Start() {
 function reDeal() {
   cardCount++;
   if (cardCount > 40) {
-    console.log('New Deck');
+    console.log("New Deck");
     shuffleDeck(DECK);
     cardCount = 0;
-    $message.innerHTML = 'New Shuffle';
+    $message.innerHTML = "New Shuffle";
   }
 }
 
@@ -207,7 +206,7 @@ function cardOutput(n, x) {
     DECK[n].cardnum +
     '<br></div>  <div class="content-card suit"></div>  <div class="bottom-card suit">' +
     DECK[n].cardnum +
-    '<br></div> </div>'
+    "<br></div> </div>"
   );
 }
 
@@ -217,14 +216,14 @@ function cardOutput(n, x) {
 function cardAction(a) {
   console.log(a);
   switch (a) {
-    case 'hit':
+    case "hit":
       takeCard(); // add new card to players hand
-      doubleBtn.style.display = 'none';
+      doubleBtn.style.display = "none";
       break;
-    case 'hold':
+    case "hold":
       endPlay(); //Playout and calculate
       break;
-    case 'double':
+    case "double":
       let betvalue = parseInt(myBet.value);
       if (mydollars - betvalue < 0) {
         betvalue = betvalue + mydollars;
@@ -239,11 +238,11 @@ function cardAction(a) {
       takeCard(); // add new card to players hand
       endPlay(); //Playout and calculate
       break;
-    case 'split':
+    case "split":
       splitCard(); //Split cards into two hands
       break;
     default:
-      console.log('done');
+      console.log("done");
       endPlay(); //Playout and calculate
   }
 }
@@ -258,7 +257,7 @@ function takeCard() {
   let rValu = checkTotal(PLAYERS_HAND);
   $playerValue.innerHTML = rValu;
   if (rValu > 21) {
-    $message.innerHTML = 'Busted!';
+    $message.innerHTML = "Busted!";
     endPlay();
   }
 }
@@ -276,13 +275,13 @@ function takeCard() {
 
 function endPlay() {
   endplay = true;
-  document.getElementById('cover').style.display = 'none';
-  myActions.style.display = 'none';
-  start.style.display = 'inline';
+  document.getElementById("cover").style.display = "none";
+  myActions.style.display = "none";
+  $start.style.display = "inline";
   // document.getElementById("increase").style.display = "inline";
   // document.getElementById("decrease").style.display = "inline";
   myBet.disabled = false;
-  $message.innerHTML = 'Game Over<br>';
+  $message.innerHTML = "Game Over<br>";
   let payoutJack = 1;
 
   let dealervalue = checkTotal(DEALERS_HAND);
@@ -300,7 +299,7 @@ function endPlay() {
 
   let playervalue = checkTotal(PLAYERS_HAND);
   if (playervalue === 21 && PLAYERS_HAND.length === 2) {
-    $message.innerHTML = 'Blackjack<br>';
+    $message.innerHTML = "Blackjack<br>";
     payoutJack = 1.5;
   }
 
@@ -331,7 +330,7 @@ function checkTotal(arr) {
   let rValue = 0;
   let aceAdjust = false;
   for (let i in arr) {
-    if (arr[i].cardnum === 'A' && !aceAdjust) {
+    if (arr[i].cardnum === "A" && !aceAdjust) {
       aceAdjust = true;
       rValue = rValue + 10;
     }
@@ -383,4 +382,4 @@ function selectPlayerBoxes() {
 
 // Event Listeners
 
-myBet.addEventListener('change', changeBetSize);
+myBet.addEventListener("change", changeBetSize);
