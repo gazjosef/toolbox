@@ -33,9 +33,9 @@ const NUMB = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 // -- DOM ELEMENTS
 
 const $message = document.getElementById('message');
-const $dealerHolder = document.getElementById('dealerHolder');
+const $dealerHolder = document.getElementById('dealer-hand');
 const $dealerValue = document.getElementById('dValue');
-const $playerHolder = document.getElementById('playerHolder');
+const $playerHolder = document.getElementById('player-hand');
 const $playerValue = document.getElementById('pValue');
 const $chipStack = document.getElementById('dollars');
 
