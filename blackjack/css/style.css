@@ -27,7 +27,6 @@ body {
   .button--hit, .button--stand, .button--double, .button--split {
     display: none; }
   .button--deal {
-    margin-left: 2.5rem;
     padding: 1rem 3rem;
     font-size: 3rem; }
 
