@@ -11,7 +11,7 @@
 // 9. Card Output
 // 10. Card Action
 // 11. Take Card
-// 12. End Pplay
+// 12. End Play
 
 ////////////////////////////////////////
 // 1. VARIABLES
