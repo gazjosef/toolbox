@@ -30,17 +30,14 @@ const NUMB = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 // -- DOM ELEMENTS
 
-const $message = document.getElementById("message");
 const $dealerHand = document.getElementById("dealer-hand");
 const $playerHand = document.getElementById("player-hand");
 const $dealerValue = document.getElementById("dealer-value");
 const $playerValue = document.getElementById("player-value");
-const $chipStack = document.getElementById("chip-stack");
 
+const $message = document.getElementById("message");
 const $betStake = document.getElementById("bet-stake");
-// const playerBoxes = document.getElementById("playerBoxes");
-// const playingField = document.getElementById("playingField");
-// const myActions = document.getElementById("myactions");
+const $chipStack = document.getElementById("chip-stack");
 
 // -- Buttons
 const $start = document.getElementById("button-deal");
@@ -90,7 +87,15 @@ function shuffleDeck(deck) {
 }
 
 ////////////////////////////////////////
-// 4. CLEAR TABLE
+// 4. START GAME
+
+function Start() {
+  shuffleDeck(DECK);
+  newDeal();
+}
+
+////////////////////////////////////////
+// 5. CLEAR TABLE
 
 function clearTable() {
   PLAYERS_HAND = [];
@@ -113,7 +118,7 @@ function clearTable() {
 }
 
 ////////////////////////////////////////
-// 5. DEAL
+// 6. DEAL
 
 function deal() {
   // Card count reshuffle
@@ -158,14 +163,15 @@ function deal() {
 }
 
 ////////////////////////////////////////
-// 6. NEW DEAL
+// 7. NEW DEAL
 
 function newDeal() {
   clearTable();
 
   //? Display Bet Value
 
-  let betvalue = $betStake.value;
+  let betvalue = $betStake.innerHTML;
+  console.log(betvalue);
   balance = balance - betvalue;
   $chipStack.innerHTML = balance;
   $message.innerHTML = `Current bet is $${betvalue}`;
@@ -174,17 +180,7 @@ function newDeal() {
 
   // $betStake.disabled = true;
 
-  // myActions.style.display = "block";
   deal();
-}
-
-////////////////////////////////////////
-// 7. START GAME
-
-function Start() {
-  shuffleDeck(DECK);
-  newDeal();
-  console.log("click");
 }
 
 ////////////////////////////////////////
@@ -284,7 +280,6 @@ function takeCard() {
 function endPlay() {
   endplay = true;
   document.getElementById("cover").style.display = "none";
-  myActions.style.display = "none";
   $start.style.display = "inline";
   // document.getElementById("increase").style.display = "inline";
   // document.getElementById("decrease").style.display = "inline";
@@ -371,21 +366,6 @@ function checkTotal(arr) {
 //     this.value = balance;
 //   }
 //   $message.innerHTML = `Bet changed to $${this.value}`;
-// }
-
-// Select Player Boxes
-// function selectPlayerBoxes() {
-//   for (let i = 0; i < playerBoxes.value; i++) {
-//     let playerNumber = i + 1;
-//     player.innerHTML += `
-//       <div id="player${playerNumber}">
-//         <div class="textBox name">Box ${playerNumber}</div>
-//         <div id="pValue" class="textBox">&nbsp;</div>
-//         <div id="message" class="textBox result">&nbsp;</div>
-//         <div id="playerHolder" class="cardArea"></div>
-//       </div>
-// `;
-//   }
 // }
 
 // Event Listeners
