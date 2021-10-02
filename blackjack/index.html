@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
+    <script src="js/script.js" defer></script>
+
     <title>BlackJack</title>
   </head>
   <body>
@@ -15,12 +17,13 @@
         <!-- Dealer -->
         <div class="playing-area__dealer">
           <div id="dealer-value" class="card-value">20</div>
+
           <div id="dealer-hand" class="card-box">Dealer</div>
-          
         </div>
         <!-- Player -->
         <div class="playing-area__player">
           <div id="player-value" class="card-value">20</div>
+
           <div id="player-hand" class="card-box">Player</div>
 
           <div class="button-menu">
@@ -50,13 +53,13 @@
         <div class="sidebar__score">
           <div class="box-score">
             <h1>
-              <span class="value">$25</span>
+              <span id="my-bet" class="value">$25</span>
             </h1>
             <h1>Betting Stake</h1>
           </div>
           <div class="box-score">
             <h1>
-              <span class="value">$975</span>
+              <span id="dollars" class="value">$975</span>
             </h1>
             <h1>Balance</h1>
           </div>
@@ -64,10 +67,10 @@
         <!-- Change Stake -->
         <div class="sidebar__change-stake">
           <button id="button-increase" class="button button--increase">
-            Increase
+            + Bet Size
           </button>
           <button id="button-decrease" class="button button--decrease">
-            Decrease
+            - Bet Size
           </button>
         </div>
         <!-- Deal -->

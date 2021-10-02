@@ -34,23 +34,28 @@ const NUMB = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 
 const $message = document.getElementById('message');
 const $dealerHolder = document.getElementById('dealer-hand');
-const $dealerValue = document.getElementById('dValue');
 const $playerHolder = document.getElementById('player-hand');
-const $playerValue = document.getElementById('pValue');
+const $dealerValue = document.getElementById('dealer-value');
+const $playerValue = document.getElementById('player-value');
 const $chipStack = document.getElementById('dollars');
 
-const myBet = document.getElementById('mybet');
+const myBet = document.getElementById('my-bet');
 const playerBoxes = document.getElementById('playerBoxes');
 const playingField = document.getElementById('playingField');
 const myActions = document.getElementById('myactions');
 
 // -- Buttons
-const start = document.getElementById('start');
+const start = document.getElementById('button-deal');
 const selectBoxesBtn = document.getElementById('selectBoxes');
 const decreaseBtn = document.getElementById('decrease');
 const increaseBtn = document.getElementById('increase');
 const doubleBtn = document.getElementById('btndouble');
 // const splitBtn = document.getElementById('increase');
+
+start.addEventListener("click", function(e) {
+  e.preventDefault()
+  console.log("click")
+})
 
 ////////////////////////////////////////
 // 2. BUILD DECK OF CARDS
@@ -84,18 +89,17 @@ function shuffleDeck(deck) {
   return deck;
 }
 
-
 ////////////////////////////////////////
 // 4. CLEAR TABLE
 
 function clearTable() {
-  $dealerValue.innerHTML = '?';
   PLAYERS_HAND = [];
   DEALERS_HAND = [];
-  $dealerHolder.innerHTML = '';
-  $playerHolder.innerHTML = '';
+  // $dealerValue.innerHTML = '?';
+  // $dealerHolder.innerHTML = '';
+  // $playerHolder.innerHTML = '';
   start.style.display = 'none';
-  $chipStack.innerHTML = mydollars;
+  // $chipStack.innerHTML = mydollars;
 }
 
 
@@ -172,6 +176,7 @@ function newDeal() {
 function Start() {
   shuffleDeck(DECK);
   newDeal();
+  console.log('click')
 }
 
 ////////////////////////////////////////
