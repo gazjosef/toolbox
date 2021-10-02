@@ -34,6 +34,70 @@ body {
     padding: 1rem 3rem;
     font-size: 3rem; }
 
+/* Cards */
+#cover {
+  height: 180px;
+  width: 120px;
+  padding: 3px;
+  border: 1px solid #000;
+  background-color: brown;
+  border-radius: 10px;
+  position: absolute; }
+
+.icard {
+  height: 180px;
+  width: 120px;
+  padding: 3px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  left: 100px;
+  display: inline-block;
+  font-family: "Lato"; }
+
+.top-card {
+  font-size: 30px;
+  line-height: 25px;
+  left: 2px;
+  top: 2px; }
+
+.content-card {
+  text-align: center;
+  font-size: 50px; }
+
+.bottom-card {
+  font-size: 30px;
+  line-height: 25px;
+  right: 2px;
+  bottom: 2px;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg); }
+
+/* Suits */
+.clubs,
+.spades {
+  color: black; }
+
+.diams,
+.hearts {
+  color: red; }
+
+.clubs .suit::after {
+  content: "\2663"; }
+
+.diams .suit::after {
+  content: "\2666"; }
+
+.hearts .suit::after {
+  content: "\2665"; }
+
+.spades .suit::after {
+  content: "\2660"; }
+
 .sidebar {
   height: 70rem;
   display: flex;
