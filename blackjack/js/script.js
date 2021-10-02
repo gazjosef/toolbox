@@ -171,7 +171,6 @@ function newDeal() {
   //? Display Bet Value
 
   let betvalue = $betStake.innerHTML;
-  console.log(betvalue);
   balance = balance - betvalue;
   $chipStack.innerHTML = balance;
   $message.innerHTML = `Current bet is $${betvalue}`;
