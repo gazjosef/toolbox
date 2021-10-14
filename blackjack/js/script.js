@@ -49,9 +49,35 @@ const $standBtn = document.getElementById("button-stand");
 const $doubleBtn = document.getElementById("button-double");
 const $splitBtn = document.getElementById("button-split");
 
-$start.addEventListener("click", function (e) {
+// -- Event Listeners
+$start.addEventListener("click", (e) => {
   e.preventDefault();
   Start();
+});
+
+$increaseBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  increaseBetSize();
+});
+
+$decreaseBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  decreaseBetSize();
+});
+
+$hitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  cardAction("hit");
+});
+
+$standBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  cardAction("stand");
+});
+
+$doubleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  cardAction("double");
 });
 
 ////////////////////////////////////////
@@ -102,7 +128,6 @@ function clearTable() {
   DEALERS_HAND = [];
 
   $chipStack.innerHTML = balance;
-  console.log($chipStack.innerHTML);
 
   $dealerValue.innerHTML = "?";
 
@@ -126,7 +151,8 @@ function deal() {
     DEALERS_HAND.push(DECK[cardCount]);
     $dealerHand.innerHTML += cardOutput(cardCount, x);
     if (x === 0) {
-      $dealerHand.innerHTML += '<div id="cover" style="left: 100px"></div>';
+      $dealerHand.innerHTML +=
+        '<div id="cover" class="card card__cover" style="left: 0px"></div>';
     }
     reDeal();
     PLAYERS_HAND.push(DECK[cardCount]);
@@ -168,16 +194,10 @@ function deal() {
 function newDeal() {
   clearTable();
 
-  //? Display Bet Value
-
   let betvalue = $betStake.innerHTML;
   balance = balance - betvalue;
   $chipStack.innerHTML = balance;
   $message.innerHTML = `Current bet is $${betvalue}`;
-
-  //? Hide $betStake
-
-  // $betStake.disabled = true;
 
   deal();
 }
@@ -199,18 +219,21 @@ function reDeal() {
 // 9. CARD OUTPUT
 
 function cardOutput(n, x) {
-  let hpos = x > 0 ? x * 60 + 100 : 100;
-  return (
-    '<div class="icard ' +
-    DECK[n].icon +
-    '" style="left:' +
-    hpos +
-    'px;">  <div class="top-card suit">' +
-    DECK[n].cardnum +
-    '<br></div>  <div class="content-card suit"></div>  <div class="bottom-card suit">' +
-    DECK[n].cardnum +
-    "<br></div> </div>"
-  );
+  let hpos = x > 0 ? x * 60 + 0 : 0;
+
+  return `<div class="card ${DECK[n].icon}" style="left: ${hpos}px;">
+    <div class="card__top">
+      <div class="card__corner suit">
+      ${DECK[n].cardnum}
+      </div>
+    </div>
+    <div class="card__content suit"></div>
+    <div class="card__bottom">
+      <div class="card__corner suit">
+      ${DECK[n].cardnum}
+      </div>
+    </div>
+  </div>`;
 }
 
 ////////////////////////////////////////
@@ -220,14 +243,16 @@ function cardAction(a) {
   console.log(a);
   switch (a) {
     case "hit":
-      takeCard(); // add new card to players hand
+      takeCard();
       $doubleBtn.style.display = "none";
       break;
+
     case "hold":
-      endPlay(); //Playout and calculate
+      endPlay();
       break;
+
     case "double":
-      let betvalue = parseInt($betStake.value);
+      let betvalue = parseInt($betStake.innerHTML);
       if (balance - betvalue < 0) {
         betvalue = betvalue + balance;
         balance = 0;
@@ -236,17 +261,18 @@ function cardAction(a) {
         betvalue = betvalue * 2;
       }
       $chipStack.innerHTML = balance;
-      $betStake.value = betvalue;
-      // double current bet, remove value from balance
-      takeCard(); // add new card to players hand
-      endPlay(); //Playout and calculate
+      $betStake.innerHTML = betvalue;
+      takeCard();
+      endPlay();
       break;
+
     case "split":
-      splitCard(); //Split cards into two hands
+      splitCard();
       break;
+
     default:
       console.log("done");
-      endPlay(); //Playout and calculate
+      endPlay();
   }
 }
 
@@ -255,10 +281,15 @@ function cardAction(a) {
 
 function takeCard() {
   PLAYERS_HAND.push(DECK[cardCount]);
+
   $playerHand.innerHTML += cardOutput(cardCount, PLAYERS_HAND.length - 1);
+
   reDeal();
+
   let rValu = checkTotal(PLAYERS_HAND);
+
   $playerValue.innerHTML = rValu;
+
   if (rValu > 21) {
     $message.innerHTML = "Busted!";
     endPlay();
@@ -266,23 +297,15 @@ function takeCard() {
 }
 
 ////////////////////////////////////////
-// // SPLIT CARD
-
-// function splitCard() {
-//   playerHolder.innerHTML = cardOutput(cardCount - 3, 0);
-//   document.getElementById('player1').style.display = 'block';
-// }
-
-////////////////////////////////////////
 // 12. END PLAY
 
 function endPlay() {
-  endplay = true;
+  // endplay = true;
   document.getElementById("cover").style.display = "none";
   $start.style.display = "inline";
-  // document.getElementById("increase").style.display = "inline";
-  // document.getElementById("decrease").style.display = "inline";
-  $betStake.disabled = false;
+  $increaseBtn.style.display = "inline";
+  $decreaseBtn.style.display = "inline";
+
   $message.innerHTML = "Game Over<br>";
   let payoutJack = 1;
 
@@ -305,22 +328,22 @@ function endPlay() {
     payoutJack = 1.5;
   }
 
-  let betvalue = parseInt($betStake.value) * payoutJack;
+  let betvalue = parseInt($betStake.innerHTML) * payoutJack;
 
   // MESSAGE
   if (
     (playervalue < 22 && dealervalue < playervalue) ||
     (dealervalue > 21 && playervalue < 22)
   ) {
-    $message.innerHTML += `<span style="color: green;">You WIN! You won $${betvalue}</span>`;
+    $message.innerHTML += `You WIN! You won $${betvalue}`;
     balance = balance + betvalue * 2;
   } else if (playervalue > 21) {
-    $message.innerHTML += `<span style="color: red;">Dealer Wins! You lost $${betvalue}</span>`;
+    $message.innerHTML += `Dealer Wins! You lost $${betvalue}`;
   } else if (playervalue === dealervalue) {
-    $message.innerHTML += `<span style="color: blue;">Push</span>`;
+    $message.innerHTML += `Push`;
     balance = balance + betvalue;
   } else {
-    $message.innerHTML += `<span style="color: red;">Dealer Wins! You lost $${betvalue}</span>`;
+    $message.innerHTML += `Dealer Wins! You lost $${betvalue}`;
   }
   $playerValue.innerHTML = playervalue;
   $chipStack.innerHTML = balance;
@@ -344,29 +367,12 @@ function checkTotal(arr) {
   return rValue;
 }
 
-// function outputCard() {
-//   output.innerHTML +=
-//     "<span style='color:" +
-//     DECK[cardCount].bgcolor +
-//     "'>" +
-//     DECK[cardCount].cardnum +
-//     '&' +
-//     DECK[cardCount].icon +
-//     ';</span>  ';
-// }
+// CHANGE BET SIZE
 
-// Change Bet Size
+function increaseBetSize() {
+  $betStake.innerHTML = parseInt($betStake.innerHTML) + 5;
+}
 
-// function changeBetSize() {
-//   if (this.value < 0) {
-//     this.value = 0;
-//   }
-//   if (this.value > balance) {
-//     this.value = balance;
-//   }
-//   $message.innerHTML = `Bet changed to $${this.value}`;
-// }
-
-// Event Listeners
-
-// $betStake.addEventListener("change", changeBetSize);
+function decreaseBetSize() {
+  $betStake.innerHTML = parseInt($betStake.innerHTML) - 5;
+}

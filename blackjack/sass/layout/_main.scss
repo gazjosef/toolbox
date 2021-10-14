@@ -11,14 +11,6 @@
   align-items: center;
   justify-content: space-between;
 
-  .card-box {
-    width: 15rem;
-    height: 22.5rem;
-
-    border: 1.5px solid $color-gold;
-    border-radius: 1rem;
-  }
-
   &__dealer,
   &__player {
     width: 35rem;
@@ -29,6 +21,16 @@
     justify-content: space-between;
 
     position: relative;
+
+    .card-box {
+      width: 15rem;
+      height: 22.5rem;
+
+      border: 1.5px solid $color-gold;
+      border-radius: 1rem;
+
+      position: relative;
+    }
 
     .card-value {
       position: absolute;
@@ -43,6 +45,8 @@
     height: 30rem;
 
     .button-menu {
+      width: 100%;
+
       display: flex;
       align-self: center;
       justify-content: center;
