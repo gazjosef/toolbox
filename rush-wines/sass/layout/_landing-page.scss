@@ -1,0 +1,33 @@
+.landing-page {
+  position: relative;
+
+  &__image {
+    background-color: orangered;
+    height: 80vh;
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__text-box {
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 6rem;
+    text-align: center;
+    color: $color-white;
+
+    // @include absCenter;
+  }
+}
