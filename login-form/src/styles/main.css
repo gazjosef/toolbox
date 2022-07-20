@@ -12,17 +12,18 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   background-color: #4070f4;
+  box-sizing: border-box;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
+  color: hsl(0deg, 0%, 0%);
   text-decoration: none;
-  color: #000;
 }
 
 p {

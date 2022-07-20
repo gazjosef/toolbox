@@ -12,13 +12,15 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   background-color: $color-blue;
-
+  box-sizing: border-box;
   height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-family: "Poppins", sans-serif;
 }
 
 ////////////////////////////////////////
@@ -26,8 +28,8 @@ body {
 ////////////////////////////////////////
 
 a {
+  color: $color-black;
   text-decoration: none;
-  color: #000;
 }
 
 p {
@@ -48,15 +50,3 @@ h3 {
   font-weight: 600;
   margin-bottom: 10px;
 }
-
-////////////////////////////////////////
-// * .container
-////////////////////////////////////////
-
-// .container {
-//   width: 100%;
-//   max-width: 960px;
-//   margin: 0 auto;
-//   padding: 0 20px;
-//   text-align: center;
-// }
