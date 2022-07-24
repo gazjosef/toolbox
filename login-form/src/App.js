@@ -17,6 +17,7 @@ function App() {
 
     console.log(pwShowHide);
 
+    //! NOT WORKING
     // JS Code to show/hide password and change icon
     pwShowHide.forEach((eyeIcon, index) => {
       console.log(index, eyeIcon);
