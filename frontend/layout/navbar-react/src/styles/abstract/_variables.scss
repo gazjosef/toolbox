@@ -1,0 +1,30 @@
+//* COLORS
+$color-blue-50: #4ad9e4; // Turquoise Blue //* Nav Links Mobile
+$color-blue-100: #6d76f7; // Cornflower Blue //* Nav Links: Hover
+$color-blue-200: #6668f4; // Cornflower Blue 2 //* Nav Menu Active & Nav Links Mobile: Hover
+$color-blue-300: #7577fa; // Cornflower Blue 3 //* Nav Links: Hover
+
+//* --- White-To-Gray
+$color-white: hsl(0, 0%, 100%); //* White
+$color-white-50: hsl(0, 0%, 95%); //* Concrete White
+$color-white-100: hsl(0, 0%, 90%); //* Mercury White
+$color-white-200: hsl(0, 0%, 80%); //* Silver White
+$color-grey-250: hsl(0, 0%, 77%); //* Silver Grey
+$color-grey-300: hsl(0, 0%, 70%); //* Nobel Grey
+$color-grey-400: hsl(0, 0%, 60%); //* Dusty Grey
+$color-grey-450: hsl(0, 2%, 55%); //* Grey
+$color-grey-500: hsl(0, 0%, 50%); //* Grey
+$color-grey-600: hsl(0, 0%, 40%); //* Dove Grey
+$color-grey-650: hsl(0, 0%, 31%); //* Emperor Grey
+$color-grey-700: hsl(0, 0%, 30%); //* Tundora Grey
+$color-black-800: hsl(0, 0%, 20%); //* Mine Shaft Grey
+$color-black-900: hsl(0, 0%, 10%); //* Cod Grey
+$color-black: hsl(0, 0%, 0%); //* Black
+
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
