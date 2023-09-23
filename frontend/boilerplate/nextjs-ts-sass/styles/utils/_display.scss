@@ -1,0 +1,25 @@
+.u-hidden {
+  display: none;
+}
+
+.u-md-hidden {
+  @media (max-width: 768px) {
+    background-color: red;
+    display: hidden;
+  }
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-md-invisible {
+  @media (max-width: 768px) {
+    background-color: red;
+    visibility: hidden;
+  }
+}
+
+.u-visible {
+  visibility: visible;
+}
