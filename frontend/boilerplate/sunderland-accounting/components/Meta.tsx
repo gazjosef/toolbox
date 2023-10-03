@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 
 interface MetaProps {
   title?: string;
@@ -12,7 +12,7 @@ const Meta: React.FC<MetaProps> = ({
   description = "Our accounting firm provides expert bookkeeping, ...", // Your default description here
 }) => {
   return (
-    <Head>
+    <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
@@ -43,7 +43,7 @@ const Meta: React.FC<MetaProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
 
       <title>{title}</title>
-    </Head>
+    </>
   );
 };
 
