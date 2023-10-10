@@ -3,7 +3,6 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <article id="home" className="article-home u-relative">
-      {/* <Header /> */}
       <div className="container">
         <h1 className="heading-one">
           SMARTER WAY TO FILE TAX RETURN{" "}

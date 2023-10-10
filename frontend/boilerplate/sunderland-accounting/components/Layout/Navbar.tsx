@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import Link from "next/link";
 
 interface MenuItem {
   title: string;
@@ -33,6 +34,18 @@ const Navbar: React.FC = () => {
     },
   ];
 
-  return <div>Navbar</div>;
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">Logo</div>
+      <div className="navbar-links">
+        <ul role="list">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </nav>
+  );
 };
 export default Navbar;
