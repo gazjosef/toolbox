@@ -1,7 +1,8 @@
 import React from "react";
 import { FaPhone } from "react-icons/fa";
-// import MapContainer from "@/components/Map/MapContainer";
 import useGsapFadeIn from "../hooks/useGsapFadeIn";
+import Form from "../components/Snippets/Form/Form";
+import Map from "../components/Snippets/Map/Map";
 
 const Contact = () => {
   const [contactTitleRef, contactMapRef, contactDetailsRef] = useGsapFadeIn();
@@ -13,9 +14,12 @@ const Contact = () => {
           <h2 className="heading-two u-margin-bottom-small">Contact Us</h2>
         </section>
 
-        <section className="article-contact__contact" ref={contactMapRef}>
+        <section
+          className="article-contact__contact | u-grid"
+          ref={contactMapRef}
+        >
           <section className="article-contact__map">
-            {/* <MapContainer /> */}
+            <Map />
           </section>
 
           <section className="article-contact__details">
@@ -44,41 +48,7 @@ const Contact = () => {
           </section>
 
           <section className="article-contact__form">
-            <form action="/action_page.php" className="form">
-              <label htmlFor="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
-
-              <label htmlFor="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
-
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-              />
-
-              <label htmlFor="subject">Subject</label>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-                style={{ height: "130px" }}
-              ></textarea>
-
-              <input type="submit" value="Submit" className="btn" />
-            </form>
+            <Form />
           </section>
         </section>
       </div>
