@@ -1,11 +1,9 @@
 import Meta from "./Meta.tsx";
 import { useRouter } from "next/router";
 
-// import Topbar from "@/components/Layout/Topbar";
+import Topbar from "./Layout/Topbar.tsx";
 import Navbar from "./Layout/Navbar.tsx";
-// import Header from "@/components/Layout/Header"; // Commented out as per your code
-
-// import Footer from "@/components/Layout/Footer";
+import Footer from "./Layout/Footer.tsx";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,13 +17,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header>
         <Meta />
       </header>
-      {/* <Topbar /> */}
+      <Topbar />
       <Navbar />
-      {/* <Header /> */}
-      {router.pathname === "/"}{" "}
-      {/* It seems like there's a condition but not being used */}
+      {router.pathname === "/"}
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
