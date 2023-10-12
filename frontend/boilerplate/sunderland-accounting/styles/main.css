@@ -2,6 +2,7 @@
   --clr-primary-100: hsl(213, 100%, 98%);
   --clr-primary-200: hsl(195, 43%, 79%);
   --clr-primary-300: hsl(202, 61%, 67%);
+  --clr-primary-350: hsl(187, 100%, 41%);
   --clr-primary-400: hsl(202, 61%, 47%);
   --clr-primary-500: hsl(209, 78%, 35%);
   --clr-secondary-100: hsl(14, 100%, 80%);
@@ -32,6 +33,10 @@
 
 .u-bg-primary-300 {
   background-color: hsl(202, 61%, 67%);
+}
+
+.u-bg-primary-350 {
+  background-color: hsl(187, 100%, 41%);
 }
 
 .u-bg-primary-400 {
@@ -116,6 +121,10 @@
 
 .u-clr-primary-300 {
   color: hsl(202, 61%, 67%) !important;
+}
+
+.u-clr-primary-350 {
+  color: hsl(187, 100%, 41%) !important;
 }
 
 .u-clr-primary-400 {
@@ -2368,7 +2377,7 @@ body {
   }
 }
 .heading-hero span {
-  color: darkblue;
+  color: var(--clr-primary-300);
 }
 
 .heading-one {
