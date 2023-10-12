@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <article id="home" className="article-home u-relative">
       <div className="container">
-        <h1 className="heading-one">
+        <h1 className="heading-hero">
           SMARTER WAY TO FILE TAX RETURN{" "}
           <span>IN PERSON. BY PHONE. ONLINE</span>
         </h1>

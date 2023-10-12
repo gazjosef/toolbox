@@ -26,7 +26,7 @@
 @each $color, $shades in $colors {
   @each $shade, $value in $shades {
     .u-clr-#{$color}-#{$shade} {
-      color: #{$value};
+      color: #{$value} !important;
     }
   }
 }
