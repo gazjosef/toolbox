@@ -7,11 +7,11 @@ const About: React.FC = () => {
 
   return (
     <article id="about" className="article-about">
-      <div className="article-about__about container">
-        <section className="article-about__title" ref={aboutTitleRef}>
+      <div className="container">
+        <section ref={aboutTitleRef}>
           <h2 className="heading-two">About Us</h2>
         </section>
-        <section className="article-about__text" ref={aboutTextRef}>
+        <section ref={aboutTextRef}>
           <p className="paragraph">
             We are a professional accounting firm dedicated to providing
             top-notch financial services to businesses and individuals. Our team
