@@ -1,0 +1,32 @@
+.form {
+  background-color: var(--clr-white-100);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+
+  input[type="text"],
+  select,
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-top: 6px;
+    padding: 1.2rem;
+    resize: vertical;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-white-0);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    transform: translateY(-0.25rem) scale(1.03);
+  }
+}

@@ -1,0 +1,48 @@
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  min-height: 30rem;
+  padding: 2.5rem;
+
+  display: grid;
+
+  font-size: 1.5rem;
+
+  transition: transform 0.3s;
+
+  & > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    color: var(--clr-primary-400);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: justify;
+    color: var(--clr-black-1000);
+    font-size: 1.5rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  &:hover {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-white-0);
+    transform: translateY(-1.5rem) scale(1.03);
+
+    p,
+    h2 {
+      color: var(--clr-white-0);
+    }
+  }
+}

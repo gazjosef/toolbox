@@ -1,0 +1,13 @@
+.footer {
+  padding: 0.5rem 0;
+
+  .border-line {
+    & > *:not(:last-child) {
+      border-right: 1px dotted var(--clr-white-0);
+
+      @include respond(tab-port) {
+        border-right: none;
+      }
+    }
+  }
+}
