@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className="header">
       <h1>Logo</h1>
       <Navbar />
     </header>
