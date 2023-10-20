@@ -1,6 +1,12 @@
 import React from "react";
+import Navbar from "./Navbar";
 
-const Navbar: React.FC = () => {
-  return <div>Navbar</div>;
+const Header: React.FC = () => {
+  return (
+    <header>
+      <h1>Logo</h1>
+      <Navbar />
+    </header>
+  );
 };
-export default Navbar;
+export default Header;
