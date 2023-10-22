@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+// import React, { useRef } from "react";
 import Image from "next/image";
 import { FaEye, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
@@ -47,12 +47,12 @@ export default function Project({ project }: ProjectProps) {
           <p>{project.frontmatter.excerpt}</p>
         </div>
 
-        <div className="post__label">
+        {/* <div className="post__label">
           {categories &&
             categories.map((category, index) => (
-              // <CategoryLabel key={index}>{category}</CategoryLabel>
+              <CategoryLabel key={index}>{category}</CategoryLabel>
             ))}
-        </div>
+        </div> */}
 
         <div className="u-mt-sm u-mx-auto | u-flex u-items-center">
           <a className="post__button" href={`${project.frontmatter.github}`}>

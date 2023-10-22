@@ -5,7 +5,7 @@ import Portfolio from "../components/Sections/Portfolio";
 import Story from "../components/Sections/Story";
 import Contact from "../components/Sections/Contact";
 
-const Home: NextPage = () => {
+const Home: NextPage = (projects) => {
   return (
     <div>
       <Head>
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Hero />
-      <Portfolio />
+      {/* <Portfolio projects={projects}/> */}
       <Story />
       <Contact />
     </div>
