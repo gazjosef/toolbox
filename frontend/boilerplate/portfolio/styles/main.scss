@@ -8,7 +8,14 @@
 @import "base/screen-reader";
 @import "base/typography";
 
+@import "layout/elements";
+@import "layout/footer";
 @import "layout/header";
+@import "layout/navbar";
+
+@import "sections/home";
+
+@import "snippets/button";
 
 @import "utils/box";
 @import "utils/color";
