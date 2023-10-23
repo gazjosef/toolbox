@@ -5,9 +5,9 @@ interface MetaProps {
 }
 
 const Meta: React.FC<MetaProps> = ({
-  title = "Ant Software Dev | Embiggened Innovation",
-  keywords = "software development, web development, custom software, mobile app development, IT services, software consulting, web design, e-commerce development, cloud computing, agile development, front-end development, back-end development, full-stack development, responsive design, SEO services", // Your long keywords list here
-  description = "Get scalable, modern and reliable custom software and let your business grow.", // Your default description here
+  title = "Gareth Hind | Web Developer",
+  keywords = "", // Your long keywords list here
+  description = "", // Your default description here
 }) => {
   return (
     <>
