@@ -4,6 +4,7 @@ import Hero from "../components/Sections/Hero";
 import Portfolio from "../components/Sections/Portfolio";
 import Story from "../components/Sections/Story";
 import Contact from "../components/Sections/Contact";
+import Gallery from "../components/Sections/Gallery";
 
 const Home: NextPage = (projects) => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = (projects) => {
 
       <Hero />
       {/* <Portfolio projects={projects}/> */}
+      <Gallery />
       <Story />
       <Contact />
     </div>

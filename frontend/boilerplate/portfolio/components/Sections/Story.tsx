@@ -8,7 +8,7 @@ const Story: React.FC = () => {
 
   return (
     <section id="story" className="section">
-      <div className="container | u-mx-auto">
+      <div className="container | u-mx-auto u-grid u-even-columns u-gap-5">
         <section className="article-story__title">
           <h1
             className="heading-one | u-mb-lg u-center-text"
@@ -17,8 +17,7 @@ const Story: React.FC = () => {
             Story
           </h1>
         </section>
-      </div>
-      <div className="container | u-mx-auto u-grid u-even-columns u-gap-5">
+
         <section ref={storyImgRef as React.RefObject<HTMLElement>}>
           <Image
             src="/images/section/undraw_programming_re_kg9v.svg"
@@ -32,17 +31,15 @@ const Story: React.FC = () => {
           ref={storyTextRef as React.RefObject<HTMLElement>}
         >
           <p className="paragraph">
-            With expertise in HTML, CSS, and SASS, I craft beautiful and
-            responsive user interfaces.
+            Web development isn&apos;t just a job; it&apos;s my calling. From my
+            very first line of code, I&apos;ve been on an exciting journey
+            through the digital universe.
           </p>
           <p className="paragraph">
-            I excel in React, Shopify and headless CMS implementations,
-            optimizing e-commerce experiences and leveraging platforms like
-            Sanity.io for seamless content management.
-          </p>
-          <p className="paragraph">
-            Let&lsquo;s collaborate to turn your vision into a successful
-            reality!
+            With a commitment to elegant solutions and a love for responsive
+            design, I&apos;ve had the privilege of crafting meaningful online
+            experiences. I&apos;m eager to continue pushing boundaries and
+            creating innovative web solutions.
           </p>
 
           <button className="btn btn--cta btn--inverse | u-max-w-max u-py-2">

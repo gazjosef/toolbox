@@ -1,0 +1,23 @@
+.article-contact {
+  &__details {
+    margin-inline: auto;
+    width: min(80%, 100rem);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    a {
+      &:visited {
+        color: black;
+      }
+    }
+
+    & > * {
+      padding: 2rem;
+      width: 50rem;
+
+      font-size: var(--fs-600);
+    }
+  }
+}
