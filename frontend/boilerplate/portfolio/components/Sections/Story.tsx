@@ -8,16 +8,12 @@ const Story: React.FC = () => {
 
   return (
     <section id="story" className="section">
+      <section className="article-story__title">
+        <h1 className="heading-one | u-mb-lg u-center-text" ref={storyTitleRef}>
+          Story
+        </h1>
+      </section>
       <div className="container | u-mx-auto u-grid u-even-columns u-gap-5">
-        <section className="article-story__title">
-          <h1
-            className="heading-one | u-mb-lg u-center-text"
-            ref={storyTitleRef}
-          >
-            Story
-          </h1>
-        </section>
-
         <section ref={storyImgRef as React.RefObject<HTMLElement>}>
           <Image
             src="/images/section/undraw_programming_re_kg9v.svg"

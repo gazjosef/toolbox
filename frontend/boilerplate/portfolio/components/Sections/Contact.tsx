@@ -8,6 +8,9 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="section">
+      <h1 className="heading-one | u-margin-bottom-small u-mx-auto u-center-text">
+        Contact
+      </h1>
       <div className="container | u-mx-auto">
         <section
           className="article-contact__image"
@@ -21,9 +24,7 @@ const Contact: React.FC = () => {
             height={572}
           />
         </section>
-        <h1 className="heading-one | u-margin-bottom-small u-mx-auto u-center-text">
-          Contact
-        </h1>
+
         <section>
           <section
             className="article-contact__details | u-bg-white-0 u-mx-auto"

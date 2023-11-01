@@ -15,7 +15,8 @@
 
     & > * {
       padding: 2rem;
-      width: 50rem;
+      // width: 50rem;
+      width: max-content;
 
       font-size: var(--fs-600);
     }

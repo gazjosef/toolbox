@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// import { FaEye, FaGithub } from "react-icons/fa";
 import Project from "../Snippets/Project";
-// import jsonData from "./projects.json";
+import jsonData from "./projects.json";
 
 interface ProjectData {
   title: string;
@@ -15,10 +14,10 @@ interface ProjectData {
 
 const Gallery: React.FC = () => {
   const [filter, setFilter] = useState("all");
-  //   const filteredProjects =
-  //     filter === "all"
-  //       ? jsonData
-  //       : jsonData.filter((project) => project.tag.includes(filter));
+  const filteredProjects =
+    filter === "all"
+      ? jsonData
+      : jsonData.filter((project) => project.tag.includes(filter));
 
   return (
     <div>
@@ -42,10 +41,10 @@ const Gallery: React.FC = () => {
           </ul>
         </div>
         <div id="grid-container" className="grid__container">
-          {/* {filteredProjects &&
+          {filteredProjects &&
             filteredProjects.map((project: ProjectData) => (
-              <Project project={project} />
-            ))} */}
+              <Project project={project} key={project.title} />
+            ))}
         </div>
       </div>
     </div>
