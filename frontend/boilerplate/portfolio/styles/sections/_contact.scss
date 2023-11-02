@@ -1,4 +1,7 @@
 .article-contact {
+  &__image {
+    margin-right: 3rem;
+  }
   &__details {
     margin-inline: auto;
     width: min(80%, 100rem);

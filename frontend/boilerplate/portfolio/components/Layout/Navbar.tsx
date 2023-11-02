@@ -19,12 +19,12 @@ const Navbar: React.FC = () => {
       url: "#home",
     },
     {
-      title: "Story",
-      url: "#story",
-    },
-    {
       title: "Portfolio",
       url: "#portfolio",
+    },
+    {
+      title: "Story",
+      url: "#story",
     },
     {
       title: "Contact",
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         id="primary-navigation"
         data-visible={false}
         role="list"
-        className={`navbar__menu | u-flex u-items-center u-gap-3
+        className={`navbar__menu | u-flex u-items-center u-gap-1
               ${toggle ? "navbar__active" : ""}
             `}
       >
