@@ -20,7 +20,7 @@ const Gallery: React.FC = () => {
       : jsonData.filter((project) => project.tag.includes(filter));
 
   return (
-    <div>
+    <section className="section">
       <div className="container">
         <div className="grid__title">
           <h1>Portolio</h1>
@@ -47,7 +47,7 @@ const Gallery: React.FC = () => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
