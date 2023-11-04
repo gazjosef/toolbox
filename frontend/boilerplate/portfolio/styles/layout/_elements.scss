@@ -8,6 +8,10 @@
   min-height: 100svh;
   padding: 10rem 20rem;
 
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
   @include respond(tab-land) {
     padding: 7.5rem 15rem;
   }
