@@ -12,18 +12,17 @@ const Contact: React.FC = () => {
         Contact
       </h1>
       <div className="container | u-mx-auto">
-        <section
+        {/* <section
           className="article-contact__image"
           ref={contactImgRef as React.RefObject<HTMLElement>}
         >
           <Image
-            className="heading-one | u-margin-bottom-small u-mx-auto u-center-text"
             src="/images/section/undraw_designer_re_5v95.svg"
             alt="responsive"
             width={960}
             height={572}
           />
-        </section>
+        </section> */}
 
         <section>
           <section

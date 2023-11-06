@@ -1,11 +1,14 @@
 .article-contact {
   &__image {
-    margin-right: 3rem;
+    // margin-right: 3rem;
+    width: min(80%, 50rem);
+    margin-inline: auto;
   }
   &__details {
     margin-inline: auto;
-    width: min(80%, 100rem);
+    width: min(80%, 80rem);
     border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     overflow: hidden;
 
     position: relative;
