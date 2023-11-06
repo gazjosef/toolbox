@@ -19,7 +19,7 @@ const Story: React.FC = () => {
             src="/images/section/undraw_programming_re_kg9v.svg"
             alt="responsive"
             width={1000}
-            height={700}
+            height={500}
           />
         </section>
         <section

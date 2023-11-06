@@ -8,22 +8,10 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="section">
-      <h1 className="heading-one | u-margin-bottom-small u-mx-auto u-center-text">
+      <h1 className="heading-one | u-mb-2xl u-mx-auto u-center-text">
         Contact
       </h1>
       <div className="container | u-mx-auto">
-        {/* <section
-          className="article-contact__image"
-          ref={contactImgRef as React.RefObject<HTMLElement>}
-        >
-          <Image
-            src="/images/section/undraw_designer_re_5v95.svg"
-            alt="responsive"
-            width={960}
-            height={572}
-          />
-        </section> */}
-
         <section>
           <section
             className="article-contact__details | u-bg-white-0 u-mx-auto"
