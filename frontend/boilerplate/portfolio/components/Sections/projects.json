@@ -5,8 +5,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "apps",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/booking-calendar",
+    "live": "https://booking-calendar-frontend.vercel.app/"
   },
   {
     "title": "Tipping App",
@@ -14,8 +14,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "apps",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/new-tipping-app",
+    "live": "https://mern-footy-tips.herokuapp.com/"
   },
   {
     "title": "Weather App",
@@ -23,8 +23,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "apps",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/weather-app",
+    "live": "https://weather-app-gazjosef.vercel.app/"
   },
   {
     "title": "BlackJack Game",
@@ -32,8 +32,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "games",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/blackjack-game",
+    "live": "https://gazjosef.github.io/blackjack-game/"
   },
   {
     "title": "Tetris Game",
@@ -49,8 +49,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "websites",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/ant-software",
+    "live": "https://ant-software.vercel.app/"
   },
   {
     "title": "Charous Cleaning",
@@ -58,8 +58,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "websites",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/charous-cleaning",
+    "live": "https://charous-cleaning.netlify.app/"
   },
   {
     "title": "Rush Wines",
@@ -67,8 +67,8 @@
     "excerpt": "",
     "categories": "",
     "tag": "websites",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/rush-wines",
+    "live": "https://www.rushwines.com.au"
   },
   {
     "title": "Sunderland Accounting",
@@ -76,7 +76,7 @@
     "excerpt": "",
     "categories": "",
     "tag": "websites",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/sunderland-accounting",
+    "live": "https://sunderland-accounting.vercel.app/"
   }
 ]
