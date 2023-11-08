@@ -3,7 +3,15 @@
     "title": "Calendar App",
     "cover_image": "/images/posts/booking-calendar3.png",
     "excerpt": "",
-    "categories": "",
+    "categories": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Tailwind",
+      "RestAPI",
+      "MongoDB"
+    ],
     "tag": "apps",
     "github": "https://github.com/gazjosef/booking-calendar",
     "live": "https://booking-calendar-frontend.vercel.app/"
@@ -12,7 +20,14 @@
     "title": "Tipping App",
     "cover_image": "/images/posts/TippingApp.png",
     "excerpt": "",
-    "categories": "",
+    "categories": [
+      "JavaScript",
+      "React",
+      "NextJS",
+      "SASS",
+      "RestAPI",
+      "MongoDB"
+    ],
     "tag": "apps",
     "github": "https://github.com/gazjosef/new-tipping-app",
     "live": "https://mern-footy-tips.herokuapp.com/"
@@ -21,7 +36,7 @@
     "title": "Weather App",
     "cover_image": "/images/posts/WeatherApp.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["JavaScript", "TypeScript", "React", "NextJS", "Tailwind"],
     "tag": "apps",
     "github": "https://github.com/gazjosef/weather-app",
     "live": "https://weather-app-gazjosef.vercel.app/"
@@ -30,7 +45,7 @@
     "title": "BlackJack Game",
     "cover_image": "/images/posts/BlackJack.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["JavaScript", "SASS"],
     "tag": "games",
     "github": "https://github.com/gazjosef/blackjack-game",
     "live": "https://gazjosef.github.io/blackjack-game/"
@@ -47,7 +62,7 @@
     "title": "Ant Software",
     "cover_image": "/images/posts/AntSoftwareDev.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["JavaScript", "React", "NextJS", "SASS", "HeadlessCMS"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/ant-software",
     "live": "https://ant-software.vercel.app/"
@@ -56,7 +71,7 @@
     "title": "Charous Cleaning",
     "cover_image": "/images/posts/charous-cleaning.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["JavaScript", "Vue", "Nuxt", "Tailwind", "HeadlessCMS"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/charous-cleaning",
     "live": "https://charous-cleaning.netlify.app/"
@@ -65,7 +80,7 @@
     "title": "Rush Wines",
     "cover_image": "/images/posts/RushWines.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["Liquid", "SASS", "Shopify"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/rush-wines",
     "live": "https://www.rushwines.com.au"
@@ -74,7 +89,7 @@
     "title": "Sunderland Accounting",
     "cover_image": "/images/posts/SunderlandAccounting.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["JavaScript", "React", "NextJS", "SASS", "HeadlessCMS"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/sunderland-accounting",
     "live": "https://sunderland-accounting.vercel.app/"
