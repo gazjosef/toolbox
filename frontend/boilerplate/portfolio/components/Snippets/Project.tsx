@@ -29,17 +29,17 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           />
         )}
       </a>
-      <h1>{project.title}</h1>
-      <p>{project.excerpt}</p>
-      <div>
-        <a className="post__button" href={`${project.github}`}>
+      <h3 className="heading-three | u-center-text">{project.title}</h3>
+      <div className="u-mt-sm u-mx-auto | u-flex u-items-center">
+        <a className="project__button" href={`${project.github}`}>
           <IconContext.Provider value={{}}>
-            <FaGithub /> READ
+            <FaGithub className="u-mr-0_75" /> READ
           </IconContext.Provider>
         </a>
-        <a className="post__button" href={`${project.live}`}>
+
+        <a className="project__button" href={`${project.live}`}>
           <IconContext.Provider value={{}}>
-            <FaEye /> LIVE
+            <FaEye className="u-mr-0_75" /> LIVE
           </IconContext.Provider>
         </a>
       </div>
