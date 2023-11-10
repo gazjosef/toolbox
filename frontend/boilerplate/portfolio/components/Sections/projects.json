@@ -68,15 +68,6 @@
     "live": "https://ant-software.vercel.app/"
   },
   {
-    "title": "Charous Cleaning",
-    "cover_image": "/images/posts/charous-cleaning.png",
-    "excerpt": "",
-    "categories": ["JavaScript", "Vue", "Nuxt", "Tailwind", "HeadlessCMS"],
-    "tag": "websites",
-    "github": "https://github.com/gazjosef/charous-cleaning",
-    "live": "https://charous-cleaning.netlify.app/"
-  },
-  {
     "title": "Rush Wines",
     "cover_image": "/images/posts/RushWines.png",
     "excerpt": "",

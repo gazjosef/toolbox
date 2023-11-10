@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="navbar | u-flex u-items-center | u-fs-nav">
+    <nav className="navbar | u-flex u-items-center | u-fs-nav u-fw-semi-bold">
       <ul
         id="primary-navigation"
         data-visible={false}
