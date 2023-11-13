@@ -52,11 +52,12 @@
   },
   {
     "title": "Tetris Game",
+    "cover_image": "/images/posts/Tetris.png",
     "excerpt": "",
-    "categories": "",
+    "categories": ["JavaScript", "SASS"],
     "tag": "games",
-    "github": "",
-    "live": ""
+    "github": "https://github.com/gazjosef/tetris",
+    "live": "https://gazjosef.github.io/tetris/"
   },
   {
     "title": "Ant Software",
