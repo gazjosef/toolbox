@@ -9,8 +9,14 @@ const Hero: React.FC = () => {
     <section id="home" className="section | u-bg-primary-50">
       <div className="container | u-mt-3xl | u-grid u-even-columns u-gap-3">
         <div ref={homeImgRef}>
-          <Image
+          {/* <Image
             src="/img/illustrations/undraw_responsive_6c8s.svg"
+            alt="responsive"
+            width={500}
+            height={350}
+          /> */}
+          <Image
+            src="/isometric-startup-development-V2B8Q7PS9T-w600.jpg"
             alt="responsive"
             width={500}
             height={350}
