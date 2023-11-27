@@ -1,0 +1,56 @@
+///////////////
+// * BORDER
+///////////////
+
+// BORDER RADIUS
+
+.u-rounded {
+  border-radius: 0.4rem;
+}
+
+// BORDER STYLE
+
+.u-border-dotted {
+  border-style: dotted;
+}
+
+// BORDER WIDTH
+
+.u-border {
+  border-width: 1px;
+}
+
+.u-border-2 {
+  border-width: 2px;
+}
+
+.u-border-4 {
+  border-width: 4px;
+}
+
+.u-border-8 {
+  border-width: 8px;
+}
+
+// BOX SHADOW
+.u-shadow {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+// HEIGHT
+
+.u-h-16 {
+  height: 16rem;
+}
+
+.u-h-200 {
+  height: 20rem;
+}
+
+.u-h-full {
+  height: 100%;
+}
+
+.u-h-min {
+  height: min-content;
+}
