@@ -21,6 +21,13 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+.primary-heading {
+  max-width: 30ch;
+
+  font-size: $fs-primary-heading;
+  font-weight: var(--fw-semi-bold);
+}
+
 .heading-home {
   margin-bottom: 3.5rem;
   max-width: 14ch;
@@ -41,7 +48,7 @@ body {
   color: var(--clr-primary-500);
   font-family: $font-third;
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 
