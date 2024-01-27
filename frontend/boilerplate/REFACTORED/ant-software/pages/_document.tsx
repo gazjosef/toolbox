@@ -8,7 +8,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
           rel="stylesheet"
         />
-        {/* //* Fonts: Montserrat, Poppins, Raleway */}
+        {/* Fonts: Montserrat, Poppins, Raleway */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 
         <link

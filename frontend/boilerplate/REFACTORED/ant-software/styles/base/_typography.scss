@@ -28,6 +28,15 @@ body {
   font-weight: var(--fw-semi-bold);
 }
 
+.secondary-heading {
+  color: var(--clr-neutral-400);
+  font-family: Raleway, sans-serif;
+  font-size: clamp(2.25rem, 2.5vw, 2.75rem);
+  font-weight: var(--fw-semi-bold);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
 .heading-home {
   margin-bottom: 3.5rem;
   max-width: 14ch;
