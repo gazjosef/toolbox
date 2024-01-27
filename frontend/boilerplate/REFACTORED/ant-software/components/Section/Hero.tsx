@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import useGsapFadeIn from "../../hooks/useGsapFadeIn";
+import CtaBtn from "../Snippets/CtaBtn";
 
 const Hero: React.FC = () => {
   const [homeTitleRef, homeTextRef, homeImgRef] = useGsapFadeIn();
@@ -28,7 +29,7 @@ const Hero: React.FC = () => {
             to capture all your unique and essential requirements.
           </p>
 
-          {/* <Button /> */}
+          <CtaBtn />
         </div>
       </div>
     </section>
