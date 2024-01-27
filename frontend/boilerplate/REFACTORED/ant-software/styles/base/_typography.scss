@@ -1,11 +1,12 @@
-$default-font-size: 1.6rem;
-$max-ch-width: 70ch;
-
+// Define typography related variables and styles
 $font-primary: "Poppins", sans-serif;
 $font-secondary: "Raleway", sans-serif;
 $font-third: "Montserrat", serif;
 $ff-body: $font-primary;
 $ff-heading: $font-primary;
+
+$default-font-size: 1.6rem;
+$max-ch-width: 70ch;
 
 $fs-body: clamp(1.4rem, 1.5vw, 1.6rem);
 $fs-primary-heading: clamp(2.5rem, 3vw, 3.5rem);
@@ -22,6 +23,7 @@ body {
 }
 
 .primary-heading {
+  margin-inline: auto;
   max-width: 30ch;
 
   font-size: $fs-primary-heading;
