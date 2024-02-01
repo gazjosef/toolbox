@@ -1,13 +1,10 @@
-// import "./App.css";
-import Iphone from "../components/Layout/Iphone";
-// import "../styles/main.css";
-import "../styles/styles.css";
+import "./App.css";
+// import Iphone from "../components/Layout/Iphone";
 
 function App() {
   return (
     <>
-      <Iphone />
-      <h1>Hello World</h1>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   );
 }
