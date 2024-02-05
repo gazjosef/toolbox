@@ -7,7 +7,7 @@ const Iphone: React.FC<iPhoneProps> = () => {
   return (
     <div className="center">
       <div className="mobile | bg-white h-[580px] w-[276px] border-solid border-2 border-neutral-400 box-border rounded-[30px] shadow-[inset_0_0_8px_rgba(0,0,0,0.3)] | relative">
-        <h1>Hello World</h1>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
         {/* <div className="screen | bg-white h-[455px] w-[256px] border-solid border-[1px] border-neutral-400 mt-24 mx-auto | relative"></div>
         <div
           className="inner | bg-black h-[4px] w-[40px] box-border rounded-sm | absolute top-[32px] left-2/4 -translate-x-2/4 |
