@@ -72,7 +72,7 @@ interface ForecastData {
 // const API_KEY = process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY;
 
 const WeatherApp: React.FC = () => {
-  return <h1>Hello World</h1>;
+  return <></>;
 };
 
 export default WeatherApp;
