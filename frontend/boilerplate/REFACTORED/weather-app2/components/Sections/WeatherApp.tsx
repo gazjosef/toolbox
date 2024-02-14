@@ -42,8 +42,8 @@ interface CurrentForecastData {
   wind: { speed: number | null; deg: number | null; gust: number | null };
 }
 
-const API_KEY: string | undefined =
-  process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY;
+// const API_KEY: string | undefined =
+//   process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY;
 
 const WeatherApp: React.FC = () => {
   const [city, setCity] = useState<string>("sydney");
