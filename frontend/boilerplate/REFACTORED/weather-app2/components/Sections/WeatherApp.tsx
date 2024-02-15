@@ -149,23 +149,23 @@ const WeatherApp: React.FC = () => {
     <div className="bg-slate-50 h-full py-[20px] px-[10px] | flex flex-col items-center	justify-between">
       <form
         onSubmit={getWeather}
-        className="weather-app__title | bg-sky-500 border-2 border-solid rounded-[5px] w-full | flex items-center overflow-hidden"
+        className="weather-app__title |  border-2 border-solid rounded-[5px] w-full | flex items-center overflow-hidden"
       >
         <input
           type="text"
           name="city"
           placeholder="E.g Sydney.."
-          className="w-full p-[6px]"
+          className="w-full p-[6px] text-xs"
         />
         <input
           type="text"
           name="country"
           placeholder="E.g AU.."
-          className="w-full p-[6px]"
+          className="w-full p-[6px] text-xs"
         />
-        <button type="submit">
+        <button type="submit" className="bg-sky-500 rounded-[5px] ">
           <IconContext.Provider
-            value={{ className: "h-[15px] w-[25px] text-white" }}
+            value={{ className: "h-[15px] w-[15px] text-white" }}
           >
             <FaSearch />
           </IconContext.Provider>
