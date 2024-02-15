@@ -4,8 +4,8 @@ import { IconContext } from "react-icons";
 import { FaSearch } from "react-icons/fa";
 
 // ** Import Shared Components
-// import Current from "./Forecast/Current";
-// import Future from "./Forecast/Future";
+import Current from "../Sections/Current";
+import Upcoming from "../Sections/Upcoming";
 
 interface CurrentForecastData {
   base: string;
@@ -172,13 +172,15 @@ const WeatherApp: React.FC = () => {
         </button>
       </form>
 
-      {/* <Current
-        currentForecast={currentForecast}
-        city={city}
-        country={country}
-      /> */}
+      <Current
+      // currentForecast={currentForecast}
+      // city={city}
+      // country={country}
+      />
 
-      {/* <Future futureForecast={futureForecast} /> */}
+      <Upcoming
+      // futureForecast={futureForecast}
+      />
     </div>
   );
 };
