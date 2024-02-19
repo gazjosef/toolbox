@@ -68,7 +68,7 @@ const Current: React.FC<CurrentProps> = ({
 
   return (
     <div className="current | bg-sky-500 h-[250px] w-full border-solid rounded-[10px] overflow-hidden | text-slate-50">
-      <h1>Current</h1>
+      <h1 className="text-sm text-left">Current</h1>
     </div>
   );
 };
