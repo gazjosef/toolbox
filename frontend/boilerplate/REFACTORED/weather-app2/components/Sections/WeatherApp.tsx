@@ -173,9 +173,9 @@ const WeatherApp: React.FC = () => {
       </form>
 
       <Current
-      // currentForecast={currentForecast}
-      // city={city}
-      // country={country}
+        currentForecast={currentForecast}
+        city={city}
+        country={country}
       />
 
       <Upcoming
