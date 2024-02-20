@@ -156,7 +156,7 @@ const WeatherApp: React.FC = () => {
         </button>
       </form>
 
-      <Current weatherData={weatherData} />
+      <Current weatherData={weatherData} city={city} country={country} />
 
       <Upcoming />
     </div>
