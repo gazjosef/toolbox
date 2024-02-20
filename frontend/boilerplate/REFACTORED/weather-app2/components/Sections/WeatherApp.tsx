@@ -1,4 +1,9 @@
-import { useState, useEffect, FormEvent } from "react";
+import {
+  useState,
+  useEffect,
+  // FormEvent
+} from "react";
+import axios from "axios";
 // ** Import Icons
 import { IconContext } from "react-icons";
 import { FaSearch } from "react-icons/fa";
@@ -7,148 +12,127 @@ import { FaSearch } from "react-icons/fa";
 import Current from "../Sections/Current";
 import Upcoming from "../Sections/Upcoming";
 
-interface CurrentForecastData {
+export interface WeatherData {
   base: string;
-  clouds: { all: number | null };
-  cod: number | null;
-  coord: { lon: number | null; lat: number | null };
-  dt: number | null;
-  id: number | null;
+  clouds: {
+    all: number;
+  };
+  cod: number;
+  coord: {
+    lon: number;
+    lat: number;
+  };
+  dt: number;
+  id: number;
   main: {
-    feels_like: number | null;
-    humidity: number | null;
-    pressure: number | null;
-    temp: number | null;
-    temp_min: number | null;
-    temp_max: number | null;
+    feels_like: number;
+    humidity: number;
+    pressure: number;
+    temp: number;
+    temp_min: number;
+    temp_max: number;
   };
-  name: string | null;
-  rain: { [key: string]: number } | null;
+  name: string;
+  rain: {
+    [key: string]: number;
+  };
   sys: {
-    type: number | null;
-    id: number | null;
-    country: string | null;
-    sunrise: number | null;
-    sunset: number | null;
+    type: number;
+    id: number;
+    country: string;
+    sunrise: number;
+    sunset: number;
   };
-  timezone: number | null;
-  visibility: number | null;
+  timezone: number;
+  visibility: number;
   weather: Array<{
-    description: string | null;
-    icon: string | null;
-    id: number | null;
-    main: string | null;
+    description: string;
+    icon: string;
+    id: number;
+    main: string;
   }>;
-  wind: { speed: number | null; deg: number | null; gust: number | null };
+  wind: {
+    speed: number;
+    deg: number;
+    gust: number;
+  };
 }
 
-const API_KEY: string | undefined = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
+// interface CurrentForecastData {
+//   base: string;
+//   clouds: {
+//     all: number | null;
+//   };
+//   cod: number | null;
+//   coord: {
+//     lon: number | null;
+//     lat: number | null;
+//   };
+//   dt: number | null;
+//   id: number | null;
+//   main: {
+//     feels_like: number | null;
+//     humidity: number | null;
+//     pressure: number | null;
+//     temp: number | null;
+//     temp_min: number | null;
+//     temp_max: number | null;
+//   };
+//   name: string | null;
+//   rain: {
+//     [key: string]: number;
+//   } | null;
+//   sys: {
+//     type: number | null;
+//     id: number | null;
+//     country: string | null;
+//     sunrise: number | null;
+//     sunset: number | null;
+//   };
+//   timezone: number | null;
+//   visibility: number | null;
+//   weather: Array<{
+//     description: string | null;
+//     icon: string | null;
+//     id: number | null;
+//     main: string | null;
+//   }>;
+//   wind: {
+//     speed: number | null;
+//     deg: number | null;
+//     gust: number | null;
+//   };
+// }
 
 const WeatherApp: React.FC = () => {
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [city, setCity] = useState<string>("sydney");
   const [country, setCountry] = useState<string>("au");
-
-  const [currentForecast, setCurrentForecast] = useState<CurrentForecastData>({
-    base: "stations",
-    clouds: { all: null },
-    cod: null,
-    coord: { lon: null, lat: null },
-    dt: null,
-    id: null,
-    main: {
-      feels_like: null,
-      humidity: null,
-      pressure: null,
-      temp: null,
-      temp_min: null,
-      temp_max: null,
-    },
-    name: null,
-    rain: null,
-    sys: {
-      type: null,
-      id: null,
-      country: null,
-      sunrise: null,
-      sunset: null,
-    },
-    timezone: null,
-    visibility: null,
-    weather: [{ description: null, icon: null, id: null, main: null }],
-    wind: { speed: null, deg: null, gust: null },
-  });
-
-  const [futureForecast, setFutureForecast] = useState<unknown[]>([]);
+  const API_KEY: string = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 
   useEffect(() => {
-    const getCurrentData = async () => {
-      const api_call = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
-      );
-      const data = await api_call.json();
+    async function fetchWeather(): Promise<void> {
+      try {
+        const response = await axios.get<WeatherData>(
+          `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
+        );
+        setWeatherData(response.data);
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+      }
+    }
 
-      setCurrentForecast(data);
-      console.log("Set Weather Data", data);
-    };
-    getCurrentData();
-  }, [city, country]);
+    fetchWeather();
+  }, [city, country, API_KEY]);
 
-  useEffect(() => {
-    const getFutureData = async () => {
-      const api_call = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=sydney,nsw&appid=${API_KEY}`
-      );
-      const futureData = await api_call.json();
+  // setCity("sydney");
+  // setCountry("au");
 
-      setFutureForecast(futureData.list.slice(0, 5));
-      console.log("Get Future Data", futureData.list.slice(0, 5));
-    };
-    getFutureData();
-  }, []);
-
-  const getWeather = async (e: FormEvent) => {
-    e.preventDefault();
-
-    const target = e.target as typeof e.target & {
-      elements: {
-        city: { value: string };
-        country: { value: string };
-      };
-    };
-
-    const city = target.elements.city.value;
-    const country = target.elements.country.value;
-
-    const api_call = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
-    );
-    const currentForecastData = await api_call.json();
-
-    console.log("Get Current Forecast Data", currentForecastData);
-
-    setCurrentForecast(currentForecastData);
-    setCity(currentForecastData.name);
-    setCountry(currentForecastData.sys.country);
-
-    const api_call2 = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${API_KEY}`
-    );
-    const futureForecastData = await api_call2.json();
-
-    console.log(
-      "Get Future Forecast Data",
-      futureForecastData.list.slice(0, 5)
-    );
-
-    setFutureForecast(futureForecastData.list.slice(0, 5));
-  };
-
-  console.log("using unused variables", currentForecast, futureForecast);
-
+  console.log("weatherData", weatherData);
   return (
     <div className="bg-slate-50 h-full py-[20px] px-[10px] | flex flex-col items-center	justify-between">
       <form
-        onSubmit={getWeather}
+        // onSubmit={fetchWeather}
         className="weather-app__title |  border-2 border-solid rounded-[5px] w-full | flex items-center overflow-hidden"
       >
         <input
@@ -172,15 +156,9 @@ const WeatherApp: React.FC = () => {
         </button>
       </form>
 
-      <Current
-        currentForecast={currentForecast}
-        city={city}
-        country={country}
-      />
+      <Current weatherData={weatherData} />
 
-      <Upcoming
-      // futureForecast={futureForecast}
-      />
+      <Upcoming />
     </div>
   );
 };
