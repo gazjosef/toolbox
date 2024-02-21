@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { WeatherData } from "./WeatherApp";
 import { IconContext } from "react-icons";
 import {
@@ -16,17 +16,20 @@ interface CurrentProps {
 }
 
 const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
-  const [time, setTime] = useState<number | null>(null);
+  const [currentTime, setCurrentTime] = useState<number>(Date.now());
+  const intervalRef = useRef<number>();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(Date.now());
+    intervalRef.current = window.setInterval(() => {
+      setCurrentTime(Date.now());
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(intervalRef.current);
+    };
   }, []);
 
-  const currentDate = new Date(time ?? 0);
+  const currentDate = new Date(currentTime ?? 0);
   const options: Intl.DateTimeFormatOptions = {
     month: "long",
     day: "numeric",
@@ -41,10 +44,11 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
 
     return directions[direction];
   };
-  console.log("weatherData", weatherData);
 
   if (!weatherData) {
     return <div>Loading...</div>;
+  } else {
+    console.log("weatherData", weatherData);
   }
 
   return (
@@ -66,8 +70,8 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
         </div>
 
         <div className="flex flex-col items-center justify-center | text-[14px] text-center">
-          <h2>{time && currentDate.toLocaleTimeString()}</h2>
-          <h2>{time && currentDate.toLocaleDateString(undefined, options)}</h2>
+          <h2>{currentDate.toLocaleTimeString()}</h2>
+          <h2>{currentDate.toLocaleDateString(undefined, options)}</h2>
           <span className="text-[25px]">
             <h2>{Math.floor(weatherData.main.temp)}&#8451;</h2>
           </span>
@@ -75,10 +79,10 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
         </div>
       </section>
 
-      <section className="h-[40px] border-t-[1px] border-solid | flex | text-sm">
+      <section className="h-[40px] border-t-[1px] border-solid | flex | text-[10px]">
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
-            <FaWind fontSize="1.5rem" />
+            <FaWind fontSize="1.2rem" />
           </div>
           <div>
             <div>{directionConverter(weatherData.wind.deg)} Wind</div>
@@ -88,7 +92,7 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
 
         <section className="w-full | flex items-center justify-center">
           <section className="mr-[15px]">
-            <FaThermometerHalf fontSize="1.5rem" />
+            <FaThermometerHalf fontSize="1.2rem" />
           </section>
           <div>
             <div>Feels Like</div>
@@ -97,10 +101,10 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
         </section>
       </section>
 
-      <section className="h-[40px] border-t-[1px] border-solid | flex">
+      <section className="h-[40px] border-t-[1px] border-solid | flex | text-[10px]">
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
-            <FaWater fontSize="1.5rem" />
+            <FaWater fontSize="1.2rem" />
           </div>
           <div>
             <div>Humidity</div>
@@ -110,7 +114,7 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
 
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
-            <FaChartLine fontSize="1.5rem" />
+            <FaChartLine fontSize="1.2rem" />
           </div>
           <div>
             <div>Pressure</div>

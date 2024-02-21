@@ -58,58 +58,72 @@ export interface WeatherData {
   };
 }
 
-// interface CurrentForecastData {
-//   base: string;
-//   clouds: {
-//     all: number | null;
-//   };
-//   cod: number | null;
-//   coord: {
-//     lon: number | null;
-//     lat: number | null;
-//   };
-//   dt: number | null;
-//   id: number | null;
-//   main: {
-//     feels_like: number | null;
-//     humidity: number | null;
-//     pressure: number | null;
-//     temp: number | null;
-//     temp_min: number | null;
-//     temp_max: number | null;
-//   };
-//   name: string | null;
-//   rain: {
-//     [key: string]: number;
-//   } | null;
-//   sys: {
-//     type: number | null;
-//     id: number | null;
-//     country: string | null;
-//     sunrise: number | null;
-//     sunset: number | null;
-//   };
-//   timezone: number | null;
-//   visibility: number | null;
-//   weather: Array<{
-//     description: string | null;
-//     icon: string | null;
-//     id: number | null;
-//     main: string | null;
-//   }>;
-//   wind: {
-//     speed: number | null;
-//     deg: number | null;
-//     gust: number | null;
-//   };
-// }
+export interface UpcomingData {
+  cod: string;
+  message: number;
+  cnt: number;
+  list: WeatherEntry[];
+  city: {
+    id: number;
+    name: string;
+    coord: {
+      lat: number;
+      lon: number;
+    };
+    country: string;
+    population: number;
+    timezone: number;
+    sunrise: number;
+    sunset: number;
+  };
+}
+
+interface WeatherEntry {
+  dt: number;
+  main: {
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    pressure: number;
+    sea_level: number;
+    grnd_level: number;
+    humidity: number;
+    temp_kf: number;
+  };
+  weather: {
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
+  }[];
+  clouds: {
+    all: number;
+  };
+  wind: {
+    speed: number;
+    deg: number;
+    gust: number;
+  };
+  visibility: number;
+  pop: number;
+  rain?: {
+    "3h": number;
+  };
+  sys: {
+    pod: string;
+  };
+  dt_txt: string;
+}
 
 const WeatherApp: React.FC = () => {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
+  const [upcomingData, setUpcomingData] = useState<UpcomingData | null>(null);
   const [city, setCity] = useState<string>("sydney");
   const [country, setCountry] = useState<string>("au");
   const API_KEY: string = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 
+  //* Fetch Weather
   useEffect(() => {
     async function fetchWeather(): Promise<void> {
       try {
@@ -125,10 +139,31 @@ const WeatherApp: React.FC = () => {
     fetchWeather();
   }, [city, country, API_KEY]);
 
-  // setCity("sydney");
-  // setCountry("au");
+  //* Fetch Upcoming Weather
+  useEffect(() => {
+    async function fetchUpcomingWeather(): Promise<void> {
+      try {
+        const response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/forecast?q=sydney,nsw&appid=${API_KEY}`
+        );
+        setUpcomingData(response.data);
+        // setUpcomingData(response.data.list.slice(0, 5));
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+      }
+    }
 
-  console.log("weatherData", weatherData);
+    fetchUpcomingWeather();
+  }, [API_KEY]);
+
+  if (weatherData) {
+    console.log("weatherData", weatherData);
+  }
+
+  if (upcomingData) {
+    console.log("upcomingData", upcomingData);
+  }
+
   return (
     <div className="bg-slate-50 h-full py-[20px] px-[10px] | flex flex-col items-center	justify-between">
       <form
@@ -158,7 +193,7 @@ const WeatherApp: React.FC = () => {
 
       <Current weatherData={weatherData} city={city} country={country} />
 
-      <Upcoming />
+      <Upcoming upcomingData={upcomingData} />
     </div>
   );
 };
