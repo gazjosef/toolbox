@@ -59,23 +59,7 @@ export interface WeatherData {
 }
 
 export interface UpcomingData {
-  cod: string;
-  message: number;
-  cnt: number;
   list: WeatherEntry[];
-  city: {
-    id: number;
-    name: string;
-    coord: {
-      lat: number;
-      lon: number;
-    };
-    country: string;
-    population: number;
-    timezone: number;
-    sunrise: number;
-    sunset: number;
-  };
 }
 
 interface WeatherEntry {
@@ -118,7 +102,7 @@ interface WeatherEntry {
 
 const WeatherApp: React.FC = () => {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
-  const [upcomingData, setUpcomingData] = useState<UpcomingData | null>(null);
+  const [upcomingData, setUpcomingData] = useState<UpcomingData[] | null>(null);
   const [city, setCity] = useState<string>("sydney");
   const [country, setCountry] = useState<string>("au");
   const API_KEY: string = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
@@ -146,8 +130,15 @@ const WeatherApp: React.FC = () => {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/forecast?q=sydney,nsw&appid=${API_KEY}`
         );
-        setUpcomingData(response.data);
-        // setUpcomingData(response.data.list.slice(0, 5));
+        const resArray = response.data.list;
+
+        if (Array.isArray(resArray)) {
+          console.log("resArray", resArray);
+          setUpcomingData(resArray.slice(0, 5));
+        }
+
+        // setUpcomingData(resArray);
+        // setUpcomingData(response.data);
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }

@@ -19,15 +19,15 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
   const [currentTime, setCurrentTime] = useState<number>(Date.now());
   const intervalRef = useRef<number>();
 
-  useEffect(() => {
-    intervalRef.current = window.setInterval(() => {
-      setCurrentTime(Date.now());
-    }, 1000);
+  // useEffect(() => {
+  //   intervalRef.current = window.setInterval(() => {
+  //     setCurrentTime(Date.now());
+  //   }, 1000);
 
-    return () => {
-      clearInterval(intervalRef.current);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(intervalRef.current);
+  //   };
+  // }, []);
 
   const currentDate = new Date(currentTime ?? 0);
   const options: Intl.DateTimeFormatOptions = {
@@ -70,8 +70,8 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
         </div>
 
         <div className="flex flex-col items-center justify-center | text-[14px] text-center">
-          <h2>{currentDate.toLocaleTimeString()}</h2>
-          <h2>{currentDate.toLocaleDateString(undefined, options)}</h2>
+          {/* <h2>{currentDate.toLocaleTimeString()}</h2>
+          <h2>{currentDate.toLocaleDateString(undefined, options)}</h2> */}
           <span className="text-[25px]">
             <h2>{Math.floor(weatherData.main.temp)}&#8451;</h2>
           </span>
