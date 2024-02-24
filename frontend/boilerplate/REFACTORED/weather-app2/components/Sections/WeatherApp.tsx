@@ -1,13 +1,8 @@
-import {
-  useState,
-  useEffect,
-  // FormEvent
-} from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 // ** Import Icons
 import { IconContext } from "react-icons";
 import { FaSearch } from "react-icons/fa";
-
 // ** Import Shared Components
 import Current from "../Sections/Current";
 import Upcoming from "../Sections/Upcoming";
@@ -135,9 +130,6 @@ const WeatherApp: React.FC = () => {
         if (Array.isArray(responseArr)) {
           setUpcomingData(responseArr.slice(0, 5));
         }
-
-        // setUpcomingData(resArray);
-        // setUpcomingData(response.data);
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }

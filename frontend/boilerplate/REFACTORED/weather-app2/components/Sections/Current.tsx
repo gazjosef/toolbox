@@ -1,5 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { WeatherData } from "./WeatherApp";
+import {
+  // useEffect,
+  useRef,
+  useState,
+} from "react";
+// ** Import Icons
 import { IconContext } from "react-icons";
 import {
   FaWind,
@@ -7,6 +11,8 @@ import {
   FaWater,
   FaChartLine,
 } from "react-icons/fa";
+// ** Import Shared Components
+import { WeatherData } from "./WeatherApp";
 import { iconConverter } from "../Snippets/iconConverter.tsx";
 
 interface CurrentProps {
@@ -70,8 +76,8 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
         </div>
 
         <div className="flex flex-col items-center justify-center | text-[14px] text-center">
-          {/* <h2>{currentDate.toLocaleTimeString()}</h2>
-          <h2>{currentDate.toLocaleDateString(undefined, options)}</h2> */}
+          {/* <h2>{currentDate.toLocaleTimeString()}</h2> */}
+          <h2>{currentDate.toLocaleDateString(undefined, options)}</h2>
           <span className="text-[25px]">
             <h2>{Math.floor(weatherData.main.temp)}&#8451;</h2>
           </span>

@@ -1,10 +1,11 @@
 import React from "react";
-import { UpcomingData, WeatherEntry } from "./WeatherApp";
+import { WeatherEntry } from "./WeatherApp";
+// ** Import Icons
 import { IconContext } from "react-icons";
 import { iconConverter } from "../Snippets/iconConverter.tsx";
 
 interface UpcomingProps {
-  upcomingData: UpcomingData[] | null;
+  upcomingData: WeatherEntry[] | null;
 }
 
 const Upcoming: React.FC<UpcomingProps> = ({ upcomingData }) => {
