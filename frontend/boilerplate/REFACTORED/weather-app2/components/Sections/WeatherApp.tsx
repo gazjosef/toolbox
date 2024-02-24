@@ -62,7 +62,7 @@ export interface UpcomingData {
   list: WeatherEntry[];
 }
 
-interface WeatherEntry {
+export interface WeatherEntry {
   dt: number;
   main: {
     temp: number;
@@ -130,11 +130,11 @@ const WeatherApp: React.FC = () => {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/forecast?q=sydney,nsw&appid=${API_KEY}`
         );
-        const resArray = response.data.list;
+        const responseArr = response.data.list;
 
-        if (Array.isArray(resArray)) {
-          console.log("resArray", resArray);
-          setUpcomingData(resArray.slice(0, 5));
+        if (Array.isArray(responseArr)) {
+          console.log("responseArr", responseArr);
+          setUpcomingData(responseArr.slice(0, 5));
         }
 
         // setUpcomingData(resArray);
