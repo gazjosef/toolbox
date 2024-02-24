@@ -133,7 +133,6 @@ const WeatherApp: React.FC = () => {
         const responseArr = response.data.list;
 
         if (Array.isArray(responseArr)) {
-          console.log("responseArr", responseArr);
           setUpcomingData(responseArr.slice(0, 5));
         }
 
@@ -147,13 +146,13 @@ const WeatherApp: React.FC = () => {
     fetchUpcomingWeather();
   }, [API_KEY]);
 
-  if (weatherData) {
-    console.log("weatherData", weatherData);
-  }
+  // if (weatherData) {
+  //   console.log("weatherData", weatherData);
+  // }
 
-  if (upcomingData) {
-    console.log("upcomingData", upcomingData);
-  }
+  // if (upcomingData) {
+  //   console.log("upcomingData", upcomingData);
+  // }
 
   return (
     <div className="bg-slate-50 h-full py-[20px] px-[10px] | flex flex-col items-center	justify-between">

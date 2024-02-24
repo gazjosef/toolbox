@@ -7,7 +7,7 @@ import {
   FaWater,
   FaChartLine,
 } from "react-icons/fa";
-// import { iconConverter } from "../Snippets/iconConverter/iconConverter.js";
+import { iconConverter } from "../Snippets/iconConverter.tsx";
 
 interface CurrentProps {
   weatherData: WeatherData | null;
@@ -48,7 +48,7 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
   if (!weatherData) {
     return <div>Loading...</div>;
   } else {
-    console.log("weatherData", weatherData);
+    // console.log("weatherData", weatherData);
   }
 
   return (
@@ -60,7 +60,7 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
               className: "font-semibold	text-[100px] text-white",
             }}
           >
-            {weatherData.weather[0].icon}
+            {iconConverter(weatherData.weather[0].icon)}
           </IconContext.Provider>
           <span className="text-center uppercase">
             <h2 className="font-semibold	text-[14px] text text-center">
