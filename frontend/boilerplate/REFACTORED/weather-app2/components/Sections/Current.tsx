@@ -1,8 +1,8 @@
-import {
-  // useEffect,
-  useRef,
-  useState,
-} from "react";
+// import {
+//   useEffect,
+//   useRef,
+//   useState,
+// } from "react";
 // ** Import Icons
 import { IconContext } from "react-icons";
 import {
@@ -22,8 +22,10 @@ interface CurrentProps {
 }
 
 const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
-  const [currentTime, setCurrentTime] = useState<number>(Date.now());
-  const intervalRef = useRef<number>();
+  // TODO : TIME
+  const currentTime = Date.now();
+  // const [currentTime, setCurrentTime] = useState<number>(Date.now());
+  // const intervalRef = useRef<number>();
 
   // useEffect(() => {
   //   intervalRef.current = window.setInterval(() => {
@@ -59,7 +61,7 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
 
   return (
     <div className="current | bg-sky-500 h-[250px] w-full border-solid rounded-[10px] overflow-hidden | text-slate-50">
-      <section className="h-[170px] p-[15px] | grid grid-cols-2	">
+      <section className="h-[170px] p-[15px] | grid grid-cols-2 gap-1	">
         <div>
           <IconContext.Provider
             value={{
@@ -75,8 +77,7 @@ const Current: React.FC<CurrentProps> = ({ weatherData, city, country }) => {
           </span>
         </div>
 
-        <div className="flex flex-col items-center justify-center | text-[14px] text-center">
-          {/* <h2>{currentDate.toLocaleTimeString()}</h2> */}
+        <div className="flex flex-col gap-1 items-center justify-center | text-[14px] text-center">
           <h2>{currentDate.toLocaleDateString(undefined, options)}</h2>
           <span className="text-[25px]">
             <h2>{Math.floor(weatherData.main.temp)}&#8451;</h2>

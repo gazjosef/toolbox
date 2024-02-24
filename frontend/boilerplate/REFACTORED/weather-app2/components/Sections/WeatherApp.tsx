@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-// ** Import Icons
-import { IconContext } from "react-icons";
-import { FaSearch } from "react-icons/fa";
 // ** Import Shared Components
 import Current from "../Sections/Current";
 import Upcoming from "../Sections/Upcoming";
+import SearchBar from "../Snippets/SearchBar";
 
 export interface WeatherData {
   base: string;
@@ -148,30 +146,7 @@ const WeatherApp: React.FC = () => {
 
   return (
     <div className="bg-slate-50 h-full py-[20px] px-[10px] | flex flex-col items-center	justify-between">
-      <form
-        // onSubmit={fetchWeather}
-        className="weather-app__title |  border-2 border-solid rounded-[5px] w-full | flex items-center overflow-hidden"
-      >
-        <input
-          type="text"
-          name="city"
-          placeholder="E.g Sydney.."
-          className="w-full p-[6px] text-xs"
-        />
-        <input
-          type="text"
-          name="country"
-          placeholder="E.g AU.."
-          className="w-full p-[6px] text-xs"
-        />
-        <button type="submit" className="bg-sky-500 rounded-[5px] ">
-          <IconContext.Provider
-            value={{ className: "h-[15px] w-[15px] text-white" }}
-          >
-            <FaSearch />
-          </IconContext.Provider>
-        </button>
-      </form>
+      <SearchBar setCity={setCity} setCountry={setCountry} />
 
       <Current weatherData={weatherData} city={city} country={country} />
 
