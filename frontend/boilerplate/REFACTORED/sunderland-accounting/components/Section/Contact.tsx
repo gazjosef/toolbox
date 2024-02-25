@@ -43,7 +43,7 @@ const Contact = () => {
               Email: info@sunderland.com.au <br />
             </p>
             <button className="btn btn--contact | u-flex u-items-center u-justify-between">
-              <FaPhone className="u-mx-0-5" /> 02 9644 9220
+              <FaPhone className="u-mr-1" /> 02 9644 9220
             </button>
           </section>
 

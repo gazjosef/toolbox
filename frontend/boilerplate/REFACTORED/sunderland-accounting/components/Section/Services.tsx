@@ -1,4 +1,5 @@
 import React from "react";
+// ** Import Icons
 import { IconContext } from "react-icons";
 import {
   FaAngleUp,
@@ -6,6 +7,7 @@ import {
   FaBriefcase,
   FaPaperclip,
 } from "react-icons/fa";
+// ** Import Hooks
 import useGsapFadeIn from "../../hooks/useGsapFadeIn";
 
 const Services: React.FC = () => {
@@ -62,9 +64,8 @@ const Services: React.FC = () => {
           <div className="article-services__text">
             <h3 className="heading-three">FINANCIAL REPORTING</h3>
             <p className="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perspiciatis exercitationem dignissimos sed a tempora saepe optio
-              esse aut sequi earum.
+              Our Financial Reporting Services go beyond numbers, providing
+              comprehensive insights into your business&apos; financial health.
             </p>
           </div>
         </section>
@@ -78,9 +79,9 @@ const Services: React.FC = () => {
           <div className="article-services__text">
             <h3 className="heading-three">BOOKKEEPING SERVICES</h3>
             <p className="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perspiciatis exercitationem dignissimos sed a tempora saepe optio
-              esse aut sequi earum.
+              We provide a range of bookkeeping services, including ledger
+              maintenance, invoicing, and expense tracking, allowing you to
+              tailor our services to fit your business model seamlessly.
             </p>
           </div>
         </section>
@@ -94,9 +95,10 @@ const Services: React.FC = () => {
           <div className="article-services__text">
             <h3 className="heading-three">PAYROLL SERVICES</h3>
             <p className="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perspiciatis exercitationem dignissimos sed a tempora saepe optio
-              esse aut sequi earum.
+              We take care of the entire payroll cycle, from data entry to tax
+              filing. Whether you&apos;re a small business owner or part of a
+              larger organization, our services scale to meet your payroll
+              needs.
             </p>
           </div>
         </section>

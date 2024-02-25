@@ -34,10 +34,10 @@ const Footer: React.FC = () => {
 
         <section className="footer__icons | u-mx-auto u-mb-md | u-flex u-items-center u-justify-center | u-fs-800">
           <IconContext.Provider value={{ className: "" }}>
-            <FaFacebook className="u-mx-0-5" />
-            <FaGooglePlus className="u-mx-0-5" />
-            <FaInstagram className="u-mx-0-5" />
-            <FaLinkedin className="u-mx-0-5" />
+            <FaFacebook className="u-mr-1" />
+            <FaGooglePlus className="u-mx-1" />
+            <FaInstagram className="u-mx-1" />
+            <FaLinkedin className="u-ml-1" />
           </IconContext.Provider>
         </section>
 

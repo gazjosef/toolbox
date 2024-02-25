@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Header from "../Layout/Header";
 
 const Hero: React.FC = () => {
   return (
     <article id="home" className="article-home u-relative">
+      <Header />
       <div className="container">
         <h1 className="heading-hero">
           SMARTER WAY TO FILE TAX RETURN{" "}

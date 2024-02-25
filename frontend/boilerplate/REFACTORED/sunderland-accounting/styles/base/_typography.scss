@@ -62,9 +62,17 @@ body {
 }
 
 .heading-two {
+  margin-bottom: 1rem;
+
   font-family: $font-primary;
-  font-size: 2rem;
+  font-size: clamp(2rem, 2.5vw, 3rem);
   font-weight: var(--fw-bold);
+
+  text-transform: uppercase;
+
+  @include respond(phone) {
+    text-align: center;
+  }
 }
 
 .heading-three {
