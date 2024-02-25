@@ -1,4 +1,6 @@
-const Hero = () => {
+import Link from "next/link";
+
+const Hero: React.FC = () => {
   return (
     <article id="home" className="article-home u-relative">
       <div className="container">
@@ -11,9 +13,7 @@ const Hero = () => {
           refund with no tax knowledge needed.
         </p>
         <button className="btn btn--home">
-          {/* <Link href="#">
-            <a>Book Appointment</a>
-          </Link> */}
+          <Link href="#">Book Appointment</Link>
         </button>
       </div>
     </article>

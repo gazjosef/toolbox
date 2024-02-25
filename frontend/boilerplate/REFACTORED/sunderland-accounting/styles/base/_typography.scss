@@ -23,7 +23,7 @@ body {
 
 .heading-hero {
   margin-bottom: 3.5rem;
-  max-width: 14ch;
+  max-width: 30ch;
 
   color: var(--clr-white-0);
   font-family: $ff-heading;
@@ -76,7 +76,7 @@ body {
 }
 
 .paragraph {
-  max-width: 45ch;
+  max-width: 65ch;
 
   color: $clr-primary-100;
   font-size: clamp(1.6rem, 1.8vw, 2rem);
