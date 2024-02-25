@@ -6,12 +6,12 @@ const About: React.FC = () => {
   const [aboutTitleRef, aboutTextRef, aboutGalleryRef] = useGsapFadeIn();
 
   return (
-    <article id="about" className="article-about">
-      <div className="container">
-        <section ref={aboutTitleRef}>
+    <article id="about" className="section article-about">
+      <div className="container | article-about__about">
+        <section className="article-about__title" ref={aboutTitleRef}>
           <h2 className="heading-two">About Us</h2>
         </section>
-        <section ref={aboutTextRef}>
+        <section className="article-about__text" ref={aboutTextRef}>
           <p className="paragraph">
             We are a professional accounting firm dedicated to providing
             top-notch financial services to businesses and individuals. Our team

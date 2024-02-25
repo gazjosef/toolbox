@@ -6,7 +6,7 @@
 .section {
   min-height: 100vh;
   min-height: 100svh;
-  padding: 10rem 20rem;
+  padding: 10rem 0rem;
 
   @include respond(tab-land) {
     padding: 7.5rem 15rem;

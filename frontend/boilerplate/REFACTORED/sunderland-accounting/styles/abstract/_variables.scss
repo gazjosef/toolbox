@@ -29,6 +29,26 @@ $clr-black-800: hsl(0, 0%, 20%); // 333333 | Mine Shaft Grey
 $clr-black-900: hsl(0, 0%, 10%); // 1a1a1a | Cod Grey
 $clr-black: hsl(0, 0%, 0%); // 000000 | Black
 
+//* --- White To Black
+$color-white: hsl(0, 0%, 100%); // ffffff | White
+$color-white-50: hsl(0, 0%, 95%); // f2f2f2 | Concrete White
+$color-white-100: hsl(0, 0%, 90%); // e6e6e6 | Mercury White
+$color-white-200: hsl(0, 0%, 80%); // cccccc | Silver White
+$color-grey-300: hsl(0, 0%, 70%); // b3b3b3 | Nobel Grey
+$color-grey-400: hsl(0, 0%, 60%); // 999999 | Dusty Grey
+$color-grey-500: hsl(0, 0%, 50%); // 808080 | Grey
+$color-grey-600: hsl(0, 0%, 40%); // 666666 | Dove Grey
+$color-grey-700: hsl(0, 0%, 30%); // 4d4d4d | Tundora Grey
+$color-black-800: hsl(0, 0%, 20%); // 333333 | Mine Shaft Grey
+$color-black-900: hsl(0, 0%, 10%); // 1a1a1a | Cod Grey
+$color-black: hsl(0, 0%, 0%); // 000000 | Black
+
+//* --- Primary
+$color-primary-100: #0c2d48; //* Downriver Blue
+$color-primary-200: #145da0; //* Fun Blue
+$color-primary-300: #2e8bc0; //* Curious Blue
+$color-primary-400: #b1d4e0; //* Ziggurat Blue
+
 //* --- Blue
 $color-blue-300: hsl(187, 100%, 41%); //* Robin's Egg Blue
 $color-blue-400: hsl(187, 100%, 21%); //* Blue Stone Blue

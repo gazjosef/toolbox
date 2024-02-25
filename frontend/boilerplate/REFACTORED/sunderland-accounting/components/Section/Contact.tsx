@@ -8,7 +8,7 @@ const Contact = () => {
   const [contactTitleRef, contactMapRef, contactDetailsRef] = useGsapFadeIn();
 
   return (
-    <section id="contact" className="article-contact">
+    <section id="contact" className="section article-contact">
       <div className="container">
         <section className="article-contact__title" ref={contactTitleRef}>
           <h2 className="heading-two u-margin-bottom-small">Contact Us</h2>

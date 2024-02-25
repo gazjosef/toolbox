@@ -13,7 +13,7 @@ const Services: React.FC = () => {
     useGsapFadeIn();
 
   return (
-    <article id="services" className="">
+    <article id="services" className="section">
       <div className="container | article-services">
         <section className="article-services__intro" ref={servicesIntroRef}>
           <h2 className="heading-two">

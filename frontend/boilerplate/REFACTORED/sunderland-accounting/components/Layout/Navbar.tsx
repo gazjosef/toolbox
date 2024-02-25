@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import Link from "next/link";
 
 interface MenuItem {
   title: string;
@@ -35,27 +34,46 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <Link href="/">Logo</Link>
-      </div>
-      <div className="navbar-links">
-        <ul role="list">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/services">Services</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
+    <nav className="navbar | u-flex u-items-center | u-fs-nav">
+      {/* UNORDERED LIST */}
+      <ul
+        id="primary-navigation"
+        data-visible="false"
+        role="list"
+        className={`navbar__menu | u-flex u-items-center u-gap-2
+          ${toggle ? "navbar__active" : ""}
+            `}
+      >
+        {MenuItems.map((item: MenuItem, index: number) => {
+          return (
+            <li key={index} className="hover-underline-animation">
+              <a
+                className="u-clr-white-0 u-ff-nav u-fw-bold u-uppercase"
+                href={item.url}
+              >
+                {item.title}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* TOGGLE BUTTON */}
+      <div
+        className="navbar__mobile-nav-toggle sr-only"
+        aria-label="Toggle navigation"
+        aria-expanded={toggle}
+      >
+        <IconContext.Provider value={{}}>
+          {toggle ? (
+            <FaTimes onClick={handleClick} />
+          ) : (
+            <FaBars onClick={handleClick} />
+          )}
+        </IconContext.Provider>
       </div>
     </nav>
   );
 };
+
 export default Navbar;

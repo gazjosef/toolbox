@@ -10,12 +10,19 @@
 
 @import "layout/elements";
 @import "layout/footer";
+@import "layout/header";
 @import "layout/navbar";
 @import "layout/topbar";
 
 @import "sections/hero";
+@import "sections/about";
+@import "sections/services";
+@import "sections/contact";
 
 @import "snippets/btn";
+@import "snippets/form";
+@import "snippets/icons";
+@import "snippets/map";
 
 @import "utils/box";
 @import "utils/color";
