@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../components/Section/Hero.tsx";
+import About from "../components/Section/About.tsx";
+import Services from "../components/Section/Services.tsx";
+import Contact from "../components/Section/Contact.tsx";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +15,9 @@ const Home: NextPage = () => {
       </Head>
 
       <Hero />
+      <About />
+      <Services />
+      <Contact />
     </div>
   );
 };
