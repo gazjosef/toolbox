@@ -7,9 +7,10 @@ function App() {
   return (
     <>
       <Layout>
-        <main>
-          <h1 className="text-3xl font-bold underline">Hello World</h1>
-          <Register />
+        <main className="container | min-h-[85vh] mx-auto p-12">
+          <div className="mx-auto">
+            <Register />
+          </div>
         </main>
       </Layout>
     </>
