@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Header from "./Header"; // Adjust the path as per your project structure
-import Footer from "./Footer"; // Adjust the path as per your project structure
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <div className="min-h-full">
       <Header />
       {children}
       <Footer />

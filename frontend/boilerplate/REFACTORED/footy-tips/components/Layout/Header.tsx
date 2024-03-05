@@ -7,9 +7,9 @@ import { IconContext } from "react-icons";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-blue-400 w-screen p-2 text-white">
-      <div className="container | flex items-center justify-between">
-        <div className="header__logo | flex items-center justify-between | text-white">
+    <header className="bg-blue-400 w-screen py-4 | text-xl text-white">
+      <div className="container mx-auto | flex items-center justify-between">
+        <div className="space-x-2 | flex items-center justify-between | text-white">
           <IconContext.Provider value={{ className: "u-fs-750" }}>
             <FaFootballBall />
           </IconContext.Provider>
