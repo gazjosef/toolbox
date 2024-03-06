@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+// ** Import Icons
 import { FaUser } from "react-icons/fa";
 
 const Register: React.FC = () => {

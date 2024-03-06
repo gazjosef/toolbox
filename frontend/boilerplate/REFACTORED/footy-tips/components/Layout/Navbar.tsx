@@ -1,5 +1,5 @@
 import React from "react";
-// ** Import Shared Components
+// ** Import Icons
 // import { IconContext } from "react-icons";
 import { FaSignOutAlt } from "react-icons/fa";
 
