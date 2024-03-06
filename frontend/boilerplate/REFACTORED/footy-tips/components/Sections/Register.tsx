@@ -29,74 +29,96 @@ const Register: React.FC = () => {
   };
 
   return (
-    <section className="grid place-items-center">
-      <form className="" onSubmit={onSubmit}>
-        <div className="form__group">
-          <h2 className="secondary-heading | u-flex u-items-center">
-            <FaUser className="u-mr-1" /> Register
-          </h2>
+    <section className="min-h-[85vh] | grid place-items-center">
+      <form
+        className="max-w-md mx-auto border-2 p-6 rounded-md space-y-6"
+        onSubmit={onSubmit}
+      >
+        <div className="space-x-2 mx-auto | flex items-center justify-center | text-2xl">
+          <FaUser />
+          <h2>Register</h2>
         </div>
-        {/* ENTER YOUR NAME */}
-        <div className="form__group">
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-gray-600 text-sm font-semibold"
+          >
+            Enter Your Name
+          </label>
           <input
             type="text"
             id="name"
-            className="form__control"
             value={name}
             placeholder="Enter your name"
-            onChange={onChange}
             autoComplete="on"
             name="name"
+            className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
+            onChange={onChange}
           />
         </div>
-        {/* ENTER YOUR EMAIL */}
-        <div className="form__group">
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-gray-600 text-sm font-semibold"
+          >
+            Enter Your Email
+          </label>
           <input
             type="email"
             id="email"
-            className="form__control"
             value={email}
             placeholder="Enter your email"
             onChange={onChange}
             autoComplete="on"
             name="email"
+            className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
-        {/* ENTER YOUR PASSWORD */}
-        <div className="form__group">
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-gray-600 text-sm font-semibold"
+          >
+            Enter Your Password
+          </label>
           <input
             type="password"
             id="password"
-            className="form__control"
             value={password}
             placeholder="Enter password"
             onChange={onChange}
             autoComplete="on"
             name="password"
+            className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
-        {/* ENTER YOUR PASSWORD2 */}
-        <div className="form__group">
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-gray-600 text-sm font-semibold"
+          >
+            Confirm Your Password
+          </label>
           <input
             type="password"
             id="password2"
-            className="form__control"
             value={password2}
             placeholder="Confirm password"
             onChange={onChange}
             autoComplete="on"
             name="password2"
+            className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
 
-        <div className="form__group">
+        <div>
           <p>Already a member? Login here.</p>
         </div>
 
-        <div className="form__group">
+        <div>
           <button
             type="submit"
-            className="btn btn-block | u-bg-primary-400 u-clr-white-0"
+            className="w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500"
           >
             Submit
           </button>

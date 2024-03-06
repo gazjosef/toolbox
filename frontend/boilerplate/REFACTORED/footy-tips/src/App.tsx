@@ -1,6 +1,7 @@
 // ** Import Share Component
 import Layout from "../components/Layout/Layout";
 import Login from "../components/Sections/Login";
+import Register from "../components/Sections/Register";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Layout>
         <Login />
+        <Register />
       </Layout>
     </>
   );
