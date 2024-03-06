@@ -31,7 +31,7 @@ const Register: React.FC = () => {
   return (
     <section className="min-h-[85vh] | grid place-items-center">
       <form
-        className="max-w-md mx-auto border-2 p-6 rounded-md space-y-6"
+        className="max-w-md  w-1/2 mx-auto border-2 p-6 rounded-lg space-y-6"
         onSubmit={onSubmit}
       >
         <div className="space-x-2 mx-auto | flex items-center justify-center | text-2xl">

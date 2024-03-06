@@ -6,14 +6,14 @@ import { FaSignOutAlt } from "react-icons/fa";
 const Navbar: React.FC = () => {
   return (
     <nav>
-      <ul role="list" className="flex items-center space-x-2">
+      <ul role="list" className="flex items-center space-x-4">
         <li>Tips</li>
         <li>Comp</li>
         <li>League</li>
         <li>
-          <button className="bg-red-500 flex items-center space-x-2">
+          <button className="bg-gray-200 p-2 rounded-lg flex items-center space-x-2 text-black">
             <FaSignOutAlt />
-            Logout
+            <h2>Logout</h2>
           </button>
         </li>
       </ul>
