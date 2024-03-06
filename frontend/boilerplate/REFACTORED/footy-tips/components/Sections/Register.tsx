@@ -29,8 +29,8 @@ const Register: React.FC = () => {
   };
 
   return (
-    <section>
-      <form className="form" onSubmit={onSubmit}>
+    <section className="grid place-items-center">
+      <form className="" onSubmit={onSubmit}>
         <div className="form__group">
           <h2 className="secondary-heading | u-flex u-items-center">
             <FaUser className="u-mr-1" /> Register
