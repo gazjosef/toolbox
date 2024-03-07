@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="bg-black py-4 |  text-white">
       <section className="container mx-auto">
         <p className="w-max mx-auto">
-          Copyright <span className="text-amber-500">&copy;</span> Gareth Hind{" "}
+          Copyright <span className="text-yellow-300">&copy;</span> Gareth Hind{" "}
           {currentYear}
         </p>
       </section>
