@@ -13,7 +13,7 @@ const Fixtures: React.FC = () => {
   const fixtures: Fixture[] = nrlData;
 
   const [currentRound, setCurrentRound] = useState<string>("Round 1");
-  const [text, setText] = useState<Array<[string, string]>>([]);
+  //   const [text, setText] = useState<Array<[string, string]>>([]);
 
   const filterFixtures = () => {
     return fixtures.filter((fixture) => {
