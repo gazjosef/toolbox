@@ -19,7 +19,7 @@ const Login: React.FC = () => {
             type="email"
             id="email"
             name="email"
-            placeholder="john@gmail.com"
+            placeholder="jane@gmail.com"
             className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
@@ -34,7 +34,7 @@ const Login: React.FC = () => {
             type="password"
             id="password"
             name="password"
-            placeholder="password123"
+            placeholder="booking123"
             className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
