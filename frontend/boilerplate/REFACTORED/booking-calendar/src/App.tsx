@@ -1,14 +1,13 @@
 import "./App.css";
-import Header from "../components/Layout/Header.tsx";
-import Calendar from "../components/Snippets/Calendar.tsx";
+// import Calendar from "../components/Snippets/Calendar.tsx";
+import Layout from "../components/Layout/Layout.tsx";
 
 function App() {
   return (
-    <>
-      <Header />
+    <Layout>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Calendar />
-    </>
+      {/* <Calendar /> */}
+    </Layout>
   );
 }
 

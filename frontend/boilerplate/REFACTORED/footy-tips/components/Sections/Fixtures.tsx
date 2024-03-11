@@ -1,7 +1,5 @@
 import { useState } from "react";
-// ** Import Shared Components
 import Tip from "../Snippets/Tip";
-// ** Import Data
 import nrlData from "../../public/data/nrl2022.json";
 
 interface Fixture {
@@ -11,20 +9,15 @@ interface Fixture {
 
 const Fixtures: React.FC = () => {
   const fixtures: Fixture[] = nrlData;
-
   const [currentRound, setCurrentRound] = useState<string>("Round 1");
   //   const [text, setText] = useState<Array<[string, string]>>([]);
-
   const filterFixtures = () => {
     return fixtures.filter((fixture) => {
       return fixture.round === currentRound;
     });
   };
-
   const roundFixtures = filterFixtures();
-
   const rounds: string[] = [];
-
   const allRounds = fixtures.map((fixture) => {
     return fixture.round;
   });
