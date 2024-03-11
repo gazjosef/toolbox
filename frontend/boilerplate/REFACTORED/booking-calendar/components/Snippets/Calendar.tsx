@@ -1,6 +1,6 @@
-import { Menu, Transition } from '@headlessui/react';
-import { DotsVerticalIcon } from '@heroicons/react/outline';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+import { Menu, Transition } from "@headlessui/react";
+import { DotsVerticalIcon } from "@heroicons/react/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import {
   add,
   eachDayOfInterval,
@@ -14,8 +14,8 @@ import {
   parse,
   parseISO,
   startOfToday,
-} from 'date-fns';
-import { Fragment, useState } from 'react';
+} from "date-fns";
+import { Fragment, useState } from "react";
 
 // Define interface for meeting objects
 interface Meeting {
@@ -27,14 +27,16 @@ interface Meeting {
 }
 
 function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function MeetingScheduler() {
   const today = startOfToday();
   const [selectedDay, setSelectedDay] = useState<Date>(today);
-  const [currentMonth, setCurrentMonth] = useState<string>(format(today, 'MMM-yyyy'));
-  const firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date());
+  const [currentMonth, setCurrentMonth] = useState<string>(
+    format(today, "MMM-yyyy")
+  );
+  const firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
 
   const days = eachDayOfInterval({
     start: firstDayCurrentMonth,
@@ -43,12 +45,12 @@ export default function MeetingScheduler() {
 
   function previousMonth() {
     const firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 });
-    setCurrentMonth(format(firstDayNextMonth, 'MMM-yyyy'));
+    setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
   function nextMonth() {
     const firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
-    setCurrentMonth(format(firstDayNextMonth, 'MMM-yyyy'));
+    setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
   const selectedDayMeetings: Meeting[] = meetings.filter((meeting) =>
@@ -62,7 +64,7 @@ export default function MeetingScheduler() {
           <div className="md:pr-14">
             <div className="flex items-center">
               <h2 className="flex-auto font-semibold text-gray-900">
-                {format(firstDayCurrentMonth, 'MMMM yyyy')}
+                {format(firstDayCurrentMonth, "MMMM yyyy")}
               </h2>
               <button
                 type="button"
@@ -82,7 +84,7 @@ export default function MeetingScheduler() {
               </button>
             </div>
             <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center text-gray-500">
-              {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map(day => (
+              {["S", "M", "T", "W", "T", "F", "S"].map((day) => (
                 <div key={day}>{day}</div>
               ))}
             </div>
@@ -92,37 +94,37 @@ export default function MeetingScheduler() {
                   key={day.toString()}
                   className={classNames(
                     dayIdx === 0 ? colStartClasses[getDay(day)] || "" : "",
-                    'py-1.5'
+                    "py-1.5"
                   )}
                 >
                   <button
                     type="button"
                     onClick={() => setSelectedDay(day)}
                     className={classNames(
-                      isEqual(day, selectedDay) && 'text-white',
+                      isEqual(day, selectedDay) && "text-white",
                       !isEqual(day, selectedDay) &&
                         isToday(day) &&
-                        'text-red-500',
+                        "text-red-500",
                       !isEqual(day, selectedDay) &&
                         !isToday(day) &&
                         isSameMonth(day, firstDayCurrentMonth) &&
-                        'text-gray-900',
+                        "text-gray-900",
                       !isEqual(day, selectedDay) &&
                         !isToday(day) &&
                         !isSameMonth(day, firstDayCurrentMonth) &&
-                        'text-gray-400',
-                      isEqual(day, selectedDay) && isToday(day) && 'bg-red-500',
+                        "text-gray-400",
+                      isEqual(day, selectedDay) && isToday(day) && "bg-red-500",
                       isEqual(day, selectedDay) &&
                         !isToday(day) &&
-                        'bg-gray-900',
-                      !isEqual(day, selectedDay) && 'hover:bg-gray-200',
+                        "bg-gray-900",
+                      !isEqual(day, selectedDay) && "hover:bg-gray-200",
                       (isEqual(day, selectedDay) || isToday(day)) &&
-                        'font-semibold',
-                      'mx-auto flex h-8 w-8 items-center justify-center rounded-full'
+                        "font-semibold",
+                      "mx-auto flex h-8 w-8 items-center justify-center rounded-full"
                     )}
                   >
-                    <time dateTime={format(day, 'yyyy-MM-dd')}>
-                      {format(day, 'd')}
+                    <time dateTime={format(day, "yyyy-MM-dd")}>
+                      {format(day, "d")}
                     </time>
                   </button>
 
@@ -139,9 +141,9 @@ export default function MeetingScheduler() {
           </div>
           <section className="mt-12 md:mt-0 md:pl-14">
             <h2 className="font-semibold text-gray-900">
-              Schedule for{' '}
-              <time dateTime={format(selectedDay, 'yyyy-MM-dd')}>
-                {format(selectedDay, 'MMM dd, yyy')}
+              Schedule for{" "}
+              <time dateTime={format(selectedDay, "yyyy-MM-dd")}>
+                {format(selectedDay, "MMM dd, yyy")}
               </time>
             </h2>
             <ol className="mt-4 space-y-1 text-sm leading-6 text-gray-500">
@@ -175,11 +177,11 @@ function MeetingItem({ meeting }: { meeting: Meeting }) {
         <p className="text-gray-900">{meeting.name}</p>
         <p className="mt-0.5">
           <time dateTime={meeting.startDatetime}>
-            {format(startDateTime, 'h:mm a')}
-          </time>{' '}
-          -{' '}
+            {format(startDateTime, "h:mm a")}
+          </time>{" "}
+          -{" "}
           <time dateTime={meeting.endDatetime}>
-            {format(endDateTime, 'h:mm a')}
+            {format(endDateTime, "h:mm a")}
           </time>
         </p>
       </div>
@@ -210,8 +212,8 @@ function MeetingItem({ meeting }: { meeting: Meeting }) {
                   <a
                     href="#"
                     className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block px-4 py-2 text-sm"
                     )}
                   >
                     Edit
@@ -223,8 +225,8 @@ function MeetingItem({ meeting }: { meeting: Meeting }) {
                   <a
                     href="#"
                     className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block px-4 py-2 text-sm"
                     )}
                   >
                     Cancel
@@ -240,51 +242,47 @@ function MeetingItem({ meeting }: { meeting: Meeting }) {
 }
 
 const colStartClasses = [
-  '',
-  'col-start-2',
-  'col-start-3',
-  'col-start-4',
-  'col-start-5',
-  'col-start-6',
-  'col-start-7',
+  "",
+  "col-start-2",
+  "col-start-3",
+  "col-start-4",
+  "col-start-5",
+  "col-start-6",
+  "col-start-7",
 ];
 
 // Define meeting data
 const meetings: Meeting[] = [
   {
     id: 1,
-    name: 'Leslie Alexander',
+    name: "Leslie Alexander",
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    startDatetime: '2022-05-11T13:00',
-    endDatetime: '2022-05-11T14:30',
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    startDatetime: "2022-05-11T13:00",
+    endDatetime: "2022-05-11T14:30",
   },
   {
     id: 2,
-    name: 'Michael Foster',
+    name: "Michael Foster",
     imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    startDatetime: '2022-05-20T09:00',
-    endDatetime: '2022-05-20T11:30',
+      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    startDatetime: "2022-05-20T09:00",
+    endDatetime: "2022-05-20T11:30",
   },
   {
     id: 3,
-    name: 'Dries Vincent',
+    name: "Dries Vincent",
     imageUrl:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    startDatetime: '2022-05-20T17:00',
-    endDatetime: '2022-05-20T18:30',
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    startDatetime: "2022-05-20T17:00",
+    endDatetime: "2022-05-20T18:30",
   },
   {
     id: 4,
-    name: 'Leslie Alexander',
+    name: "Leslie Alexander",
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    startDatetime: '2022-06-09T13:00',
-    endDatetime: '2022-06-09T14:30',
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    startDatetime: "2022-06-09T13:00",
+    endDatetime: "2022-06-09T14:30",
   },
-  {
-    id: 5,
-    name: 'Michael Foster',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEy
+];

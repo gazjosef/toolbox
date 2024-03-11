@@ -1,12 +1,16 @@
-import "./App.css";
-// import Calendar from "../components/Snippets/Calendar.tsx";
+// ** Import Shared Components
 import Layout from "../components/Layout/Layout.tsx";
+import Login from "../components/Sections/Login.tsx";
+import Register from "../components/Sections/Register.tsx";
+import Calendar from "../components/Snippets/Calendar";
+import "./App.css";
 
 function App() {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       {/* <Calendar /> */}
+      <Login />
+      <Register />
     </Layout>
   );
 }
