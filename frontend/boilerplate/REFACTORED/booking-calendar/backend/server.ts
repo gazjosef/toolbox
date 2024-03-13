@@ -8,11 +8,11 @@ const startServer = async () => {
 
   const app = express();
 
-  app.get("/api/goals", (req: Request, res: Response) => {
-    res.json({ message: "Get goals" });
-  });
+  app.use("/api/goals", require("./routes/goalRoutes").default);
 
   app.listen(port, () => console.log(`Server started on port ${port}`));
 };
 
-startServer().catch((error) => console.error("Error starting server:", error));
+startServer().catch((error: Error) =>
+  console.error("Error starting server:", error)
+);
