@@ -1,10 +1,9 @@
 import { Router, Request, Response } from "express";
+import { getGoals } from "../controllers/goalController";
 
 const router: Router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  res.status(200).json({ message: "Get goal" });
-});
+router.get("/", getGoals);
 
 router.post("/", (req: Request, res: Response) => {
   res.status(200).json({ message: "Create goal" });
