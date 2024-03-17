@@ -15,7 +15,7 @@ export const setGoal = (req: Request, res: Response) => {
 };
 
 // @desc    Update Goal
-// @route   UPDATE /api/goals
+// @route   UPDATE /api/goals/:id
 // @access  Private
 export const updateGoal = (req: Request, res: Response) => {
   const { id } = req.params;
@@ -23,7 +23,7 @@ export const updateGoal = (req: Request, res: Response) => {
 };
 
 // @desc    Delete Goal
-// @route   DELETE /api/goals
+// @route   DELETE /api/goals/:id
 // @access  Private
 export const deleteGoal = (req: Request, res: Response) => {
   const { id } = req.params;

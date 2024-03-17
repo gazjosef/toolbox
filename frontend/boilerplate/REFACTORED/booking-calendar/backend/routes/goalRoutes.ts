@@ -8,12 +8,7 @@ import {
 
 const router: Router = Router();
 
-router.get("/", getGoals);
-
-router.post("/", setGoal);
-
-router.put("/:id", updateGoal);
-
-router.delete("/:id", deleteGoal);
+router.route("/").get(getGoals).post(setGoal);
+router.route("/:id").put(updateGoal).delete(deleteGoal);
 
 export default router;
