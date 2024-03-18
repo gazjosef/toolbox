@@ -10,6 +10,7 @@
   "author": "Gareth Hind",
   "license": "MIT",
   "dependencies": {
+    "@types/mongoose": "^5.11.97",
     "colors": "^1.4.0",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",

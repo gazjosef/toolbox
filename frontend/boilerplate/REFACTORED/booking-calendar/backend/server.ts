@@ -3,10 +3,12 @@ import dotenv from "dotenv";
 dotenv.config();
 import goalRoutes from "./routes/goalRoutes";
 import { errorHandler } from "./middleware/errorMiddleware";
+import { connectDB } from "./config/db";
 
 const startServer = async () => {
   const port: number | string = process.env.PORT || 5001;
 
+  connectDB();
   const app = express();
 
   app.use(express.json());
