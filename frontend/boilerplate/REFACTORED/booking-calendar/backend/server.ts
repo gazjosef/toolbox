@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import goalRoutes from "./routes/goalRoutes";
+import userRoutes from "./routes/userRoutes";
 import { errorHandler } from "./middleware/errorMiddleware";
 import { connectDB } from "./config/db";
 
@@ -15,6 +16,7 @@ const startServer = async () => {
   app.use(express.urlencoded({ extended: false }));
 
   app.use("/api/goals", goalRoutes);
+  app.use("/api/users", userRoutes);
   app.use(errorHandler);
 
   app.listen(port, () => console.log(`Server started on port ${port}`));

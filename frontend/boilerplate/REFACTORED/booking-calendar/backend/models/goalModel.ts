@@ -2,6 +2,7 @@ import mongoose, { Schema, Document, Model } from "mongoose";
 
 // Define the interface for the document (instance of the model)
 interface IGoal extends Document {
+  user: mongoose.Schema.Types.ObjectId;
   text: string;
   createdAt: Date;
   updatedAt: Date;
@@ -10,6 +11,11 @@ interface IGoal extends Document {
 // Define the schema
 const goalSchema: Schema<IGoal> = new mongoose.Schema(
   {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
     text: {
       type: String,
       required: [true, "Please add a text value"],
