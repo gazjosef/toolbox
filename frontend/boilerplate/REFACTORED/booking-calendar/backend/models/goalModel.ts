@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
 
 // Define the interface for the document (instance of the model)
-interface IGoal extends Document {
+export interface IGoal extends Document {
   user: mongoose.Schema.Types.ObjectId;
   text: string;
   createdAt: Date;
