@@ -1,15 +1,12 @@
 .header {
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-  // min-height: 8rem;
-  height: min-content;
-  width: 100%;
-  padding: 1rem 4rem;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.8);
+  min-height: 8rem;
 
-  z-index: 100;
+  display: flex;
+  align-items: center;
 
-  &__span {
-    @include respond(sm) {
-      display: none;
-    }
+  & .container {
+    display: flex;
+    justify-content: space-between;
   }
 }
