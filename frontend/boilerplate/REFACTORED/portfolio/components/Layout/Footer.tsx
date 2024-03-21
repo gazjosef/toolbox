@@ -5,9 +5,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
-      <div className="container | u-mx-auto u-center-text">
-        <div>Copyright &copy; Gareth Hind {currentYear}</div>
-      </div>
+      <div>Copyright &copy; Gareth Hind {currentYear}</div>
     </footer>
   );
 };
