@@ -5,9 +5,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  &__title {
+  &__header {
+    padding: 0.2rem 0;
     margin-bottom: 2rem;
     border-bottom: 1px solid #000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,12 +19,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
 
-  &__filter-btns button {
-    cursor: pointer;
-    border: none;
-    color: #333;
-    padding: 8px 16px;
+    button {
+      cursor: pointer;
+      background-color: orangered;
+      border-radius: 5px;
+      padding: 0.8rem 1.6rem;
+    }
   }
 }

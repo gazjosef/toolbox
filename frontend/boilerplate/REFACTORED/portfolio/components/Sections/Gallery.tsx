@@ -22,8 +22,10 @@ const Gallery: React.FC = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="grid__title">
-          <h1>Portolio</h1>
+        <div className="grid__header">
+          <div className="grid__title">
+            <h1>Portolio</h1>
+          </div>
 
           <ul role="list" className="grid__filter-btns">
             <li role="listitem">
