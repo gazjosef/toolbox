@@ -29,8 +29,10 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           />
         )}
       </a>
-      <h3 className="heading-three | u-center-text">{project.title}</h3>
-      <div className="u-mt-sm u-mx-auto | u-flex u-items-center">
+      <div className="project__title">
+        <h3 className="heading-three">{project.title}</h3>
+      </div>
+      <div className="project__buttons">
         <a className="project__button" href={`${project.github}`}>
           <IconContext.Provider value={{}}>
             <FaGithub className="u-mr-0_75" /> READ
