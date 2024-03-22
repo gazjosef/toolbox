@@ -1,13 +1,13 @@
 .grid {
   &__container {
     display: grid;
-    gap: 1rem;
+    gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
   }
 
   &__header {
-    padding: 0.2rem 0;
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid #000;
 
     display: flex;
@@ -23,6 +23,7 @@
     button {
       cursor: pointer;
       background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.4);
       border-radius: 5px;
       padding: 0.8rem 1.6rem;
       text-transform: uppercase;

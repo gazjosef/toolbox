@@ -23,10 +23,6 @@ const Gallery: React.FC = () => {
     <section className="section">
       <div className="container">
         <div className="grid__header">
-          <div className="grid__title">
-            <h1>Portolio</h1>
-          </div>
-
           <ul role="list" className="grid__filter-btns">
             <li role="listitem">
               <button onClick={() => setFilter("all")}>All</button>
