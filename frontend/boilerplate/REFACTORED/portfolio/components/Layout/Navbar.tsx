@@ -33,21 +33,19 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="navbar | u-flex u-items-center | u-fs-nav u-fw-semi-bold">
+    <nav className="navbar | u-flex u-items-center | u-fs-nav">
       <ul
         id="primary-navigation"
         data-visible={false}
         role="list"
-        className={`navbar__menu | u-flex u-items-center u-gap-1
+        className={`navbar__menu 
               ${toggle ? "navbar__active" : ""}
             `}
       >
         {MenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <a className="u-mx-1 u-text-black" href={item.url}>
-                {item.title}
-              </a>
+              <a href={item.url}>{item.title}</a>
             </li>
           );
         })}

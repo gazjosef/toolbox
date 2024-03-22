@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../components/Sections/Hero";
-import Portfolio from "../components/Sections/Portfolio";
 import Story from "../components/Sections/Story";
 import Contact from "../components/Sections/Contact";
 import Gallery from "../components/Sections/Gallery";

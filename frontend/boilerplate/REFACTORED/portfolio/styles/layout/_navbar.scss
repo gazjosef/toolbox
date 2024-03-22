@@ -1,6 +1,16 @@
 .navbar {
   position: relative;
 
+  a,
+  a:visited {
+    color: #000;
+  }
+
+  ul {
+    display: flex;
+    gap: 2rem;
+  }
+
   &__menu {
     @include respond(sm) {
       background-color: steelblue;
