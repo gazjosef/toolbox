@@ -23,8 +23,8 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           <Image
             src={project.cover_image}
             alt={project.title}
-            height={250}
-            width={500}
+            height={200}
+            width={400}
             className="project__image"
           />
         )}

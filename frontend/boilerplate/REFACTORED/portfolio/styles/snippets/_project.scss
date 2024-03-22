@@ -5,16 +5,13 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
-  // justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__image {
     border-bottom: 1px solid rgba($clr-black, 0.3);
-    object-fit: contain;
-    height: 20rem;
+    object-fit: cover;
   }
 
   &__buttons,
@@ -36,6 +33,7 @@
 
     width: 10rem;
     padding: 0.25em 1rem;
+    border: 1px solid rgba($clr-black, 0.3);
     border-radius: 1rem;
 
     display: flex;

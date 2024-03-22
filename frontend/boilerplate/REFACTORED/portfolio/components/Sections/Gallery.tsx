@@ -5,11 +5,11 @@ import jsonData from "./projects.json";
 interface ProjectData {
   title: string;
   excerpt: string;
+  cover_image: string;
   categories: string[];
   tag: string;
   github: string;
   live: string;
-  // Add more properties as needed
 }
 
 const Gallery: React.FC = () => {
