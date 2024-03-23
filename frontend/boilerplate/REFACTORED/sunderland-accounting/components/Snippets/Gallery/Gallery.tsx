@@ -53,9 +53,9 @@ const Gallery: React.FC = () => {
               />
             </div> */}
             <div className="article-about__desc">
-              <h3 className="heading-three">{member.position}</h3>
-              <h3 className="heading-three heading-three--lighter">
-                {member.name}
+              <h3 className="heading-three ">{member.name}</h3>
+              <h3 className="heading-three heading-three--light">
+                {member.position}
               </h3>
             </div>
           </section>

@@ -1,3 +1,19 @@
 .topbar {
   background-color: black;
+  padding: 0.4rem 0;
+
+  color: var(--clr-white-0);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__phone,
+  &__social-media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }

@@ -1,5 +1,24 @@
 .footer {
   background-color: black;
-
   padding: 4rem 0;
+
+  color: var(--clr-white-0);
+  text-align: center;
+  text-transform: uppercase;
+
+  &__links {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 }

@@ -12,37 +12,39 @@ const Footer: React.FC = () => {
   const currentYear: number = new Date().getFullYear();
 
   return (
-    <footer className="footer | u-bg-black-900 | u-clr-white-0">
+    <footer className="footer">
       <div className="container">
-        <h2 className="u-mb-md | u-center-text u-uppercase">
+        <h2 className="heading-two | u-margin-bottom-medium">
           Sunderland Accounting
         </h2>
 
-        <section className="footer__links | u-mb-sm u-mx-auto">
-          <ul
-            role="list"
-            className="u-flex u-items-center u-justify-center u-gap-2 | u-uppercase"
-          >
+        <section className="footer__links | u-margin-bottom-small ">
+          <ul role="list">
             <li>Home</li>
             <li>Our Services</li>
             <li>About Us</li>
+          </ul>
+        </section>
+
+        <section className="footer__icons | u-margin-bottom-small">
+          <IconContext.Provider value={{}}>
+            <FaFacebook size={28} />
+            <FaGooglePlus size={28} />
+            <FaInstagram size={28} />
+            <FaLinkedin size={28} />
+          </IconContext.Provider>
+        </section>
+
+        <section className="footer__links | u-margin-bottom-medium">
+          <ul role="list">
             <li>Contact Us</li>
             <li>Terms</li>
             <li>Privacy Policy</li>
           </ul>
         </section>
 
-        <section className="footer__icons | u-mx-auto u-mb-md | u-flex u-items-center u-justify-center | u-fs-800">
-          <IconContext.Provider value={{ className: "" }}>
-            <FaFacebook className="u-mr-1" />
-            <FaGooglePlus className="u-mx-1" />
-            <FaInstagram className="u-mx-1" />
-            <FaLinkedin className="u-ml-1" />
-          </IconContext.Provider>
-        </section>
-
         <section className="u-center-text">
-          Ant Software &copy; {currentYear}
+          Gareth Hind &copy; {currentYear}
         </section>
       </div>
     </footer>

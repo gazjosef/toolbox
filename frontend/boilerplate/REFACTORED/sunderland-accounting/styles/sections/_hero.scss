@@ -9,8 +9,11 @@
   background-size: cover;
   min-height: calc(100vh - 4rem);
 
-  color: white;
-
   display: grid;
   place-content: center;
+  position: relative;
+
+  p {
+    color: var(--clr-white-0);
+  }
 }

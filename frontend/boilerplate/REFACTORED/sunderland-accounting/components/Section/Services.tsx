@@ -40,7 +40,7 @@ const Services: React.FC = () => {
                 "article-services__icons article-services__icons--caret",
             }}
           >
-            <FaAngleUp />
+            <FaAngleUp size={60} />
           </IconContext.Provider>
           <div className="article-services__text">
             <h3 className="heading-three">TAX ACCOUNTING & PREPARATION</h3>
@@ -59,7 +59,7 @@ const Services: React.FC = () => {
           <IconContext.Provider
             value={{ className: "article-services__icons" }}
           >
-            <FaPencilAlt />
+            <FaPencilAlt size={48} />
           </IconContext.Provider>
           <div className="article-services__text">
             <h3 className="heading-three">FINANCIAL REPORTING</h3>
@@ -74,7 +74,7 @@ const Services: React.FC = () => {
           <IconContext.Provider
             value={{ className: "article-services__icons" }}
           >
-            <FaBriefcase />
+            <FaBriefcase size={48} />
           </IconContext.Provider>
           <div className="article-services__text">
             <h3 className="heading-three">BOOKKEEPING SERVICES</h3>
@@ -90,7 +90,7 @@ const Services: React.FC = () => {
           <IconContext.Provider
             value={{ className: "article-services__icons" }}
           >
-            <FaPaperclip />
+            <FaPaperclip size={48} />
           </IconContext.Provider>
           <div className="article-services__text">
             <h3 className="heading-three">PAYROLL SERVICES</h3>

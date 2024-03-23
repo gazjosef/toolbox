@@ -8,10 +8,9 @@
     row-gap: 2rem;
   }
 
-  &__image {
-    min-height: 10rem;
-    // width: 100%;
-  }
+  // &__image {
+  //   min-height: 10rem;
+  // }
 
   &__about {
     display: grid;
@@ -61,22 +60,20 @@
     border: 1px solid $color-black;
     border-radius: 0.5rem;
 
-    // img {
-    //   border-radius: 0.5rem;
-    //   height: 30rem;
-    //   width: 100%;
-    //   object-fit: cover;
+    img {
+      border-radius: 0.5rem;
+      height: 30rem;
+      width: 100%;
+      object-fit: cover;
 
-    //   @include respond(phone) {
-    //     height: 45rem;
-    //   }
-    // }
+      @include respond(phone) {
+        height: 45rem;
+      }
+    }
   }
 
   &__desc {
-    margin-bottom: auto;
     padding: 2rem;
-    height: 13rem;
 
     display: flex;
     flex-direction: column;

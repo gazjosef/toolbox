@@ -3,12 +3,10 @@ import Navbar from "./Navbar";
 
 const Header: React.FC = () => {
   return (
-    <header className="header | u-flex u-items-center | u-clr-white-0">
-      <div className="container | u-flex u-items-center u-justify-between">
+    <header className="header">
+      <div className="container">
         <Link href="#" passHref>
-          <h2 className="navbar-heading | u-clr-white-0 u-uppercase">
-            Sunderland Accounting
-          </h2>
+          <h2 className="heading-logo">Sunderland Accounting</h2>
         </Link>
 
         <Navbar />

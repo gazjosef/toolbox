@@ -1,9 +1,9 @@
 .form {
   border-radius: 0.5rem;
-  background-color: $color-white-100;
+  // background-color: $color-white-100;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 2rem;
   margin: 0 auto;
-  // height: 100%;
 
   input[type="text"],
   select,

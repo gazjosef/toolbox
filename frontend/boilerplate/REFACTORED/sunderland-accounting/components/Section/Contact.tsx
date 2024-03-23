@@ -22,6 +22,10 @@ const Contact = () => {
             <Map />
           </section>
 
+          <section className="article-contact__form">
+            <Form />
+          </section>
+
           <section className="article-contact__details">
             <h3 className="heading-three">Address</h3>
             <p className="paragraph">
@@ -42,13 +46,9 @@ const Contact = () => {
             <p className="paragraph">
               Email: info@sunderland.com.au <br />
             </p>
-            <button className="btn btn--contact | u-flex u-items-center u-justify-between">
-              <FaPhone className="u-mr-1" /> 02 9644 9220
+            <button className="btn btn--contact | u-flex u-items-center u-justify-between u-gap-1">
+              <FaPhone /> 02 9644 9220
             </button>
-          </section>
-
-          <section className="article-contact__form">
-            <Form />
           </section>
         </section>
       </div>

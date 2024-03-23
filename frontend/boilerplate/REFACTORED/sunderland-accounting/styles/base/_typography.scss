@@ -14,11 +14,14 @@ $fs-nav: clamp(1.6rem, 1.8vw, 2rem);
 $fs-button: 1.3rem;
 
 body {
-  // color: var(--clr-black-900);
   font-family: $ff-body;
   font-size: $default-font-size;
   line-height: 1.7;
   text-rendering: optimizeSpeed;
+}
+
+.heading-logo {
+  color: var(--clr-white-0);
 }
 
 .heading-hero {
@@ -81,6 +84,10 @@ body {
   font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
+
+  &--light {
+    color: $clr-primary-100;
+  }
 }
 
 .paragraph {
