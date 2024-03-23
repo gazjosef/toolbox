@@ -23,4 +23,8 @@
   @include respond(sm-phone) {
     padding: 1rem 2rem;
   }
+
+  &--min-content {
+    min-height: min-content;
+  }
 }

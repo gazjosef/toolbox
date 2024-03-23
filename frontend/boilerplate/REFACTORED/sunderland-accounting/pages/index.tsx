@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../components/Section/Hero.tsx";
-import About from "../components/Section/About.tsx";
 import Services from "../components/Section/Services.tsx";
+import About from "../components/Section/About.tsx";
+import Gallery from "../components/Section/Gallery.tsx";
 import Contact from "../components/Section/Contact.tsx";
 
 const Home: NextPage = () => {
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Hero />
       <Services />
       <About />
+      <Gallery />
       <Contact />
     </div>
   );

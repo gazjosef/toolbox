@@ -1,13 +1,11 @@
-import { useEffect, useRef } from "react";
 import useGsapFadeIn from "../../hooks/useGsapFadeIn";
-import Gallery from "../../components/Snippets/Gallery/Gallery";
 
 const About: React.FC = () => {
-  const [aboutTitleRef, aboutTextRef, aboutGalleryRef] = useGsapFadeIn();
+  const [aboutTitleRef, aboutTextRef] = useGsapFadeIn();
 
   return (
-    <article id="about" className="section article-about">
-      <div className="container | article-about__about">
+    <article id="about" className="section section--min-content article-about">
+      <div className="container">
         <section className="article-about__title" ref={aboutTitleRef}>
           <h2 className="heading-two">About Us</h2>
         </section>
@@ -27,10 +25,6 @@ const About: React.FC = () => {
             services at an affordable price.
           </p>
         </section>
-      </div>
-
-      <div className="container">
-        <Gallery />
       </div>
     </article>
   );

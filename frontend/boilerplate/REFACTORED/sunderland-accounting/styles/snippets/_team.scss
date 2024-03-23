@@ -1,0 +1,25 @@
+.team {
+  border: 1px solid $color-black;
+  border-radius: 0.5rem;
+
+  &__img {
+    padding: 2rem;
+
+    display: grid;
+    place-items: center;
+  }
+
+  &__desc {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+
+    @include respond(tab-land) {
+      font-size: 0.8em;
+    }
+  }
+}
