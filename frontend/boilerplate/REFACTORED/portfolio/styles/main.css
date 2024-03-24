@@ -2355,13 +2355,18 @@ body {
 
 .heading-logo {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
 }
 .heading-logo a {
   color: var(--clr-black-900);
 }
 .heading-logo span {
   font-weight: var(--fw-bold);
+}
+
+.nav-links a {
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
 }
 
 .heading-hero {
@@ -2758,10 +2763,9 @@ body {
 .project__labels {
   min-height: 12rem;
   display: inline-flex;
-  flex-direction: col;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 0.25rem 0.5rem;
+  gap: 0rem 0.5rem;
 }
 .project__buttons {
   display: flex;
@@ -2914,39 +2918,4 @@ body {
 
 .u-place-content-start {
   place-content: start !important;
-}
-
-.u-fs-primary-heading {
-  font-size: clamp(2.5rem, 3vw, 3.5rem);
-}
-
-.u-fs-secondary-heading {
-  font-size: clamp(2.5rem, 2.75vw, 3rem);
-}
-
-.u-fs-button {
-  font-size: 1.3rem;
-}
-
-.u-fs-nav {
-  font-size: 1.6rem;
-  letter-spacing: 0.15rem;
-}
-
-.u-leading-snug {
-  line-height: 1.375;
-}
-
-.u-uppercase {
-  text-transform: uppercase;
-}
-
-.u-center-text {
-  text-align: center !important;
-}
-
-@media (max-width: 768px) {
-  .u-center-text-md {
-    text-align: center !important;
-  }
 }/*# sourceMappingURL=main.css.map */

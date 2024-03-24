@@ -23,7 +23,7 @@ body {
 
 .heading-logo {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
 
   a {
     color: var(--clr-black-900);
@@ -31,6 +31,13 @@ body {
 
   span {
     font-weight: var(--fw-bold);
+  }
+}
+
+.nav-links {
+  a {
+    font-size: $fs-nav;
+    letter-spacing: 0.15rem;
   }
 }
 

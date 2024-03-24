@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="navbar | u-flex u-items-center | u-fs-nav">
+    <nav className="navbar | u-flex u-items-center">
       <ul
         id="primary-navigation"
         data-visible={false}
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       >
         {MenuItems.map((item, index) => {
           return (
-            <li key={index}>
+            <li className="nav-links" key={index}>
               <a href={item.url}>{item.title}</a>
             </li>
           );
