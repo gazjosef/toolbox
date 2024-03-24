@@ -25,22 +25,34 @@ const Gallery: React.FC = () => {
         <div className="grid__header">
           <ul role="list" className="grid__filter-btns">
             <li role="listitem">
-              <button className="btn" onClick={() => setFilter("all")}>
+              <button
+                className={`btn ${filter === "all" ? "active" : ""}`}
+                onClick={() => setFilter("all")}
+              >
                 All
               </button>
             </li>
             <li role="listitem">
-              <button className="btn" onClick={() => setFilter("apps")}>
+              <button
+                className={`btn ${filter === "apps" ? "active" : ""}`}
+                onClick={() => setFilter("apps")}
+              >
                 Apps
               </button>
             </li>
             <li role="listitem">
-              <button className="btn" onClick={() => setFilter("games")}>
+              <button
+                className={`btn ${filter === "games" ? "active" : ""}`}
+                onClick={() => setFilter("games")}
+              >
                 Games
               </button>
             </li>
             <li role="listitem">
-              <button className="btn" onClick={() => setFilter("websites")}>
+              <button
+                className={`btn ${filter === "websites" ? "active" : ""}`}
+                onClick={() => setFilter("websites")}
+              >
                 Websites
               </button>
             </li>

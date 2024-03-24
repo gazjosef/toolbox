@@ -2589,12 +2589,16 @@ body {
     margin-inline: auto;
   }
 }
-.btn a {
-  color: #145da0;
-}
 .btn:hover {
   background-color: var(--clr-primary-400);
   color: hsl(0, 0%, 100%);
+}
+.btn.active {
+  background-color: var(--clr-primary-400);
+  color: hsl(0, 0%, 100%);
+}
+.btn a {
+  color: #145da0;
 }
 .btn--cta {
   border-radius: 1rem;
@@ -2635,13 +2639,14 @@ body {
 }
 
 .label {
-  cursor: pointer;
+  --padding-top-bottom: 0.6rem;
+  --padding-left-right: 1.2rem;
   max-width: -moz-max-content;
   max-width: max-content;
-  background-color: #fff;
+  background-color: var(--clr-white-0);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  padding: var(--padding-top-bottom) var(--padding-left-right);
   color: var(--clr-white-0);
   font-size: 1.1rem;
   font-weight: 700;
@@ -2748,14 +2753,15 @@ body {
      object-fit: cover;
 }
 .project__buttons, .project__labels, .project__title {
-  padding: 2rem 4rem;
+  padding: 2rem;
 }
 .project__labels {
+  min-height: 12rem;
   display: inline-flex;
   flex-direction: col;
   flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 0.25rem 0.5rem;
 }
 .project__buttons {
   display: flex;

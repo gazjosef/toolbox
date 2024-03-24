@@ -1,10 +1,12 @@
 .label {
-  cursor: pointer;
+  --padding-top-bottom: 0.6rem;
+  --padding-left-right: 1.2rem;
+
   max-width: max-content;
-  background-color: #fff;
+  background-color: var(--clr-white-0);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  padding: var(--padding-top-bottom) var(--padding-left-right);
 
   color: var(--clr-white-0);
   font-size: 1.1rem;
