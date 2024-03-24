@@ -1,6 +1,7 @@
 .header {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  min-height: 8rem;
+  min-height: 6rem;
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -8,7 +9,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  & .container {
+  .container {
     display: flex;
     justify-content: space-between;
   }

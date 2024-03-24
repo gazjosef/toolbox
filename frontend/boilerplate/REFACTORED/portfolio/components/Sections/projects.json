@@ -4,10 +4,9 @@
     "cover_image": "/images/posts/booking-calendar3.png",
     "excerpt": "",
     "categories": [
-      "JavaScript",
+      "Vite",
       "TypeScript",
       "React",
-      "NextJS",
       "Tailwind",
       "RestAPI",
       "MongoDB"
@@ -21,10 +20,10 @@
     "cover_image": "/images/posts/TippingApp.png",
     "excerpt": "",
     "categories": [
-      "JavaScript",
+      "Vite",
+      "TypeScript",
       "React",
-      "NextJS",
-      "SASS",
+      "Tailwind",
       "RestAPI",
       "MongoDB"
     ],
@@ -36,7 +35,7 @@
     "title": "Weather App",
     "cover_image": "/images/posts/WeatherApp.png",
     "excerpt": "",
-    "categories": ["JavaScript", "TypeScript", "React", "NextJS", "Tailwind"],
+    "categories": ["Vite", "TypeScript", "React", "Tailwind"],
     "tag": "apps",
     "github": "https://github.com/gazjosef/weather-app",
     "live": "https://weather-app-gazjosef.vercel.app/"
@@ -63,7 +62,7 @@
     "title": "Ant Software",
     "cover_image": "/images/posts/AntSoftwareDev.png",
     "excerpt": "",
-    "categories": ["JavaScript", "React", "NextJS", "SASS", "HeadlessCMS"],
+    "categories": ["TypeScript", "React", "NextJS", "SASS", "HeadlessCMS"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/ant-software",
     "live": "https://ant-software.vercel.app/"
@@ -72,7 +71,7 @@
     "title": "Rush Wines",
     "cover_image": "/images/posts/RushWines.png",
     "excerpt": "",
-    "categories": ["Liquid", "SASS", "Shopify"],
+    "categories": ["Shopify", "Liquid", "SASS"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/rush-wines",
     "live": "https://www.rushwines.com.au"
@@ -81,7 +80,7 @@
     "title": "Sunderland Accounting",
     "cover_image": "/images/posts/SunderlandAccounting.png",
     "excerpt": "",
-    "categories": ["JavaScript", "React", "NextJS", "SASS", "HeadlessCMS"],
+    "categories": ["TypeScript", "React", "NextJS", "SASS", "HeadlessCMS"],
     "tag": "websites",
     "github": "https://github.com/gazjosef/sunderland-accounting",
     "live": "https://sunderland-accounting.vercel.app/"

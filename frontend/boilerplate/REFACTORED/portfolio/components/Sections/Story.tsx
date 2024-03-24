@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleDown } from "react-icons/fa";
 import useGsapFadeDown from "../../hooks/useGsapFadeDown";
 
 const Story: React.FC = () => {
@@ -9,7 +9,10 @@ const Story: React.FC = () => {
   return (
     <section id="story" className="section">
       <section className="article-story__title">
-        <h1 className="heading-one | u-mb-lg u-center-text" ref={storyTitleRef}>
+        <h1
+          className="heading-one | u-mb-lg u-center-text"
+          ref={storyTitleRef as React.LegacyRef<HTMLHeadingElement>}
+        >
           Story
         </h1>
       </section>
@@ -27,26 +30,28 @@ const Story: React.FC = () => {
           ref={storyTextRef as React.RefObject<HTMLElement>}
         >
           <p className="paragraph">
-            Web development isn&apos;t just a job; it&apos;s my calling. From my
-            very first line of code, I&apos;ve been on an exciting journey
-            through the digital universe.
+            Web development isn&apos;t just a profession; it&apos;s my vocation.
+            With expertise in TypeScript, React, Shopify, and Vue, I&apos;m on a
+            mission to create seamless user experiences.
           </p>
           <p className="paragraph">
-            With a commitment to elegant solutions and a love for responsive
-            design, I&apos;ve had the privilege of crafting meaningful online
-            experiences. I&apos;m eager to continue pushing boundaries and
-            creating innovative web solutions.
+            Crafting meaningful online experiences is my privilege, and I&apos;m
+            excited to keep pushing boundaries with the latest web technologies.
           </p>
-
-          <button className="btn btn--cta btn--inverse | u-max-w-max u-py-2">
-            <a
-              href="#portfolio"
-              className="u-flex u-items-center u-justify-center"
-            >
-              Portfolio
-              <FaArrowCircleRight className="u-ml-1" />
-            </a>
-          </button>
+          <p className="paragraph">
+            Let&apos;s build something awesome together!
+          </p>
+          <p>
+            <button className="btn btn--cta btn--inverse">
+              <a
+                href="#contact"
+                className="u-flex u-items-center u-justify-center u-gap-1"
+              >
+                Contact
+                <FaArrowCircleDown />
+              </a>
+            </button>
+          </p>
         </section>
       </div>
     </section>

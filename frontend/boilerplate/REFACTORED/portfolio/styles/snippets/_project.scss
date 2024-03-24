@@ -1,7 +1,7 @@
 .project {
   background-color: #fff;
   border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 
@@ -15,34 +15,26 @@
   }
 
   &__buttons,
+  &__labels,
   &__title {
     padding: 2rem 4rem;
   }
-  &__description {
-    min-height: min(8rem, 12rem);
+
+  &__labels {
+    display: inline-flex;
+    flex-direction: col;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem;
   }
+
+  // &__description {
+  //   min-height: min(8rem, 12rem);
+  // }
 
   &__buttons {
     display: flex;
     justify-content: center;
     gap: 2rem;
-  }
-
-  &__button {
-    background-color: var(--clr-primary-500);
-
-    padding: 0.4rem 2rem;
-    border: 1px solid rgba($clr-black, 0.3);
-    border-radius: 0.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--clr-white-0);
-
-    &:hover {
-      background-color: var(--clr-primary-400);
-    }
   }
 }

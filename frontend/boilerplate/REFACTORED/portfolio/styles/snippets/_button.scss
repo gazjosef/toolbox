@@ -1,10 +1,9 @@
 .btn {
   cursor: pointer;
-  border: none;
-  border-radius: 1rem;
-  padding: 1.5rem 3rem;
-
-  display: inline-block;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0.8rem 1.6rem;
 
   font-size: 1.5rem;
   font-weight: 700;
@@ -13,16 +12,25 @@
   text-transform: uppercase;
 
   @include respond(tab-port) {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   a {
     color: $clr-primary-200;
   }
 
+  &:hover {
+    background-color: var(--clr-primary-400);
+    color: $clr-white;
+  }
+
   &--cta {
-    margin-top: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    max-width: max-content;
+    margin-top: 4rem;
+
+    font-size: 1.5rem;
   }
 
   &--inverse {
@@ -30,6 +38,14 @@
 
     a {
       color: $clr-white;
+    }
+
+    &:hover {
+      background-color: var(--clr-white);
+
+      a {
+        color: var(--clr-primary-400);
+      }
     }
   }
 }

@@ -14,14 +14,15 @@
 @import "layout/navbar";
 
 @import "sections/gallery";
-@import "sections/home";
+@import "sections/hero";
 @import "sections/contact";
 
 @import "snippets/button";
+@import "snippets/label";
 @import "snippets/project";
 
-@import "utils/box";
-@import "utils/color";
+// @import "utils/box";
+// @import "utils/color";
 @import "utils/display";
 @import "utils/flex";
 @import "utils/grid";

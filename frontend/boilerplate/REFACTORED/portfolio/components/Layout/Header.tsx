@@ -6,10 +6,12 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link href="/">
-          <span className="u-fw-bold u-text-primary-300">Gareth Hind</span>{" "}
-          <span className="header__span">Web Developer</span>
-        </Link>
+        <div className="heading-logo">
+          <Link href="https://gareth-hind-portfolio.vercel.app/">
+            <span>Gareth Hind</span> Web Developer
+          </Link>
+        </div>
+
         <Navbar />
       </div>
     </header>

@@ -20,21 +20,29 @@ const Gallery: React.FC = () => {
       : jsonData.filter((project) => project.tag.includes(filter));
 
   return (
-    <section className="section">
+    <section id="portfolio" className="section">
       <div className="container">
         <div className="grid__header">
           <ul role="list" className="grid__filter-btns">
             <li role="listitem">
-              <button onClick={() => setFilter("all")}>All</button>
+              <button className="btn" onClick={() => setFilter("all")}>
+                All
+              </button>
             </li>
             <li role="listitem">
-              <button onClick={() => setFilter("apps")}>Apps</button>
+              <button className="btn" onClick={() => setFilter("apps")}>
+                Apps
+              </button>
             </li>
             <li role="listitem">
-              <button onClick={() => setFilter("games")}>Games</button>
+              <button className="btn" onClick={() => setFilter("games")}>
+                Games
+              </button>
             </li>
             <li role="listitem">
-              <button onClick={() => setFilter("websites")}>Websites</button>
+              <button className="btn" onClick={() => setFilter("websites")}>
+                Websites
+              </button>
             </li>
           </ul>
         </div>

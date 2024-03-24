@@ -2,6 +2,7 @@ import React from "react";
 import { FaEye, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import Image from "next/image";
+import Label from "./Label";
 
 interface ProjectProps {
   project: {
@@ -16,6 +17,8 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
+  let categories = project.categories;
+
   return (
     <div className="project">
       <a href={`${project.live}`}>
@@ -32,18 +35,34 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       <div className="project__title">
         <h3 className="heading-three">{project.title}</h3>
       </div>
+      <div className="project__labels">
+        {categories &&
+          categories.map((category) => (
+            <Label key={category}>{category}</Label>
+          ))}
+      </div>
       <div className="project__buttons">
-        <a className="project__button" href={`${project.github}`}>
-          <IconContext.Provider value={{}}>
-            <FaGithub className="u-mr-0_75" /> READ
-          </IconContext.Provider>
-        </a>
+        <button className="btn btn--inverse">
+          <a
+            className="u-flex u-items-center u-justify-center u-gap-1"
+            href={`${project.github}`}
+          >
+            <IconContext.Provider value={{}}>
+              <FaGithub /> READ
+            </IconContext.Provider>
+          </a>
+        </button>
 
-        <a className="project__button" href={`${project.live}`}>
-          <IconContext.Provider value={{}}>
-            <FaEye className="u-mr-0_75" /> LIVE
-          </IconContext.Provider>
-        </a>
+        <button className="btn btn--inverse">
+          <a
+            className="u-flex u-items-center u-justify-center u-gap-1"
+            href={`${project.live}`}
+          >
+            <IconContext.Provider value={{}}>
+              <FaEye /> LIVE
+            </IconContext.Provider>
+          </a>
+        </button>
       </div>
     </div>
   );

@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleDown } from "react-icons/fa";
 import useGsapFadeDown from "../../hooks/useGsapFadeDown";
 
 const Hero: React.FC = () => {
   const [heroTitleRef, heroImgRef, heroTextRef] = useGsapFadeDown();
 
   return (
-    <section id="home" className="section | u-bg-primary-400">
+    <section id="home" className="hero section">
       <div className="container | | u-grid u-even-columns">
         <div ref={heroTextRef as React.RefObject<HTMLDivElement>}>
-          <h1 className="heading-home">
-            Hi, I&apos;m <span className="u-clr-primary-400">Gareth</span>.
+          <h1 className="heading-hero">
+            Hi, I&apos;m <span>Gareth</span>.
           </h1>
 
           <p className="paragraph">
@@ -19,13 +19,13 @@ const Hero: React.FC = () => {
             engaging, responsive, and user-friendly websites.
           </p>
 
-          <button className="btn btn--cta | u-max-w-max">
+          <button className="btn btn--cta">
             <a
               href="#portfolio"
-              className="u-flex u-items-center u-justify-center"
+              className="u-flex u-items-center u-justify-center u-gap-1"
             >
               Portfoloio
-              <FaArrowCircleRight className="u-ml-1" />
+              <FaArrowCircleDown />
             </a>
           </button>
         </div>
