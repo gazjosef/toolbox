@@ -17,39 +17,52 @@
 
   &:hover {
     background-color: var(--clr-primary-400);
-    color: $clr-white;
+    color: var(--clr-white-0);
+
+    a {
+      color: var(--clr-white-0);
+    }
   }
 
   &.active {
     background-color: var(--clr-primary-400);
-    color: $clr-white;
+    color: var(--clr-white-0);
   }
 
   a {
     color: $clr-primary-200;
+
+    &:hover {
+      background-color: var(--clr-primary-400);
+      color: var(--clr-white-0);
+    }
   }
 
   &--cta {
     border-radius: 1rem;
     padding: 1rem 2rem;
     max-width: max-content;
-    margin-top: 4rem;
+    margin-top: 2rem;
 
     font-size: 1.5rem;
   }
 
   &--inverse {
     background-color: $clr-primary-300;
+    color: var(--clr-white-0);
 
     a {
-      color: $clr-white;
+      background-color: $clr-primary-300;
+      color: var(--clr-white-0);
     }
 
     &:hover {
-      background-color: var(--clr-white);
+      background-color: var(--clr-white-0);
+      color: var(--clr-primary-400);
 
       a {
         color: var(--clr-primary-400);
+        background-color: var(--clr-white-0);
       }
     }
   }
