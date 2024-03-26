@@ -19,9 +19,9 @@ const Hero: React.FC = () => {
         </div>
 
         <div ref={homeTextRef}>
-          <h1 className="primary-heading | u-mb-sm">
+          <h1 className="primary-heading | u-margin-bottom-small">
             Get scalable, modern and reliable{" "}
-            <span className="u-clr-primary-300">custom software</span>.
+            <span className="">custom software</span>.
           </h1>
 
           <p className="paragraph">

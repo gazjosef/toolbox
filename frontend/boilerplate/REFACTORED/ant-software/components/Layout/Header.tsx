@@ -5,8 +5,8 @@ import Navbar from "./Navbar";
 
 const Header: React.FC = () => {
   return (
-    <header className="header | u-bg-white-0">
-      <div className="container | u-flex u-items-center u-justify-between">
+    <header className="header">
+      <div className="container">
         <Link href="#home">
           <Image
             src="/img/black-logo.png"

@@ -28,6 +28,10 @@ body {
 
   font-size: $fs-primary-heading;
   font-weight: var(--fw-semi-bold);
+
+  span {
+    color: var(--clr-primary-300);
+  }
 }
 
 .secondary-heading {
