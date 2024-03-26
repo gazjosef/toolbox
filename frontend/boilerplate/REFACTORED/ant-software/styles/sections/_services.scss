@@ -1,4 +1,15 @@
 .section-services {
+  .container {
+    text-align: center;
+  }
+
+  &__heading {
+    h1,
+    h2 {
+      text-align: center;
+    }
+  }
+
   &__grid {
     // margin-top: 3rem;
 

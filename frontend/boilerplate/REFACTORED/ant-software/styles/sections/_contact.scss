@@ -1,8 +1,11 @@
 .section-contact {
   &__details {
-    margin-top: 3rem;
-
+    margin-bottom: 3rem;
+    width: 40%;
+    margin-inline: auto;
+    padding: 4rem;
     display: grid;
+    // place-content: center;
     grid-template-columns: repeat(2, 1fr);
 
     @include respond(phone) {

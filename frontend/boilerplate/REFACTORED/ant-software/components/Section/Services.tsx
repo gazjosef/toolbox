@@ -12,19 +12,20 @@ const Services: React.FC = () => {
   const [servicesTitleRef, servicesGridRef] = useGsapFadeIn();
 
   return (
-    <section id="services" className="section | u-bg-primary-50">
-      <div className="container | u-center-text">
-        <div ref={servicesTitleRef as React.RefObject<HTMLDivElement>}>
+    <section id="services" className="section">
+      <div className="container">
+        <div
+          className="services__heading u-margin-bottom-medium"
+          ref={servicesTitleRef as React.RefObject<HTMLDivElement>}
+        >
           <h2 className="secondary-heading">Services</h2>
-          <h1 className="primary-heading | u-mx-auto">
-            We provide{" "}
-            <span className="u-clr-primary-300">professional IT solutions</span>{" "}
-            for your business.
+          <h1 className="primary-heading | u-center-text">
+            We provide <span>professional IT solutions</span> for your business.
           </h1>
         </div>
 
         <section
-          className="section-services__grid | u-mt-3"
+          className="section-services__grid"
           ref={servicesGridRef as React.RefObject<HTMLDivElement>}
         >
           <div className="feature-box">
