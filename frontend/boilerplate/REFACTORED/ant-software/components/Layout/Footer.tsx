@@ -46,36 +46,42 @@ const Footer: React.FC = () => {
             width="352"
           />
         </div>
+        <div className="footer__links | u-margin-x-auto">
+          {/* <div className="footer__social-media | u-margin-bottom-small">
+            <a href="www.facebook.com">
+              <FaFacebook size="4rem" />
+            </a>
+            <a href="www.instagram.com">
+              <FaInstagram size="4rem" />
+            </a>
+            <a href="www.linkedin.com">
+              <FaLinkedin size="4rem" />
+            </a>
+            <a href="www.twitter.com">
+              <FaTwitter size="4rem" />
+            </a>
+          </div> */}
 
-        <div className="footer__social-media">
-          <a href="www.facebook.com">
-            <FaFacebook size="4rem" />
-          </a>
-          <a href="www.instagram.com">
-            <FaInstagram size="4rem" />
-          </a>
-          <a href="www.linkedin.com">
-            <FaLinkedin size="4rem" />
-          </a>
-          <a href="www.twitter.com">
-            <FaTwitter size="4rem" />
-          </a>
-        </div>
-        <div className="footer__links">
-          <ul role="list" className="u-flex u-gap-1">
-            {FooterNavItems.map((item, index) => {
-              return (
-                <li key={index}>
-                  <a href={item.url}>{item.title}</a>
-                </li>
-              );
-            })}
-          </ul>
+          {/* <hr /> */}
+          <nav>
+            <ul
+              role="list"
+              className="u-flex u-align-center u-justify-between u-gap-1"
+            >
+              {FooterNavItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a href={item.url}>{item.title}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </div>
       </div>
 
-      <section className="container | u-margin-top-medium u-mx-auto">
-        <p className="u-center-text">
+      <section className="u-margin-top-medium ">
+        <p className="u-center-text u-margin-x-auto">
           Copyright <span className="u-clr-secondary-100">&copy;</span> Ant
           Software {currentYear}
         </p>

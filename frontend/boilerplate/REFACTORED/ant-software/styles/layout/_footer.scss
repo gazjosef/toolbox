@@ -6,9 +6,8 @@
   text-align: center;
 
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
@@ -17,9 +16,28 @@
     text-transform: uppercase;
   }
 
+  nav {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-semibold);
+  }
+
+  &__img,
+  &__links {
+    display: grid;
+    place-items: center;
+  }
+
+  &__links {
+    width: 40rem;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
   &__social-media {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 2rem;
   }
 }
