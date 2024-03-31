@@ -1,15 +1,18 @@
 .section-contact {
-  &__details {
-    margin-bottom: 3rem;
-    width: 40%;
-    margin-inline: auto;
-    padding: 4rem;
+  .container {
     display: grid;
-    // place-content: center;
     grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
 
-    @include respond(phone) {
-      grid-template-columns: repeat(1, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 }

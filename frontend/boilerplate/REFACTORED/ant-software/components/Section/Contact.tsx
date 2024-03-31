@@ -2,44 +2,47 @@ import React from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import useGsapFadeIn from "../../hooks/useGsapFadeIn";
 import EmailForm from "../Snippets/EmailForm";
+import Image from "next/image";
 
 const Contact: React.FC = () => {
   const [contactTitleRef, contactDetailsRef, contactFormRef] = useGsapFadeIn();
 
   return (
-    <section id="contact" className="section">
-      <div
-        className="container | u-margin-bottom-medium | u-center-text"
+    <section id="contact" className="section section-contact">
+      <h2
+        className="secondary-heading | u-margin-bottom-medium"
         ref={contactTitleRef}
       >
-        <h2 className="secondary-heading">Contact</h2>
-        <h1 className="primary-heading">
-          We are here to <span>help and answer</span> any questions you might
-          have.
-        </h1>
-      </div>
+        Contact
+      </h2>
 
-      <section
-        className="u-flex u-flex-col u-justify-between"
-        ref={contactDetailsRef}
-      >
-        <section className="section-contact__details">
+      <div className="container">
+        <section className="section-contact__details" ref={contactDetailsRef}>
+          <h1 className="primary-heading">
+            We are here to <span>help and answer</span> any questions you might
+            have.
+          </h1>
+          <Image
+            src="/img/illustrations/undraw_programming_2svr.svg"
+            alt="responsive"
+            width={300}
+            height={225}
+          />
           <div className="phone | u-flex u-items-center u-justify-center u-gap-1">
-            <FaPhone size="5rem" color="hsl(202, 61%, 47%)" />
+            <FaPhone size="3rem" color="hsl(202, 61%, 47%)" />
             <p className="paragraph">0434 420 506</p>
           </div>
           <div className="email | u-flex u-items-center u-justify-center u-gap-1">
-            <FaEnvelope size="5rem" color="hsl(202, 61%, 47%)" />
+            <FaEnvelope size="3rem" color="hsl(202, 61%, 47%)" />
             <p className="paragraph">ant@antsoftware.dev</p>
           </div>
         </section>
-      </section>
-
-      <div className="container">
         <section className="section-contact__form" ref={contactFormRef}>
           <EmailForm />
         </section>
       </div>
+
+      {/* <div className="container"></div> */}
     </section>
   );
 };

@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const [homeTitleRef, homeTextRef, homeImgRef] = useGsapFadeIn();
 
   return (
-    <section id="home" className="section | u-bg-primary-50">
+    <section id="home" className="section section-hero | u-bg-primary-50">
       <div className="container | u-mt-3xl | u-grid u-even-columns u-gap-3">
         <div ref={homeImgRef}>
           <Image
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        <div ref={homeTextRef}>
+        <div className="section-hero__text" ref={homeTextRef}>
           <h1 className="primary-heading | u-margin-bottom-small">
             Get scalable, modern and reliable{" "}
             <span className="">custom software</span>.
