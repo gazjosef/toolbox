@@ -2296,24 +2296,14 @@ body {
 .section {
   min-height: 95vh;
   min-height: 95svh;
-  padding: 10rem 20rem;
+  padding: 10rem 5rem;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
-@media (max-width: 75em) {
-  .section {
-    padding: 7.5rem 15rem;
-  }
-}
-@media (max-width: 56.25em) {
-  .section {
-    padding: 5rem 10rem;
-  }
-}
 @media (max-width: 37.5em) {
   .section {
-    padding: 2.5rem 5rem;
+    padding: 5rem;
   }
 }
 @media (max-width: 21.875em) {
@@ -2449,14 +2439,14 @@ body {
 .section-services__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(10rem, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 4rem;
 }
-@media (max-width: 75em) {
+@media (max-width: 56.25em) {
   .section-services__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (max-width: 75em) {
+@media (max-width: 37.5em) {
   .section-services__grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

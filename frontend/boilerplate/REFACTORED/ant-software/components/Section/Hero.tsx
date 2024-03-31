@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="section section-hero | u-bg-primary-50">
-      <div className="container | u-mt-3xl | u-grid u-even-columns u-gap-3">
+      <div className="container | u-mt-3xl | u-grid u-even-columns u-gap-5">
         <div ref={homeImgRef}>
           <Image
             src="/img/illustrations/undraw_responsive_6c8s.svg"

@@ -6,22 +6,14 @@
 .section {
   min-height: 95vh;
   min-height: 95svh;
-  padding: 10rem 20rem;
+  padding: 10rem 5rem;
 
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
 
-  @include respond(tab-land) {
-    padding: 7.5rem 15rem;
-  }
-
-  @include respond(tab-port) {
-    padding: 5rem 10rem;
-  }
-
   @include respond(phone) {
-    padding: 2.5rem 5rem;
+    padding: 5rem;
   }
 
   @include respond(sm-phone) {
